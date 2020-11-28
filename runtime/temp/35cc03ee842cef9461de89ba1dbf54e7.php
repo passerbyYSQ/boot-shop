@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"D:\Wamp\www\boot-shop\public/../application/index\view\member\register.html";i:1606566909;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:75:"D:\Wamp\www\boot-shop\public/../application/index\view\member\register.html";i:1606568052;s:63:"D:\Wamp\www\boot-shop\application\index\view\common\footer.html";i:1606568028;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -121,7 +121,8 @@
 
     </div>
 
-    <!-- footer部分 -->
+	<!-- 引入公共的footer部分 -->
+    	<!-- footer部分 -->
     <!-- 灰色横条 -->
     <div class="bg-grey">
         <div class="container">
@@ -233,8 +234,6 @@
     <script src="/boot-shop/public/static/lib/jquery/jquery.min.js"></script>
     <!-- 表单验证插件 -->
     <script src="/boot-shop/public/static/lib/jquery/jquery.validation.min.js"></script>
-    <!-- popper.min.js依赖jquery -->
-    <script src="/boot-shop/public/static/lib/popper/popper.min.js"></script>
     <!-- bootstrap.min.js依赖jquery -->
     <script src="/boot-shop/public/static/lib/bootstrap4/js/bootstrap.min.js"></script>
     

@@ -12827,3 +12827,165 @@ IT File
 [ info ] [ VIEW ] D:\Wamp\www\boot-shop\public/../application/index\view\member\login.html [ array (
 ) ]
 [ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-11-28T21:36:17+08:00 ] 0.0.0.0 GET localhost/boot-shop/public/index/member/register
+[运行时间：0.017771s] [吞吐率：56.27req/s] [内存消耗：299.88kb] [文件加载：44]
+[ info ] [ LANG ] D:\Wamp\www\boot-shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'member',
+    2 => 'register',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'none',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-dest' => 'document',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'Idea-fe3516c6=cb1c4e95-c1db-495d-8ceb-5b820c286629; Webstorm-be5713b7=19c81b9a-1096-4366-b3f6-d00f30db6270; PHPSESSID=d93e6aad8ucgf6oba7aoejil2k',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Member->register[ D:\Wamp\www\boot-shop\application\index\controller\Member.php ]
+[ info ] [ VIEW ] D:\Wamp\www\boot-shop\public/../application/index\view\member\register.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-11-28T21:36:17+08:00 ] 0.0.0.0 GET localhost/boot-shop/public/captcha
+[运行时间：0.016901s] [吞吐率：59.17req/s] [内存消耗：233.70kb] [文件加载：34]
+[ info ] [ LANG ] D:\Wamp\www\boot-shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36',
+  'accept' => 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-dest' => 'image',
+  'referer' => 'http://localhost/boot-shop/public/index/member/register',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'Idea-fe3516c6=cb1c4e95-c1db-495d-8ceb-5b820c286629; Webstorm-be5713b7=19c81b9a-1096-4366-b3f6-d00f30db6270; PHPSESSID=d93e6aad8ucgf6oba7aoejil2k',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\Wamp\www\boot-shop\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-11-28T21:36:20+08:00 ] 0.0.0.0 GET localhost/boot-shop/public/static/lib/jquery/jquery.min.map
+[运行时间：0.014470s] [吞吐率：69.11req/s] [内存消耗：214.93kb] [文件加载：35]
+[ info ] [ LANG ] D:\Wamp\www\boot-shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'lib',
+    2 => 'jquery',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-dest' => 'empty',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'Idea-fe3516c6=cb1c4e95-c1db-495d-8ceb-5b820c286629; Webstorm-be5713b7=19c81b9a-1096-4366-b3f6-d00f30db6270; PHPSESSID=d93e6aad8ucgf6oba7aoejil2k',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-11-28T21:36:20+08:00 ] 0.0.0.0 GET localhost/boot-shop/public/static/lib/bootstrap4/js/bootstrap4.min.js.map
+[运行时间：0.013896s] [吞吐率：71.96req/s] [内存消耗：215.76kb] [文件加载：35]
+[ info ] [ LANG ] D:\Wamp\www\boot-shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'lib',
+    2 => 'bootstrap4',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-dest' => 'empty',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'Idea-fe3516c6=cb1c4e95-c1db-495d-8ceb-5b820c286629; Webstorm-be5713b7=19c81b9a-1096-4366-b3f6-d00f30db6270; PHPSESSID=d93e6aad8ucgf6oba7aoejil2k',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'bootstrap4.min.js.map',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-11-28T21:36:20+08:00 ] 0.0.0.0 GET localhost/boot-shop/public/static/lib/bootstrap4/css/bootstrap4.css.map
+[运行时间：0.005368s] [吞吐率：186.29req/s] [内存消耗：215.76kb] [文件加载：35]
+[ info ] [ LANG ] D:\Wamp\www\boot-shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'lib',
+    2 => 'bootstrap4',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-dest' => 'empty',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'Idea-fe3516c6=cb1c4e95-c1db-495d-8ceb-5b820c286629; Webstorm-be5713b7=19c81b9a-1096-4366-b3f6-d00f30db6270; PHPSESSID=d93e6aad8ucgf6oba7aoejil2k',
+)
+[ info ] [ PARAM ] array (
+  'css' => 'bootstrap4.css.map',
+)
+[ info ] [ LOG ] INIT File
