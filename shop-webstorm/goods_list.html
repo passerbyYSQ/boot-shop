@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- 不设置的话，手机端不会进行响应式布局 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>商品列表页</title>
+
+    <!-- 引入图标样式 -->
+    <link rel="stylesheet" href="lib/iconfont/css/iconfont.css">
+
+    <!-- 引入Bootstrap核心样式文件 -->
+    <link rel="stylesheet" href="lib/bootstrap4/css/bootstrap.css">
+
+    <!-- 引入自己写的样式 -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/goods_list.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <!--站点图标-->
+    <!-- ... -->
+
+    <style type="text/css">
+    </style>
+
+</head>
+<body>
+    <div class="top-bar">
+        <!-- top-bar 最顶部那一行 -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-12">
+                    <ul class="clearfix">
+                        <li><a href="#">请先登录</a></li>
+                        <li><a href="#">免费注册</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-8 col-12">
+                    <ul class="bd-list clearfix">
+                        <li><a href="#">客户服务</a></li>
+                        <li><a href="#">我的收藏</a></li>
+                        <li><a href="#">我的浏览</a></li>
+                        <li><a href="#">我的订单</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container p-2">
+        <!--  logo + 搜索框      -->
+        <div class="row">
+            <div class="col-lg-4 col-sm-12 col-12">
+                <a href="https://blog.csdn.net/qq_43290318">
+                    <img src="img/logo.png" style="max-height: 92px;">
+                </a>
+                <a href="https://blog.csdn.net/qq_43290318">
+                    <img src="img/ecsc-join.gif" style="max-height: 92px;">
+                </a>
+            </div>
+            <div class="col-lg-5 col-sm-8 col-12">
+                <div class="input-group mt-4">
+                    <input type="text" class="form-control search" placeholder="请输入商品名称关键词">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" id="button-addon2">搜索</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-4 col-12">
+                <div class="shop-cart mt-4 float-right">
+                    <a href="#">
+                        <i class="iconfont icon-carts"></i><span>我的购物车</span>
+                        <em class=""><b>3</b></em>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--   导航栏     -->
+        <nav class="navbar navbar-expand-sm navbar-light mt-2">
+            <a class="navbar-brand" href="#">全部商品分类</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#">女人街</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">品牌专区</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">聚划算</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- 条件框 -->
+        <div class="card mt-4 condition-box">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <div class="condition-title">分类：</div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customControlAutosizing1">
+                        <label class="custom-control-label" for="customControlAutosizing1">Remember my preference</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customControlAutosizing2">
+                        <label class="custom-control-label" for="customControlAutosizing2">Remember my preference</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customControlAutosizing3">
+                        <label class="custom-control-label" for="customControlAutosizing3">Remember my preference</label>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="condition-title mt-1">价格：</div>
+                    <div class="price-box">
+                        <ul class="clearfix float-left mt-1">
+                            <li>1 - 99</li>
+                            <li>100 - 499</li>
+                            <li>500 - 999</li>
+                            <li>999 - 4999</li>
+                            <li>4999 - 9999</li>
+                        </ul>
+                        <div class="form-group float-left d-flex d-inline mb-0 mr-3">
+                            <input type="text" placeholder="￥" class="form-control form-control-sm">
+                            <span class="text-muted mx-2">-</span>
+                            <input type="text" placeholder="￥" class="form-control form-control-sm">
+                        </div>
+                        <button type="button" class="btn btn-primary btn-sm">确认</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 排序方式 -->
+        <ul class="list-group list-group-horizontal mt-3 sort-box">
+            <li class="list-group-item">
+                <a href="javascript:void(0);" >
+                    <span>新品</span><i class="iconfont icon-arrow-down ml-1"></i>
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a href="javascript:void(0);" >
+                    <span>价格</span><i class="iconfont icon-arrow-down ml-1"></i>
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a href="javascript:void(0);" >
+                    <span>销量</span><i class="iconfont icon-arrow-up ml-1"></i>
+                </a>
+            </li>
+        </ul>
+
+        <!-- 商品列表 -->
+        <div class="row mt-4 goods-list">
+            <div class="col-md-3 col-sm-6 col-12 mb-4">
+                <div class="card">
+                    <img src="img/girl.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="goods-num clearfix">
+                            <span class="p-price">¥398.00</span>
+                            <span class="sale-count">已售<b>968</b>件</span>
+                        </div>
+                        <p class="card-text text-right text-muted">上架：2020-07-08 23:54:54</p>
+                        <h6 class="card-title">
+                            <a href="#">
+                                夏季短袖卫衣t恤男套装运动休闲韩版潮流男装一套搭配帅气两件套
+                            </a>
+                        </h6>
+                        <div class="btn-group btn-group-sm d-flex flex-fill" role="group" >
+                            <button type="button" class="btn btn-outline-warning">
+                                <i class="iconfont icon-zan-alt "></i>
+                                <span>收藏</span>
+                            </button>
+                            <button type="button" class="btn btn-outline-warning">
+                                <i class="iconfont icon-carts"></i>
+                                <span>加入购物车</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-3 col-sm-6 col-12 mb-4">
+                <div class="card">
+                    <img src="img/girl.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="goods-num clearfix">
+                            <span class="p-price">¥398.00</span>
+                            <span class="sale-count">已售<b>968</b>件</span>
+                        </div>
+                        <p class="card-text text-right text-muted">上架：2020-07-08 23:54:54</p>
+                        <h6 class="card-title">
+                            <a href="#">
+                                夏季短袖卫衣t恤男套装运动休闲韩版潮流男装一套搭配帅气两件套
+                            </a>
+                        </h6>
+                        <div class="btn-group btn-group-sm d-flex flex-fill" role="group" >
+                            <button type="button" class="btn btn-outline-warning">
+                                <i class="iconfont icon-zan-alt icon"></i>
+                                <span>收藏</span>
+                            </button>
+                            <button type="button" class="btn btn-outline-warning">
+                                <i class="iconfont icon-carts"></i>
+                                <span>加入购物车</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-3 col-sm-6 col-12 mb-4">
+                <div class="card">
+                    <img src="img/girl.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="goods-num clearfix">
+                            <span class="p-price">¥398.00</span>
+                            <span class="sale-count">已售<b>968</b>件</span>
+                        </div>
+                        <p class="card-text text-right text-muted">上架：2020-07-08 23:54:54</p>
+                        <h6 class="card-title">
+                            <a href="#">
+                                夏季短袖卫衣t恤男套装运动休闲韩版潮流男装一套搭配帅气两件套
+                            </a>
+                        </h6>
+                        <div class="btn-group btn-group-sm d-flex flex-fill" role="group" >
+                            <button type="button" class="btn btn-outline-warning">
+                                <i class="iconfont icon-zan-alt "></i>
+                                <span>收藏</span>
+                            </button>
+                            <button type="button" class="btn btn-outline-warning">
+                                <i class="iconfont icon-carts"></i>
+                                <span>加入购物车</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-3 col-sm-6 col-12 mb-4">
+                <div class="card">
+                    <img src="img/girl.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="goods-num clearfix">
+                            <span class="p-price">¥398.00</span>
+                            <span class="sale-count">已售<b>968</b>件</span>
+                        </div>
+                        <p class="card-text text-right text-muted">上架：2020-07-08 23:54:54</p>
+                        <h6 class="card-title">
+                            <a href="#">
+                                夏季短袖卫衣t恤男套装运动休闲韩版潮流男装一套搭配帅气两件套
+                            </a>
+                        </h6>
+                        <div class="btn-group btn-group-sm d-flex flex-fill" role="group" >
+                            <button type="button" class="btn btn-outline-warning">
+                                <i class="iconfont icon-zan-alt "></i>
+                                <span>收藏</span>
+                            </button>
+                            <button type="button" class="btn btn-outline-warning">
+                                <i class="iconfont icon-carts"></i>
+                                <span>加入购物车</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-3 col-sm-6 col-12 mb-4">
+                <div class="card">
+                    <img src="img/girl.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="goods-num clearfix">
+                            <span class="p-price">¥398.00</span>
+                            <span class="sale-count">已售<b>968</b>件</span>
+                        </div>
+                        <p class="card-text text-right text-muted">上架：2020-07-08 23:54:54</p>
+                        <h6 class="card-title">
+                            <a href="#">
+                                夏季短袖卫衣t恤男套装运动休闲韩版潮流男装一套搭配帅气两件套
+                            </a>
+                        </h6>
+                        <div class="btn-group btn-group-sm d-flex flex-fill" role="group" >
+                            <button type="button" class="btn btn-outline-warning">
+                                <i class="iconfont icon-zan-alt "></i>
+                                <span>收藏</span>
+                            </button>
+                            <button type="button" class="btn btn-outline-warning">
+                                <i class="iconfont icon-carts"></i>
+                                <span>加入购物车</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- footer部分 -->
+    <!-- 灰色横条 -->
+    <div class="bg-grey">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-4 col-6 ">
+                    <div class="service-item d-flex justify-content-center">
+                        <i class="f-icon f-icon-qi"></i>
+                        <span>七天包退</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 ">
+                    <div class="service-item d-flex justify-content-center">
+                        <i class="f-icon f-icon-zheng"></i>
+                        <span>正品保障</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 ">
+                    <div class="service-item d-flex justify-content-center">
+                        <i class="f-icon f-icon-hao"></i>
+                        <span>好评如潮</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 ">
+                    <div class="service-item d-flex justify-content-center">
+                        <i class="f-icon f-icon-shan"></i>
+                        <span>闪电发货</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 ">
+                    <div class="service-item d-flex justify-content-center">
+                        <i class="f-icon f-icon-quan"></i>
+                        <span>权威荣誉</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 ">
+                    <div class="service-item d-flex justify-content-center">
+                        <i class="f-icon f-icon-kefu"></i>
+                        <span>咨询客服</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- dark部分 -->
+    <div class="footer-body">
+        <div class="container">
+            <div class="row vertical-list">
+                <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                    <h5>新手上路</h5>
+                    <ul>
+                        <li><a href="">售后流程</a></li>
+                        <li><a href="">购物流程</a></li>
+                        <li><a href="">订购方式</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                    <h5>配送与支付</h5>
+                    <ul>
+                        <li><a href="">货到付款区域</a></li>
+                        <li><a href="">配送支付智能查询</a></li>
+                        <li><a href="">支付方式说明</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                    <h5>服务保证</h5>
+                    <ul>
+                        <li><a href="">退换货原则</a></li>
+                        <li><a href="">售后服务保证</a></li>
+                        <li><a href="">产品质量保证</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                    <h5>联系我们</h5>
+                    <ul>
+                        <li><a href="">网站故障报告</a></li>
+                        <li><a href="">选机咨询</a></li>
+                        <li><a href="">投诉与建议</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 mb-2">
+                    <div class="qrcode-box">
+                       <img src="img/passerby.jpg" alt="">
+                       <div class="qrcode-title">联系我</div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 mb-2">
+                    <div class="qrcode-box">
+                        <img src="img/scnu_logo.jpg" alt="">
+                            <div class="qrcode-title">Logo</div>
+                    </div>
+                </div>
+            </div>
+            <!--  分隔线  -->
+            <div class="apart-line"></div>
+            <ul class="clearfix text-center horizontal-list d-flex justify-content-center">
+                <li><a href="#">客户服务</a></li>
+                <li><a href="#">我的收藏</a></li>
+                <li><a href="#">我的浏览</a></li>
+                <li><a href="#">我的订单</a></li>
+            </ul>
+            <p class="copyright">
+                Copyright © 2020 <a href="">passerbyYSQ</a>. All Rights Reserved | <a href=""> 粤ICP备20036780号</a><br>
+                Powered by <a href="">passerbyYSQ</a> 1127664027@qq.com
+            </p>
+        </div>
+    </div>
+
+    <!-- js的顺序不能乱 -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <!-- popper.min.js依赖jquery -->
+    <script src="lib/popper/popper.min.js"></script>
+    <!-- bootstrap.min.js依赖jquery -->
+    <script src="lib/bootstrap4/js/bootstrap.min.js"></script>
+
+</body>
+</html>

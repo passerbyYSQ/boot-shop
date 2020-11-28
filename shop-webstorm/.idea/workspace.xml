@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2e885863-4c7e-4320-8775-1b2a9fd89905" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="bootstrap" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1klDx62piAm7C3y1e6ZsjTvG7Pu" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\WebstormProjects\shop" />
+      <recent name="E:\WebstormProjects\shop\img" />
+      <recent name="E:\WebstormProjects\shop\lib\iconfont" />
+      <recent name="E:\WebstormProjects\shop\lib\bootstrap\js" />
+      <recent name="E:\WebstormProjects\shop\lib\bootstrap\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\WebstormProjects\shop\lib\iconfont\css" />
+      <recent name="E:\WebstormProjects\shop\lib\iconfont" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2e885863-4c7e-4320-8775-1b2a9fd89905" name="Default Changelist" comment="" />
+      <created>1606266528224</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606266528224</updated>
+      <workItem from="1606266529276" duration="15766000" />
+      <workItem from="1606393967636" duration="58000" />
+      <workItem from="1606394240943" duration="13000" />
+      <workItem from="1606394346897" duration="9000" />
+      <workItem from="1606394600069" duration="46000" />
+      <workItem from="1606394677444" duration="15006000" />
+      <workItem from="1606443133342" duration="28402000" />
+      <workItem from="1606493507790" duration="168000" />
+      <workItem from="1606532926322" duration="6574000" />
+      <workItem from="1606567177390" duration="1287000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="498" y="212" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606488530893">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="498" y="212" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1606488530892" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1606275258161">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1606275258161" />
+    <state x="270" y="56" key="SettingsEditor" timestamp="1606483455317">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="270" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1606483455317" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1606406256773">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1606406256773" />
+  </component>
+</project>

@@ -1,0 +1,86 @@
+/* header */
+.header .list-group-item {
+    border: none;
+    padding: 2px 12px;
+    border-right: 2px solid #e2e3e5;
+    text-align: center;
+}
+.header .list-group-item:last-child {
+    border: none;
+}
+.header .form-control {
+    border-color: rgb(0, 123, 255);
+}
+.header a {
+    color: #808080;
+}
+a:hover {
+    text-decoration:none;
+    color: rgb(0, 123, 255);
+}
+
+/* navbar */
+
+/* 轮播图 */
+.carousel {
+    margin: 4px 16px !important;
+}
+.carousel-indicators {
+    bottom: 2%;
+}
+.carousel-indicators li {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.carousel-indicators .active {
+    background-color: #0AA1ED;
+}
+.carousel-control-prev, .carousel-control-next {
+    width: 5%;
+    height: 32%;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.1);
+    top: 50%;
+    /* margin-top: -16%; 不正确 */
+    transform: translateY(-50%);
+}
+.carousel-control-prev {
+    left: 24px;
+}
+.carousel-control-next {
+    right: 24px;
+}
+
+.bg-grey {
+    background-color: #E8E8E8;
+    border-radius: 4px;
+}
+.list {
+    list-style: none;
+    padding-left: 0;
+
+}
+.list li {
+    margin: 0 8px;
+    float: left;
+}
+.card {
+    padding: 16px;
+}
+.card-body {
+    padding: 0;
+    padding-top: 8px;
+    text-align: center;
+}
+.card-title {
+
+}
+
+/*img {*/
+/*    transition: transform 1s !important;*/
+/*}*/
+/*img:hover {*/
+/*    transform: scale(1.2) !important;*/
+/*}*/
