@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:70:"D:\Wamp\www\boot-shop\public/../application/index\view\goods\list.html";i:1593848604;s:60:"D:\Wamp\www\boot-shop\application\index\view\common\top.html";i:1594013813;s:61:"D:\Wamp\www\boot-shop\application\index\view\common\cart.html";i:1591879332;s:63:"D:\Wamp\www\boot-shop\application\index\view\common\footer.html";i:1593847819;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:70:"D:\Wamp\www\boot-shop\public/../application/index\view\goods\list.html";i:1593848604;s:60:"D:\Wamp\www\boot-shop\application\index\view\common\top.html";i:1594013813;s:61:"D:\Wamp\www\boot-shop\application\index\view\common\cart.html";i:1591879332;s:63:"D:\Wamp\www\boot-shop\application\index\view\common\footer.html";i:1606568028;}*/ ?>
 <!doctype html>
 <html>
 <head>
@@ -6,24 +6,24 @@
 <title>YSQ百货 - 商品列表</title>
 <link rel="shortcut icon" href="favicon.ico" />
 <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
-<link rel="stylesheet" type="text/css" href="/shop/public/static/index/css/base.css" />
-<link rel="stylesheet" type="text/css" href="/shop/public/static/index/css/style.css" />
-<link rel="stylesheet" type="text/css" href="/shop/public/static/index/css/iconfont.css" />
-<link rel="stylesheet" type="text/css" href="/shop/public/static/index/css/purebox.css" />
+<link rel="stylesheet" type="text/css" href="/boot-shop/public/static/index/css/base.css" />
+<link rel="stylesheet" type="text/css" href="/boot-shop/public/static/index/css/style.css" />
+<link rel="stylesheet" type="text/css" href="/boot-shop/public/static/index/css/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="/boot-shop/public/static/index/css/purebox.css" />
 <link rel="stylesheet" type="text/css"
-	href="/shop/public/static/index/css/quickLinks.css" />
-<link rel="stylesheet" type="text/css" href="/shop/public/static/index/css/suggest.css" />
-<link rel="stylesheet" type="text/css" href="/shop/public/static/index/css/select.css" />
-<link rel="stylesheet" type="text/css" href="/shop/public/static/index/css/perfect-scrollbar.min.css" />
-<script type="text/javascript" src="/shop/public/static/index/js/jquery-1.9.1.min.js"></script>
+	href="/boot-shop/public/static/index/css/quickLinks.css" />
+<link rel="stylesheet" type="text/css" href="/boot-shop/public/static/index/css/suggest.css" />
+<link rel="stylesheet" type="text/css" href="/boot-shop/public/static/index/css/select.css" />
+<link rel="stylesheet" type="text/css" href="/boot-shop/public/static/index/css/perfect-scrollbar.min.css" />
+<script type="text/javascript" src="/boot-shop/public/static/index/js/jquery-1.9.1.min.js"></script>
 <!--  
-<script type="text/javascript" src="/shop/public/static/index/js/jquery.json.js"></script>
-<script type="text/javascript" src="/shop/public/static/index/js/transport_jquery.js"></script>
+<script type="text/javascript" src="/boot-shop/public/static/index/js/jquery.json.js"></script>
+<script type="text/javascript" src="/boot-shop/public/static/index/js/transport_jquery.js"></script>
 -->
 <script type="text/javascript">
 	//加载效果
-	var load_cart_info = '<img src="/shop/public/static/index/img/load/loadGoods.gif" height="108" class="ml100">';
-	var load_icon = '<img src="/shop/public/static/index/img/load/load.gif" width="200" height="200">';
+	var load_cart_info = '<img src="/boot-shop/public/static/index/img/load/loadGoods.gif" height="108" class="ml100">';
+	var load_icon = '<img src="/boot-shop/public/static/index/img/load/load.gif" width="200" height="200">';
 </script>
 </head>
 <body>
@@ -80,8 +80,8 @@
 	<div class="w w1390">
 		<div class="logo">
 			<div class="logoImg">
-				<a href="https://blog.csdn.net/qq_43290318"><img src="/shop/public/static/style/logo1.png" style="height:100%;"/></a>
-				<a href="https://blog.csdn.net/qq_43290318"><img src="/shop/public/static/style/ecsc-join.gif" /></a>
+				<a href="https://blog.csdn.net/qq_43290318"><img src="/boot-shop/public/static/style/logo1.png" style="height:100%;"/></a>
+				<a href="https://blog.csdn.net/qq_43290318"><img src="/boot-shop/public/static/style/ecsc-join.gif" /></a>
 			</div>
 		</div>
 		<div class="dsc-search">
@@ -247,7 +247,7 @@
 									<div class="gl-i-wrap" >
 										<div class="p-img" >
 											<a href="<?php echo url('goods/index'); ?>?id=<?php echo $goods['id']; ?>" target="_blank"><img 
-												src="/shop/public/<?php echo $goods['mainPic']; ?>" /></a>
+												src="/boot-shop/public/<?php echo $goods['mainPic']; ?>" /></a>
 										</div>
 
 										<div class="p-lie">
@@ -271,7 +271,7 @@
 												class="iconfont icon-zan-alt"></i>收藏</a> 
 											<a href="javascript:void(0);" onClick="addToCart(<?php echo $goods['id']; ?>)"
 												style="flex: 1;"
-												rev="/shop/public/static/index/img/0_thumb_G_1490174925807.jpg"
+												rev="/boot-shop/public/static/index/img/0_thumb_G_1490174925807.jpg"
 												data-dialog="addCart_dialog" data-divid="addCartLog"
 												data-title="请选择属性" class="addcart"> <i
 												class="iconfont icon-carts"></i>加入购物车
@@ -301,7 +301,7 @@
 						<div class="ibar_login_box status_login">
 							<div class="avatar_box">
 								<p class="avatar_imgbox">
-									<img src="/shop/public/static/index/img/touxiang.jpg" width="100"
+									<img src="/boot-shop/public/static/index/img/touxiang.jpg" width="100"
 										height="100" />
 								</p>
 								<ul class="user_info">
@@ -366,144 +366,129 @@
 					</div>
 				</div>
 			</div>
-				<div class="footer-new">
-	<div class="footer-new-top">
-		<div class="w w1200">
-			<div class="service-list">
-				<div class="service-item">
-					<i class="f-icon f-icon-qi"></i> <span>七天包退</span>
-				</div>
-				<div class="service-item">
-					<i class="f-icon f-icon-zheng"></i> <span>正品保障</span>
-				</div>
-				<div class="service-item">
-					<i class="f-icon f-icon-hao"></i> <span>好评如潮</span>
-				</div>
-				<div class="service-item">
-					<i class="f-icon f-icon-shan"></i> <span>闪电发货</span>
-				</div>
-				<div class="service-item">
-					<i class="f-icon f-icon-quan"></i> <span>权威荣誉</span>
-				</div>
-			</div>
-			<div class="contact">
-				<div class="contact-item contact-item-first">
-					<i class="f-icon f-icon-tel"></i><span>XXXX-XXX-XXX</span>
-				</div>
-				<div class="contact-item">
-					<a id="IM" IM_type="dsc" onclick="openWin(this)"
-						href="javascript:;" class="btn-ctn"><i
-						class="f-icon f-icon-kefu"></i><span>咨询客服</span></a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="footer-new-con">
-		<div class="fnc-warp">
-			<div class="help-list">
-				<div class="help-item">
-					<h3>新手上路</h3>
-					<ul>
-						<li><a href="#" title="售后流程" target="_blank" rel="nofollow">售后流程</a></li>
-						<li><a href="#" title="购物流程" target="_blank" rel="nofollow">购物流程</a></li>
-						<li><a href="#" title="订购方式" target="_blank" rel="nofollow">订购方式</a></li>
-					</ul>
-					</dl>
-				</div>
-				<div class="help-item">
-					<h3>配送与支付</h3>
-					<ul>
-						<li><a href="#" title="货到付款区域" target="_blank" rel="nofollow">货到付款区域</a></li>
-						<li><a href="#" title="配送支付智能查询 " target="_blank"
-							rel="nofollow">配送支付智能查询</a></li>
-						<li><a href="#" title="支付方式说明" target="_blank" rel="nofollow">支付方式说明</a></li>
-					</ul>
-					</dl>
-				</div>
-				<div class="help-item">
-					<h3>会员中心</h3>
-					<ul>
-						<li><a href="#" title="资金管理" target="_blank" rel="nofollow">资金管理</a></li>
-						<li><a href="#" title="我的收藏" target="_blank" rel="nofollow">我的收藏</a></li>
-						<li><a href="#" title="我的订单" target="_blank" rel="nofollow">我的订单</a></li>
-					</ul>
-					</dl>
-				</div>
-				<div class="help-item">
-					<h3>服务保证</h3>
-					<ul>
-						<li><a href="#" title="退换货原则" target="_blank" rel="nofollow">退换货原则</a></li>
-						<li><a href="#" title="售后服务保证" target="_blank" rel="nofollow">售后服务保证</a></li>
-						<li><a href="#" title="产品质量保证 " target="_blank"
-							rel="nofollow">产品质量保证</a></li>
-					</ul>
-					</dl>
-				</div>
-				<div class="help-item">
-					<h3>联系我们</h3>
-					<ul>
-						<li><a href="#" title="网站故障报告" target="_blank" rel="nofollow">网站故障报告</a></li>
-						<li><a href="#" title="选机咨询 " target="_blank" rel="nofollow">选机咨询</a></li>
-						<li><a href="#" title="投诉与建议 " target="_blank" rel="nofollow">投诉与建议</a></li>
-					</ul>
-					</dl>
-				</div>
-
-			</div>
-			<div class="qr-code">
-				<div class="qr-item qr-item-first">
-					<div class="code_img">
-						<img src="/shop/public/static/style/passerby.jpg">
-					</div>
-					<div class="code_txt">联系我</div>
-				</div>
-				<div class="qr-item">
-					<div class="code_img">
-						<img src="/shop/public/static/style/qqcode.png">
-					</div>
-					<div class="code_txt">QQ</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="footer-new-bot">
-		<div class="w w1200">
-
-			<p class="copyright_links">
-				<a href="#" rel="nofollow">首页</a> <span class="spacer"></span> <a
-					href="#" rel="nofollow">隐私保护</a> <span class="spacer"></span> <a
-					href="https://www.ysqorz.top/" rel="nofollow">联系我们</a> <span class="spacer"></span> <a
-					href="#" rel="nofollow">免责条款</a> <span class="spacer"></span> <a
-					href="https://www.ysqorz.top/" rel="nofollow">公司简介</a> <span class="spacer"></span> <a
-					href="https://www.ysqorz.top/" rel="nofollow">意见反馈</a>
-			</p>
-			<p style="color:white;">
-				<span>Copyright © 2020 <a style="color:white;" href="https://blog.csdn.net/qq_43290318">passerbyYSQ</a>. All Rights Reserved | <a style="color:white;" href="http://www.beian.miit.gov.cn/">粤ICP备20036780号</a></span>
-			</p>
-			<p style="color:white;">
-				<span>Powered by <a style="color:white;" href="https://blog.csdn.net/qq_43290318">passerbyYSQ</a> 1127664027@qq.com</span>
-			</p>
-			<p class="copyright_auth">&nbsp;</p>
-		</div>
-	</div>
-
-</div>
+					<!-- footer部分 -->
+    <!-- 灰色横条 -->
+    <div class="bg-grey">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-4 col-6 ">
+                    <div class="service-item d-flex justify-content-center">
+                        <i class="f-icon f-icon-qi"></i>
+                        <span>七天包退</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 ">
+                    <div class="service-item d-flex justify-content-center">
+                        <i class="f-icon f-icon-zheng"></i>
+                        <span>正品保障</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 ">
+                    <div class="service-item d-flex justify-content-center">
+                        <i class="f-icon f-icon-hao"></i>
+                        <span>好评如潮</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 ">
+                    <div class="service-item d-flex justify-content-center">
+                        <i class="f-icon f-icon-shan"></i>
+                        <span>闪电发货</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 ">
+                    <div class="service-item d-flex justify-content-center">
+                        <i class="f-icon f-icon-quan"></i>
+                        <span>权威荣誉</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 ">
+                    <div class="service-item d-flex justify-content-center">
+                        <i class="f-icon f-icon-kefu"></i>
+                        <span>咨询客服</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- dark部分 -->
+    <div class="footer-body">
+        <div class="container">
+            <div class="row vertical-list">
+                <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                    <h5>新手上路</h5>
+                    <ul>
+                        <li><a href="">售后流程</a></li>
+                        <li><a href="">购物流程</a></li>
+                        <li><a href="">订购方式</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                    <h5>配送与支付</h5>
+                    <ul>
+                        <li><a href="">货到付款区域</a></li>
+                        <li><a href="">配送支付智能查询</a></li>
+                        <li><a href="">支付方式说明</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                    <h5>服务保证</h5>
+                    <ul>
+                        <li><a href="">退换货原则</a></li>
+                        <li><a href="">售后服务保证</a></li>
+                        <li><a href="">产品质量保证</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                    <h5>联系我们</h5>
+                    <ul>
+                        <li><a href="">网站故障报告</a></li>
+                        <li><a href="">选机咨询</a></li>
+                        <li><a href="">投诉与建议</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 mb-2">
+                    <div class="qrcode-box">
+                        <img src="/boot-shop/public/static/index/img/passerby.jpg" alt="">
+                        <div class="qrcode-title">联系我</div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 mb-2">
+                    <div class="qrcode-box">
+                        <img src="/boot-shop/public/static/index/img/scnu_logo.jpg" alt="">
+                        <div class="qrcode-title">Logo</div>
+                    </div>
+                </div>
+            </div>
+            <!--  分隔线  -->
+            <div class="apart-line"></div>
+            <ul class="clearfix text-center horizontal-list d-flex justify-content-center">
+                <li><a href="#">客户服务</a></li>
+                <li><a href="#">我的收藏</a></li>
+                <li><a href="#">我的浏览</a></li>
+                <li><a href="#">我的订单</a></li>
+            </ul>
+            <p class="copyright">
+                Copyright © 2020 <a href="">passerbyYSQ</a>. All Rights Reserved | <a href=""> 粤ICP备20036780号</a><br>
+                Powered by <a href="">passerbyYSQ</a> 1127664027@qq.com
+            </p>
+        </div>
+    </div>
 
 				<!-- 
-				<script type="text/javascript" src="/shop/public/static/index/js/utils.js"></script>
+				<script type="text/javascript" src="/boot-shop/public/static/index/js/utils.js"></script>
 
-				<script type="text/javascript" src="/shop/public/static/index/js/jquery.SuperSlide.2.1.1.js"></script>
-				<script type="text/javascript" src="/shop/public/static/index/js/common.js"></script>
-				<script type="text/javascript" src="/shop/public/static/index/js/cart_common.js"></script>
+				<script type="text/javascript" src="/boot-shop/public/static/index/js/jquery.SuperSlide.2.1.1.js"></script>
+				<script type="text/javascript" src="/boot-shop/public/static/index/js/common.js"></script>
+				<script type="text/javascript" src="/boot-shop/public/static/index/js/cart_common.js"></script>
 				
-				<script type="text/javascript" src="/shop/public/static/index/js/parabola.js"></script>
-				<script type="text/javascript" src="/shop/public/static/index/js/shopping_flow.js"></script>
+				<script type="text/javascript" src="/boot-shop/public/static/index/js/parabola.js"></script>
+				<script type="text/javascript" src="/boot-shop/public/static/index/js/shopping_flow.js"></script>
 				<script type="text/javascript"
-					src="/shop/public/static/index/js/cart_quick_links.js"></script>
+					src="/boot-shop/public/static/index/js/cart_quick_links.js"></script>
 				<script type="text/javascript"
-					src="/shop/public/static/index/js/perfect-scrollbar.min.js"></script>
+					src="/boot-shop/public/static/index/js/perfect-scrollbar.min.js"></script>
 
-				<script type="text/javascript" src="/shop/public/static/index/js/jquery.purebox.js"></script>
+				<script type="text/javascript" src="/boot-shop/public/static/index/js/jquery.purebox.js"></script>
 				
 				-->
 				<script type="text/javascript">

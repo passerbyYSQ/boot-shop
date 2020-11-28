@@ -54,7 +54,7 @@ class Member extends Controller {
         }
         
         if (request()->isPost()) {
-            $phone = input('post.username');
+            $phone = input('post.mobile_phone');
             $password = input('post.password');
             
             $model = new MemberModel();

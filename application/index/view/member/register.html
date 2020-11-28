@@ -29,16 +29,19 @@
                 </a>
             </div>
             <div class="col-lg-5 col-sm-8 col-12">
-                <div class="input-group mt-4">
-                    <input type="text" class="form-control search" placeholder="请输入商品名称关键词">
-                    <div class="input-group-append">
-                        <button class="btn btn-primary" type="button" id="button-addon2">搜索</button>
-                    </div>
-                </div>
+                <form id="searchForm" method="get" action="{:url('goods/list')}">
+		            <div class="input-group mt-4">
+		            	<input type="text" name="goodsName" class="form-control search" placeholder="请输入商品名称关键词"
+		                	{notempty name="$conds.goodsName" placeholder="搜索商品名"}value="{$conds.goodsName}" {/notempty}>
+		                <div class="input-group-append">
+		                    <button class="btn btn-primary" type="submit" id="button-addon2">搜索</button>
+		                </div>
+		            </div>
+	            </form>
             </div>
             <div class="col-lg-3 col-sm-4 col-12">
                 <div class="shop-cart mt-4 float-right to-login">
-                    <a href="#">已有账号，去&nbsp;<em><b>登录</b></em></a>
+                    <a href="{:url('member/login')}">已有账号，去&nbsp;<em><b>登录</b></em></a>
                 </div>
             </div>
         </div>

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:75:"D:\Wamp\www\boot-shop\public/../application/index\view\member\register.html";i:1606568052;s:63:"D:\Wamp\www\boot-shop\application\index\view\common\footer.html";i:1606568028;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:75:"D:\Wamp\www\boot-shop\public/../application/index\view\member\register.html";i:1606575460;s:63:"D:\Wamp\www\boot-shop\application\index\view\common\footer.html";i:1606568028;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,16 +30,19 @@
                 </a>
             </div>
             <div class="col-lg-5 col-sm-8 col-12">
-                <div class="input-group mt-4">
-                    <input type="text" class="form-control search" placeholder="请输入商品名称关键词">
-                    <div class="input-group-append">
-                        <button class="btn btn-primary" type="button" id="button-addon2">搜索</button>
-                    </div>
-                </div>
+                <form id="searchForm" method="get" action="<?php echo url('goods/list'); ?>">
+		            <div class="input-group mt-4">
+		            	<input type="text" name="goodsName" class="form-control search" placeholder="请输入商品名称关键词"
+		                	<?php if(!(empty($conds['goodsName']) || (($conds['goodsName'] instanceof \think\Collection || $conds['goodsName'] instanceof \think\Paginator ) && $conds['goodsName']->isEmpty()))): ?>value="<?php echo $conds['goodsName']; ?>" <?php endif; ?>>
+		                <div class="input-group-append">
+		                    <button class="btn btn-primary" type="submit" id="button-addon2">搜索</button>
+		                </div>
+		            </div>
+	            </form>
             </div>
             <div class="col-lg-3 col-sm-4 col-12">
                 <div class="shop-cart mt-4 float-right to-login">
-                    <a href="#">已有账号，去&nbsp;<em><b>登录</b></em></a>
+                    <a href="<?php echo url('member/login'); ?>">已有账号，去&nbsp;<em><b>登录</b></em></a>
                 </div>
             </div>
         </div>

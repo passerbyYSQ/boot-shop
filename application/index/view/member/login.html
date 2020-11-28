@@ -42,16 +42,19 @@
             </a>
         </div>
         <div class="col-lg-5 col-sm-8 col-12">
-            <div class="input-group mt-4">
-                <input type="text" class="form-control search" placeholder="请输入商品名称关键词">
-                <div class="input-group-append">
-                    <button class="btn btn-primary" type="button" id="button-addon2">搜索</button>
-                </div>
-            </div>
+        	<form id="searchForm" method="get" action="{:url('goods/list')}">
+	            <div class="input-group mt-4">
+	            	<input type="text" name="goodsName" class="form-control search" placeholder="请输入商品名称关键词"
+	                	{notempty name="$conds.goodsName" placeholder="搜索商品名"}value="{$conds.goodsName}" {/notempty}>
+	                <div class="input-group-append">
+	                    <button class="btn btn-primary" type="submit" id="button-addon2">搜索</button>
+	                </div>
+	            </div>
+            </form>
         </div>
         <div class="col-lg-3 col-sm-4 col-12">
             <div class="shop-cart mt-4 float-right to-login">
-                <a href="#">未有账号，去&nbsp;<em><b>注册</b></em></a>
+                <a href="{:url('member/register')}">未有账号，去&nbsp;<em><b>注册</b></em></a>
             </div>
         </div>
     </div>
@@ -90,24 +93,25 @@
                     <h4 class="title mb-2">欢迎登录EasyMall</h4>
                     <img src="__index__/img/girl.jpg" alt="..." class="img-thumbnail rounded-circle photo mb-2" >
                     <!-- 登录表单 -->
-                    <form id="loginForm">
+                    <form id="loginForm" action="{:url('member/login')}" method="post" onSubmit="return false;">
                         <div class="form-group">
-                            <label for="phone">手机</label>
-                            <span class="error-msg">手机不存在</span>
-                            <input type="text" class="form-control" id="phone" name="phone" placeholder="手机">
+                            <label for="mobile_phone">手机</label>
+                            <span class="error-msg"></span>
+                            <input type="text" class="form-control" id="mobile_phone" name="mobile_phone" placeholder="手机">
                         </div>
                         <div class="form-group">
                             <label for="password">密码</label>
-                            <span class="error-msg">密码错误</span>
+                            <span class="error-msg"></span>
                             <input type="password" class="form-control" id="password" name="password" placeholder="密码">
                         </div>
                         <div class="form-group">
                             <label for="captcha">验证码</label>
+                            <span class="error-msg"></span>
                             <div class="input-group mb-3">
-                                <input type="text" maxlength="4" class="form-control is-invalid" id="captcha" name="captcha"
+                                <input type="text" maxlength="4" class="form-control" id="captcha" name="captcha"
                                        placeholder="验证码">
                                 <div class="input-group-append">
-                                    <img src="__index__/img/verification_code.jpg" class="captcha">
+                                    <img src="{:captcha_src()}" onClick="this.src='{:captcha_src()}'" class="captcha">
                                 </div>
                             </div>
                         </div>
@@ -133,7 +137,114 @@
 	<!-- 为了避免浏览器缓存静态资源文件，就不把自定义的js放到单独的js文件了，
     	直接写在<script>标签中 -->
    	<script type="text/javascript">
-   		
+   	$(function() {
+   		// 登录表单验证
+   		$("#loginForm").validate({
+   			// 表单验证成功通过后的回调
+   			submitHandler: function(form) {
+   				//console.log(form);
+   				form.submit();
+   			},
+   			// 错误提示
+   			errorPlacement: function(error, element) { // 错误信息，input表单项
+   				// 设置输入框的错误样式
+   				element.addClass('is-invalid');
+   				// 找到输入框的含有form-group样式的祖先元素div。parents()找祖先元素，parent()找直接父亲元素
+   				var parentDiv = element.parents('div.form-group')
+   				// 找到装信息提示的span
+   				var errorMsgSpan = parentDiv.find('span.error-msg');
+   				// 设置错误信息提示
+   				errorMsgSpan.html(error); 
+   			},
+   			// 成功时，移除
+   			success: function(element) { // 注意这里回调过来的并不是输入框，而是label 
+   				//console.log(element);
+   				// 找到输入框的含有form-group样式的祖先元素div。parents()找祖先元素，parent()找直接父亲元素
+   				var parentDiv = element.parents('div.form-group')
+   				// 找到装信息提示的span
+   				var errorMsgSpan = parentDiv.find('span.error-msg');
+   				// 找到输入框
+   				var input = parentDiv.find('input');
+   				// 移除错误信息提示
+   				errorMsgSpan.html(''); 
+   				// 重置输入框样式
+   				input.removeClass('is-invalid');
+   				input.addClass('is-valid');
+   			},
+   			ignore: ".ignore",
+   			// 表单验证规则
+   			rules: {
+   				mobile_phone: { 
+   					required: true,
+   					isMobile: true,
+   					remote: {
+   						cache: false,
+   						async: true,
+   						type: 'POST',
+   						url: "{:url('member/isPhoneExist')}",
+   						data: { // 请求所需的参数列表
+   							mobile_phone: function() {
+   								return $('#mobile_phone').val();
+   							}
+   						},
+   						// 由于remote需要的返回值是布尔值（false表示不通过），而实际返回值是一个封装对象
+   						// 所以需要dataFilter对返回的封装对象进行预处理，并给remote返回所需的布尔值
+   						dataFilter: function(jsonStr, type) {
+   							// true：不存在
+   							if (jsonStr === 'true') {
+   								return false;
+   							}
+   							return true;
+   						}
+   					}
+   				},
+   				password: {
+   					required: true,
+   					rangelength: [3, 32]  // 字符长度
+   				},
+   				captcha: {
+   					required: true,
+   					remote: {
+   						cache: false,
+   						async: true,
+   						type: 'POST',
+   						url: "{:url('member/checkCaptcha')}",
+   						data: { // 提交给服务端的数据（键值对）
+   							captcha: function() {
+   								return $('#captcha').val();
+   							}
+   						},
+   						dataFilter: function(jsonStr, type) {
+   							// jsonStr是'true'表示验证码正确
+   							return jsonStr === 'true'; 
+   						}
+   					}
+   				}
+   			},
+   			messages: { // 与验证规则一一对应的消息提示
+   				mobile_phone: {
+   					required: '请输入手机号',
+   					isMobile: '请输入正确的手机号',
+   					remote: '该手机号尚未注册'
+   				},
+   				password: {
+   					required: '密码不能为空',
+   					rangelength: '密码长度在3到32个字符' 
+   				},
+   				captcha: {
+   					required: '验证码不能为空',
+   					remote: '验证码错误'
+   				}
+   			},
+   			onkeyup: function(element, event) {
+   				var name = $(element).attr("name");
+   				if (name == "captcha") {
+   					//不可去除，当是验证码输入必须失去焦点才可以验证（错误刷新验证码）
+   					return false;
+   				}
+   			}
+   		});
+   	});
    	</script>
 	
 </body>
