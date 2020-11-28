@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- 不设置的话，手机端不会进行响应式布局 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>登录页</title>
+
+    <!-- 引入Bootstrap核心样式文件 -->
+    <link rel="stylesheet" href="__lib__/bootstrap4/css/bootstrap.css">
+    <!-- 引入自己写的样式 -->
+    <link rel="stylesheet" href="__index__/css/base.css">
+    <link rel="stylesheet" href="__index__/css/footer.css">
+    <link rel="stylesheet" href="__index__/css/register.css">
+
+    <style type="text/css">
+        /* 头像 */
+        .photo {
+            width: 100px;
+            display: block;
+            margin: 0 auto;
+            box-shadow: 0 0 6px #ddd;
+        }
+    </style>
+
+    <!--站点图标-->
+    <!-- ... -->
+
+</head>
+<body>
+<div class="container">
+    <!--  logo + 搜索框      -->
+    <!--  logo + 搜索框      -->
+    <div class="row mt-2">
+        <div class="col-lg-4 col-sm-12 col-12">
+            <a href="https://blog.csdn.net/qq_43290318">
+                <img src="__index__/img/logo.png" style="max-height: 92px;">
+            </a>
+            <a href="https://blog.csdn.net/qq_43290318">
+                <img src="__index__/img/ecsc-join.gif" style="max-height: 92px;">
+            </a>
+        </div>
+        <div class="col-lg-5 col-sm-8 col-12">
+            <div class="input-group mt-4">
+                <input type="text" class="form-control search" placeholder="请输入商品名称关键词">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="button" id="button-addon2">搜索</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-4 col-12">
+            <div class="shop-cart mt-4 float-right to-login">
+                <a href="#">未有账号，去&nbsp;<em><b>注册</b></em></a>
+            </div>
+        </div>
+    </div>
+
+    <!--   导航栏     -->
+    <nav class="navbar navbar-expand-sm navbar-light mt-2 mb-4">
+        <a class="navbar-brand" href="#">全部商品分类</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#">女人街</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">品牌专区</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">聚划算</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 中间主体部分 -->
+    <div class="row my-4">
+        <!-- 控制居中 -->
+        <div class="col-md-4 offset-md-4 col-sm-8 offset-sm-2 px-2">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="title mb-2">欢迎登录EasyMall</h4>
+                    <img src="__index__/img/girl.jpg" alt="..." class="img-thumbnail rounded-circle photo mb-2" >
+                    <!-- 登录表单 -->
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="phone">手机</label>
+                            <span class="error-msg">手机不存在</span>
+                            <input type="text" class="form-control" id="phone" name="phone" placeholder="手机">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">密码</label>
+                            <span class="error-msg">密码错误</span>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="密码">
+                        </div>
+                        <div class="form-group">
+                            <label for="captcha">验证码</label>
+                            <div class="input-group mb-3">
+                                <input type="text" maxlength="4" class="form-control is-invalid" id="captcha" name="captcha"
+                                       placeholder="验证码">
+                                <div class="input-group-append">
+                                    <img src="__index__/img/verification_code.jpg" class="captcha">
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success register-btn">登&nbsp;&nbsp;录</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+	<!-- 引入公共的footer部分 -->
+    {include file="common/footer" /}
+
+	<!-- js的顺序不能乱 -->
+	<script src="__lib__/jquery/jquery.min.js"></script>
+	<!-- 表单验证插件 -->
+	<script src="__lib__/jquery/jquery.validation.min.js"></script>
+	<!-- bootstrap.min.js依赖jquery -->
+	<script src="__lib__/bootstrap4/js/bootstrap.min.js"></script>
+	
+	<!-- 为了避免浏览器缓存静态资源文件，就不把自定义的js放到单独的js文件了，
+    	直接写在<script>标签中 -->
+   	<script type="text/javascript">
+   		
+   	</script>
+	
+</body>
+</html>

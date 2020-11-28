@@ -1,0 +1,114 @@
+<div class="site-nav" id="site-nav">
+	<div class="w w1390">
+		<div class="fl">
+			<div class="txt-info" id="ECS_MEMBERZONE">
+				{empty name="$Think.session.member"}
+					<a href="{:url('member/login')}" class="link-login red">请登录</a> 
+					<a href="{:url('member/register')}" class="link-regist">免费注册</a>
+				{else/}
+					<a href="#" class="link-login red">
+						{$Think.session.member.phone} | {$Think.session.member.memberName}
+					</a> 
+					<a href="{:url('member/logout')}" class="link-regist" 
+					onClick="return confirm('是否确认退出当前账号？');">退出</a>
+				{/empty}
+				<a style="margin-left:16px;" href="{:url('admin/login/index')}" class="link-regist" 
+					>后台登录：http://www.ysqorz.top/admin/login/</a>
+				<a style="margin-left:16px;" href="https://www.ysqorz.top/" class="link-regist" 
+					>交流反馈：https://www.ysqorz.top/</a>
+				<a style="margin-left:16px;" href="https://github.com/passerbyYSQ/shop" class="link-regist" 
+					>项目Github：https://github.com/passerbyYSQ/shop</a>
+			</div>
+		</div>
+		<ul class="quick-menu fr">
+			<li>
+				<div class="dt">
+					<a href="{:url('order/myorder')}">我的订单</a>
+				</div>
+			</li>
+			<li class="spacer"></li>
+			<li>
+				<div class="dt">
+					<a href="#">我的浏览</a>
+				</div>
+			</li>
+			<li class="spacer"></li>
+			<li>
+				<div class="dt">
+					<a href="#">我的收藏</a>
+				</div>
+			</li>
+			<li class="spacer"></li>
+			<li>
+				<div class="dt">
+					<a href="https://www.ysqorz.top/">客户服务</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="header">
+	<div class="w w1390">
+		<div class="logo">
+			<div class="logoImg">
+				<a href="https://blog.csdn.net/qq_43290318"><img src="__root__/logo1.png" style="height:100%;"/></a>
+				<a href="https://blog.csdn.net/qq_43290318"><img src="__root__/ecsc-join.gif" /></a>
+			</div>
+		</div>
+		<div class="dsc-search">
+			<div class="form">
+				<form id="searchForm" method="get"
+					action="{:url('goods/list')}"class="search-form">
+					<input name="goodsName" type="text" id="keyword" class="search-text" {notempty name="$conds.goodsName"}value="{$conds.goodsName}"{/notempty}/> 
+					<button type="submit" class="button button-goods">搜商品</button>
+				</form>
+				<ul class="keyword">
+					<li><a href="#" target="_blank">周大福</a></li>
+					<li><a href="#" target="_blank">内衣</a></li>
+					<li><a href="#" target="_blank">Five Plus</a></li>
+					<li><a href="#" target="_blank">手机</a></li>
+				</ul>
+
+				<div class="suggestions_box" id="suggestions" style="display: none;">
+					<div class="suggestions_list" id="auto_suggestions_list">&nbsp;</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="shopCart" data-ectype="dorpdown" id="ECS_CARTINFO"
+			data-carteveval="0">
+			<div class="shopCart-con dsc-cm">
+				<a href="{:url('cart/index')}"> 
+					<i class="iconfont icon-carts"></i> <span>我的购物车</span>
+					<em class="count cart_num">?</em>
+				</a>
+			</div>
+			<div class="dorpdown-layer" ectype="dorpdownLayer">
+				<div class="prompt">
+					<div class="nogoods">
+						<b></b><span>购物车中还没有商品，赶紧选购吧！</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="nav dsc-zoom">
+	<div class="w w1390">
+		<div class="categorys site-mast">
+			<div class="categorys-type">
+				<a href="#" target="_blank">全部商品分类</a>
+			</div>
+		</div>
+		<div class="nav-main" id="nav">
+			<ul class="navitems">
+				<li><a href="#" class="curr">首页</a></li>
+				<li><a href="#">女装街</a></li>
+				<li><a href="#">男人柜</a></li>
+				<li><a href="#">品牌专区</a></li>
+				<li><a href="#">聚划算</a></li>
+				<li><a href="#">积分商城</a></li>
+			</ul>
+		</div>
+	</div>
+</div>

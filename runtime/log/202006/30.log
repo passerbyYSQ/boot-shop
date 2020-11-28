@@ -1,0 +1,2681 @@
+---------------------------------------------------------------
+[ 2020-06-30T23:32:50+08:00 ] 0.0.0.0 GET localhost/shop/public/index.php/index/cart
+[运行时间：0.087153s] [吞吐率：11.47req/s] [内存消耗：380.57kb] [文件加载：42]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'cart',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'none',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-dest' => 'document',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Cart->index[ D:\Wamp\www\shop\application\index\controller\Cart.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\Wamp\www\shop\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-06-30T23:32:52+08:00 ] 0.0.0.0 GET localhost/shop/public/index.php/index/member/login
+[运行时间：0.022984s] [吞吐率：43.51req/s] [内存消耗：285.66kb] [文件加载：44]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'member',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-dest' => 'document',
+  'referer' => 'http://localhost/shop/public/index.php/index/cart',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Member->login[ D:\Wamp\www\shop\application\index\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\Wamp\www\shop\public/../application/index\view\member\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-06-30T23:32:52+08:00 ] 0.0.0.0 GET localhost/shop/public/index.php/captcha
+[运行时间：0.020999s] [吞吐率：47.62req/s] [内存消耗：234.16kb] [文件加载：34]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-dest' => 'image',
+  'referer' => 'http://localhost/shop/public/index.php/index/member/login',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\Wamp\www\shop\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-06-30T23:32:52+08:00 ] 0.0.0.0 GET localhost/shop/public/index.php/index/member/favicon.ico
+[运行时间：0.028654s] [吞吐率：34.90req/s] [内存消耗：230.70kb] [文件加载：42]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'member',
+    2 => 'favicon',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost/shop/public/index.php/index/member/login',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-06-30T23:33:07+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/member/checkcaptcha
+[运行时间：0.015199s] [吞吐率：65.79req/s] [内存消耗：248.14kb] [文件加载：41]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'member',
+    2 => 'checkcaptcha',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '12',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://localhost',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost/shop/public/index.php/index/member/login',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'captcha' => 'NLVS',
+)
+[ info ] [ RUN ] app\index\controller\Member->checkCaptcha[ D:\Wamp\www\shop\application\index\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-06-30T23:33:07+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/member/login
+[运行时间：0.072401s] [吞吐率：13.81req/s] [内存消耗：573.42kb] [文件加载：51]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'member',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '207',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'origin' => 'http://localhost',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-dest' => 'document',
+  'referer' => 'http://localhost/shop/public/index.php/index/member/login',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'username' => '18575784345',
+  'password' => '123456',
+  'captcha' => 'NLVS',
+  'dsc_token' => 'd181014a3312a8a86c67ccff723ac5fd',
+  'act' => 'act_login',
+  'back_act' => '.%2Findex.php',
+  'submit' => '登  录',
+)
+[ info ] [ RUN ] app\index\controller\Member->login[ D:\Wamp\www\shop\application\index\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\Wamp\www\shop\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012108s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `member` [ RunTime:0.007129s ]
+[ sql ] [ SQL ] SELECT * FROM `member` WHERE  `phone` = '18575784345' LIMIT 1 [ RunTime:0.000788s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:33:10+08:00 ] 0.0.0.0 GET localhost/shop/public/index.php/index/goods/list
+[运行时间：0.065825s] [吞吐率：15.19req/s] [内存消耗：634.65kb] [文件加载：55]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-dest' => 'document',
+  'referer' => 'http://localhost/shop/public/index.php/index/member/login',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Goods->list[ D:\Wamp\www\shop\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\Wamp\www\shop\public/../application/index\view\goods\list.html [ array (
+  0 => 'cates',
+  1 => 'goodsList',
+  2 => 'pageHtml',
+  3 => 'conds',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001201s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `category` [ RunTime:0.005711s ]
+[ sql ] [ SQL ] SELECT * FROM `category` ORDER BY `sort` DESC,`id` DESC [ RunTime:0.000651s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011447s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `goods` [ RunTime:0.008665s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `goods` LIMIT 1 [ RunTime:0.000621s ]
+[ sql ] [ SQL ] SELECT `id`,`goodsName`,`mainPic`,`salePrice`,`saleCount` FROM `goods` ORDER BY `onSaleTime` DESC LIMIT 0,12 [ RunTime:0.000521s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:33:11+08:00 ] 0.0.0.0 GET localhost/shop/public/index.php/index/goods/favicon.ico
+[运行时间：0.016681s] [吞吐率：59.95req/s] [内存消耗：228.52kb] [文件加载：42]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'favicon',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost/shop/public/index.php/index/goods/list',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-06-30T23:33:15+08:00 ] 0.0.0.0 GET localhost/shop/public/index.php/index/cart/index
+[运行时间：0.043163s] [吞吐率：23.17req/s] [内存消耗：462.38kb] [文件加载：50]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'cart',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-dest' => 'document',
+  'referer' => 'http://localhost/shop/public/index.php/index/goods/list',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Cart->index[ D:\Wamp\www\shop\application\index\controller\Cart.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\Wamp\www\shop\public/../application/index\view\cart\cart_list.html [ array (
+  0 => 'itemList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011157s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cart` [ RunTime:0.011352s ]
+[ sql ] [ SQL ] SELECT c.id as cartId,`c`.`count`,g.id as goodsId,`goodsName`,`mainPic`,`salePrice`,g.count as last FROM `cart` `c` INNER JOIN `goods` `g` ON `c`.`goodsId`=`g`.`id` WHERE  `memberId` = 1 [ RunTime:0.001371s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:33:15+08:00 ] 0.0.0.0 GET localhost/shop/public/index.php/index/cart/favicon.ico
+[运行时间：0.019809s] [吞吐率：50.48req/s] [内存消耗：229.11kb] [文件加载：42]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'cart',
+    2 => 'favicon',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost/shop/public/index.php/index/cart/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-06-30T23:39:22+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/cart/updatenum
+[运行时间：0.048493s] [吞吐率：20.62req/s] [内存消耗：492.63kb] [文件加载：53]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'cart',
+    2 => 'updatenum',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '17',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://localhost',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost/shop/public/index.php/index/cart/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'cartId' => '7',
+  'count' => '23',
+)
+[ info ] [ RUN ] app\index\controller\Cart->updateNum[ D:\Wamp\www\shop\application\index\controller\Cart.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011575s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cart` [ RunTime:0.002094s ]
+[ sql ] [ SQL ] SELECT * FROM `cart` WHERE  `id` = 7 LIMIT 1 [ RunTime:0.000549s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `goods` [ RunTime:0.001498s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000553s ]
+[ sql ] [ SQL ] UPDATE `cart`  SET `count`=23  WHERE  `id` = 7 [ RunTime:0.003468s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:39:33+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/cart/updatenum
+[运行时间：0.028034s] [吞吐率：35.67req/s] [内存消耗：491.37kb] [文件加载：53]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'cart',
+    2 => 'updatenum',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '17',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://localhost',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost/shop/public/index.php/index/cart/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'cartId' => '7',
+  'count' => '27',
+)
+[ info ] [ RUN ] app\index\controller\Cart->updateNum[ D:\Wamp\www\shop\application\index\controller\Cart.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001160s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cart` [ RunTime:0.001538s ]
+[ sql ] [ SQL ] SELECT * FROM `cart` WHERE  `id` = 7 LIMIT 1 [ RunTime:0.000483s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `goods` [ RunTime:0.001527s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000562s ]
+[ sql ] [ SQL ] UPDATE `cart`  SET `count`=27  WHERE  `id` = 7 [ RunTime:0.011597s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:39:58+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/order/index
+[运行时间：0.034633s] [吞吐率：28.87req/s] [内存消耗：563.51kb] [文件加载：51]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '117',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'origin' => 'http://localhost',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-dest' => 'document',
+  'referer' => 'http://localhost/shop/public/index.php/index/cart/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'checkItem' => 
+  array (
+    0 => '7',
+    1 => '8',
+    2 => '9',
+    3 => '10',
+  ),
+  'goodsNum' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Order->index[ D:\Wamp\www\shop\application\index\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\Wamp\www\shop\public/../application/index\view\order\order.html [ array (
+  0 => 'allAddress',
+  1 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010108s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cart` [ RunTime:0.001538s ]
+[ sql ] [ SQL ] SELECT c.id as cartId,`c`.`count`,g.id as goodsId,`goodsName`,`mainPic`,`salePrice`,g.count as last FROM `cart` `c` INNER JOIN `goods` `g` ON `c`.`goodsId`=`g`.`id` WHERE  `c`.`id` IN ('7','8','9','10') [ RunTime:0.001390s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `address` [ RunTime:0.002515s ]
+[ sql ] [ SQL ] SELECT * FROM `address` WHERE  `memberId` = 1 ORDER BY `id` DESC [ RunTime:0.000590s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:39:58+08:00 ] 0.0.0.0 GET localhost/shop/public/index.php/index/order/favicon.ico
+[运行时间：0.011553s] [吞吐率：86.56req/s] [内存消耗：229.41kb] [文件加载：42]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'favicon',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost/shop/public/index.php/index/order/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-06-30T23:40:18+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/order/deleteaddress
+[运行时间：0.052974s] [吞吐率：18.88req/s] [内存消耗：472.16kb] [文件加载：52]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'deleteaddress',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '11',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://localhost',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost/shop/public/index.php/index/order/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'addressId' => '2',
+)
+[ info ] [ RUN ] app\index\controller\Order->deleteAddress[ D:\Wamp\www\shop\application\index\controller\Order.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011859s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `address` [ RunTime:0.008688s ]
+[ sql ] [ SQL ] SELECT * FROM `address` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000715s ]
+[ sql ] [ SQL ] DELETE FROM `address`    WHERE  `id` = 2 [ RunTime:0.011888s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:41:05+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/order/updateaddress
+[运行时间：0.009158s] [吞吐率：109.19req/s] [内存消耗：230.14kb] [文件加载：42]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'updateaddress',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '274',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://localhost',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost/shop/public/index.php/index/order/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'consigneeName' => '测试346',
+  'mobilePhone' => '18575784345',
+  'telephone' => '235',
+  'province' => '甘肃省',
+  'city' => '庆阳市',
+  'area' => '正宁县',
+  'detail' => '华南师范大学南海校区',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-06-30T23:41:06+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/order/updateaddress
+[运行时间：0.006635s] [吞吐率：150.72req/s] [内存消耗：230.14kb] [文件加载：42]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'updateaddress',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '274',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://localhost',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost/shop/public/index.php/index/order/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'consigneeName' => '测试346',
+  'mobilePhone' => '18575784345',
+  'telephone' => '235',
+  'province' => '甘肃省',
+  'city' => '庆阳市',
+  'area' => '正宁县',
+  'detail' => '华南师范大学南海校区',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-06-30T23:43:18+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/order/index
+[运行时间：0.032833s] [吞吐率：30.46req/s] [内存消耗：489.70kb] [文件加载：51]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '117',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'origin' => 'http://localhost',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-dest' => 'document',
+  'referer' => 'http://localhost/shop/public/index.php/index/cart/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'checkItem' => 
+  array (
+    0 => '7',
+    1 => '8',
+    2 => '9',
+    3 => '10',
+  ),
+  'goodsNum' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Order->index[ D:\Wamp\www\shop\application\index\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\Wamp\www\shop\public/../application/index\view\order\order.html [ array (
+  0 => 'allAddress',
+  1 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010475s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cart` [ RunTime:0.001556s ]
+[ sql ] [ SQL ] SELECT c.id as cartId,`c`.`count`,g.id as goodsId,`goodsName`,`mainPic`,`salePrice`,g.count as last FROM `cart` `c` INNER JOIN `goods` `g` ON `c`.`goodsId`=`g`.`id` WHERE  `c`.`id` IN ('7','8','9','10') [ RunTime:0.001230s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `address` [ RunTime:0.001553s ]
+[ sql ] [ SQL ] SELECT * FROM `address` WHERE  `memberId` = 1 ORDER BY `id` DESC [ RunTime:0.000557s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:43:38+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/order/updateaddress
+[运行时间：0.010018s] [吞吐率：99.82req/s] [内存消耗：230.14kb] [文件加载：42]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'updateaddress',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '250',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://localhost',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost/shop/public/index.php/index/order/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'consigneeName' => '测试11111',
+  'mobilePhone' => '18938322395',
+  'telephone' => '3532',
+  'province' => '吉林省',
+  'city' => '松原市',
+  'area' => '乾安县',
+  'detail' => '而过问过问过问',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-06-30T23:46:00+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/order/updateaddress
+[运行时间：0.009506s] [吞吐率：105.20req/s] [内存消耗：230.14kb] [文件加载：42]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'updateaddress',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '250',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://localhost',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost/shop/public/index.php/index/order/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'consigneeName' => '测试11111',
+  'mobilePhone' => '18938322395',
+  'telephone' => '3532',
+  'province' => '吉林省',
+  'city' => '松原市',
+  'area' => '乾安县',
+  'detail' => '而过问过问过问',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-06-30T23:46:02+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/order/updateaddress
+[运行时间：0.006876s] [吞吐率：145.43req/s] [内存消耗：230.14kb] [文件加载：42]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'updateaddress',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '250',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://localhost',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost/shop/public/index.php/index/order/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'consigneeName' => '测试11111',
+  'mobilePhone' => '18938322395',
+  'telephone' => '3532',
+  'province' => '吉林省',
+  'city' => '松原市',
+  'area' => '乾安县',
+  'detail' => '而过问过问过问',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-06-30T23:46:04+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/order/index
+[运行时间：0.042326s] [吞吐率：23.63req/s] [内存消耗：617.59kb] [文件加载：53]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '117',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'origin' => 'http://localhost',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-dest' => 'document',
+  'referer' => 'http://localhost/shop/public/index.php/index/cart/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'checkItem' => 
+  array (
+    0 => '7',
+    1 => '8',
+    2 => '9',
+    3 => '10',
+  ),
+  'goodsNum' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Order->index[ D:\Wamp\www\shop\application\index\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\Wamp\www\shop\public/../application/index\view\order\order.html [ array (
+  0 => 'allAddress',
+  1 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002097s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cart` [ RunTime:0.004376s ]
+[ sql ] [ SQL ] SELECT c.id as cartId,`c`.`count`,g.id as goodsId,`goodsName`,`mainPic`,`salePrice`,g.count as last FROM `cart` `c` INNER JOIN `goods` `g` ON `c`.`goodsId`=`g`.`id` WHERE  `c`.`id` IN ('7','8','9','10') [ RunTime:0.001449s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `address` [ RunTime:0.001544s ]
+[ sql ] [ SQL ] SELECT * FROM `address` WHERE  `memberId` = 1 ORDER BY `id` DESC [ RunTime:0.000497s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:47:00+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/order/addaddress
+[运行时间：0.028658s] [吞吐率：34.89req/s] [内存消耗：407.44kb] [文件加载：49]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'addaddress',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '251',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://localhost',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost/shop/public/index.php/index/order/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'consigneeName' => '十点半v文库v',
+  'mobilePhone' => '18938322395',
+  'telephone' => '3463576',
+  'province' => '广东省',
+  'city' => '广州市',
+  'area' => '海珠区',
+  'detail' => '俺是个v为',
+)
+[ info ] [ RUN ] app\index\controller\Order->addAddress[ D:\Wamp\www\shop\application\index\controller\Order.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001204s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `address` [ RunTime:0.009446s ]
+[ sql ] [ SQL ] INSERT INTO `address` (`memberId` , `consigneeName` , `mobilePhone` , `telephone` , `province` , `city` , `area` , `detail`) VALUES (1 , '十点半v文库v' , '18938322395' , '3463576' , '广东省' , '广州市' , '海珠区' , '俺是个v为') [ RunTime:0.003371s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:47:00+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/order/addaddress
+[运行时间：0.047107s] [吞吐率：21.23req/s] [内存消耗：407.44kb] [文件加载：49]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'addaddress',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '251',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://localhost',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost/shop/public/index.php/index/order/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'consigneeName' => '十点半v文库v',
+  'mobilePhone' => '18938322395',
+  'telephone' => '3463576',
+  'province' => '广东省',
+  'city' => '广州市',
+  'area' => '海珠区',
+  'detail' => '俺是个v为',
+)
+[ info ] [ RUN ] app\index\controller\Order->addAddress[ D:\Wamp\www\shop\application\index\controller\Order.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011044s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `address` [ RunTime:0.002239s ]
+[ sql ] [ SQL ] INSERT INTO `address` (`memberId` , `consigneeName` , `mobilePhone` , `telephone` , `province` , `city` , `area` , `detail`) VALUES (1 , '十点半v文库v' , '18938322395' , '3463576' , '广东省' , '广州市' , '海珠区' , '俺是个v为') [ RunTime:0.003828s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:47:00+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/order/addaddress
+[运行时间：0.055261s] [吞吐率：18.10req/s] [内存消耗：407.44kb] [文件加载：49]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'addaddress',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '251',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://localhost',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost/shop/public/index.php/index/order/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'consigneeName' => '十点半v文库v',
+  'mobilePhone' => '18938322395',
+  'telephone' => '3463576',
+  'province' => '广东省',
+  'city' => '广州市',
+  'area' => '海珠区',
+  'detail' => '俺是个v为',
+)
+[ info ] [ RUN ] app\index\controller\Order->addAddress[ D:\Wamp\www\shop\application\index\controller\Order.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001226s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `address` [ RunTime:0.001927s ]
+[ sql ] [ SQL ] INSERT INTO `address` (`memberId` , `consigneeName` , `mobilePhone` , `telephone` , `province` , `city` , `area` , `detail`) VALUES (1 , '十点半v文库v' , '18938322395' , '3463576' , '广东省' , '广州市' , '海珠区' , '俺是个v为') [ RunTime:0.003420s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:47:00+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/order/addaddress
+[运行时间：0.063491s] [吞吐率：15.75req/s] [内存消耗：407.44kb] [文件加载：49]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'addaddress',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '251',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://localhost',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost/shop/public/index.php/index/order/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'consigneeName' => '十点半v文库v',
+  'mobilePhone' => '18938322395',
+  'telephone' => '3463576',
+  'province' => '广东省',
+  'city' => '广州市',
+  'area' => '海珠区',
+  'detail' => '俺是个v为',
+)
+[ info ] [ RUN ] app\index\controller\Order->addAddress[ D:\Wamp\www\shop\application\index\controller\Order.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001060s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `address` [ RunTime:0.001532s ]
+[ sql ] [ SQL ] INSERT INTO `address` (`memberId` , `consigneeName` , `mobilePhone` , `telephone` , `province` , `city` , `area` , `detail`) VALUES (1 , '十点半v文库v' , '18938322395' , '3463576' , '广东省' , '广州市' , '海珠区' , '俺是个v为') [ RunTime:0.003033s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:47:00+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/order/addaddress
+[运行时间：0.070739s] [吞吐率：14.14req/s] [内存消耗：407.44kb] [文件加载：49]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'addaddress',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '251',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://localhost',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost/shop/public/index.php/index/order/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'consigneeName' => '十点半v文库v',
+  'mobilePhone' => '18938322395',
+  'telephone' => '3463576',
+  'province' => '广东省',
+  'city' => '广州市',
+  'area' => '海珠区',
+  'detail' => '俺是个v为',
+)
+[ info ] [ RUN ] app\index\controller\Order->addAddress[ D:\Wamp\www\shop\application\index\controller\Order.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003086s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `address` [ RunTime:0.002043s ]
+[ sql ] [ SQL ] INSERT INTO `address` (`memberId` , `consigneeName` , `mobilePhone` , `telephone` , `province` , `city` , `area` , `detail`) VALUES (1 , '十点半v文库v' , '18938322395' , '3463576' , '广东省' , '广州市' , '海珠区' , '俺是个v为') [ RunTime:0.003122s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:47:11+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/order/deleteaddress
+[运行时间：0.047480s] [吞吐率：21.06req/s] [内存消耗：472.19kb] [文件加载：52]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'deleteaddress',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '12',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://localhost',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost/shop/public/index.php/index/order/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'addressId' => '23',
+)
+[ info ] [ RUN ] app\index\controller\Order->deleteAddress[ D:\Wamp\www\shop\application\index\controller\Order.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010704s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `address` [ RunTime:0.003070s ]
+[ sql ] [ SQL ] SELECT * FROM `address` WHERE  `id` = 23 LIMIT 1 [ RunTime:0.000537s ]
+[ sql ] [ SQL ] DELETE FROM `address`    WHERE  `id` = 23 [ RunTime:0.016164s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:47:15+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/order/deleteaddress
+[运行时间：0.056561s] [吞吐率：17.68req/s] [内存消耗：472.19kb] [文件加载：52]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'deleteaddress',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '12',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://localhost',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost/shop/public/index.php/index/order/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'addressId' => '22',
+)
+[ info ] [ RUN ] app\index\controller\Order->deleteAddress[ D:\Wamp\www\shop\application\index\controller\Order.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010839s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `address` [ RunTime:0.015118s ]
+[ sql ] [ SQL ] SELECT * FROM `address` WHERE  `id` = 22 LIMIT 1 [ RunTime:0.002132s ]
+[ sql ] [ SQL ] DELETE FROM `address`    WHERE  `id` = 22 [ RunTime:0.010673s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:47:18+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/order/deleteaddress
+[运行时间：0.030448s] [吞吐率：32.84req/s] [内存消耗：472.19kb] [文件加载：52]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'deleteaddress',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '12',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://localhost',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost/shop/public/index.php/index/order/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'addressId' => '26',
+)
+[ info ] [ RUN ] app\index\controller\Order->deleteAddress[ D:\Wamp\www\shop\application\index\controller\Order.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010349s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `address` [ RunTime:0.001708s ]
+[ sql ] [ SQL ] SELECT * FROM `address` WHERE  `id` = 26 LIMIT 1 [ RunTime:0.000546s ]
+[ sql ] [ SQL ] DELETE FROM `address`    WHERE  `id` = 26 [ RunTime:0.003534s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:47:22+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/order/deleteaddress
+[运行时间：0.045341s] [吞吐率：22.06req/s] [内存消耗：472.19kb] [文件加载：52]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'deleteaddress',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '12',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://localhost',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost/shop/public/index.php/index/order/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'addressId' => '24',
+)
+[ info ] [ RUN ] app\index\controller\Order->deleteAddress[ D:\Wamp\www\shop\application\index\controller\Order.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010712s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `address` [ RunTime:0.003056s ]
+[ sql ] [ SQL ] SELECT * FROM `address` WHERE  `id` = 24 LIMIT 1 [ RunTime:0.000825s ]
+[ sql ] [ SQL ] DELETE FROM `address`    WHERE  `id` = 24 [ RunTime:0.010698s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:47:24+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/order/deleteaddress
+[运行时间：0.032871s] [吞吐率：30.42req/s] [内存消耗：472.19kb] [文件加载：52]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'deleteaddress',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '12',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://localhost',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost/shop/public/index.php/index/order/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'addressId' => '25',
+)
+[ info ] [ RUN ] app\index\controller\Order->deleteAddress[ D:\Wamp\www\shop\application\index\controller\Order.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011372s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `address` [ RunTime:0.001598s ]
+[ sql ] [ SQL ] SELECT * FROM `address` WHERE  `id` = 25 LIMIT 1 [ RunTime:0.000531s ]
+[ sql ] [ SQL ] DELETE FROM `address`    WHERE  `id` = 25 [ RunTime:0.010594s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:48:41+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/order/addaddress
+[运行时间：0.017487s] [吞吐率：57.19req/s] [内存消耗：406.96kb] [文件加载：49]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'addaddress',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '194',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://localhost',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost/shop/public/index.php/index/order/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'consigneeName' => '11111111',
+  'mobilePhone' => '18575784345',
+  'telephone' => '356436',
+  'province' => '广东省',
+  'city' => '茂名市',
+  'area' => '信宜市',
+  'detail' => 'v我的v',
+)
+[ info ] [ RUN ] app\index\controller\Order->addAddress[ D:\Wamp\www\shop\application\index\controller\Order.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001047s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `address` [ RunTime:0.001796s ]
+[ sql ] [ SQL ] INSERT INTO `address` (`memberId` , `consigneeName` , `mobilePhone` , `telephone` , `province` , `city` , `area` , `detail`) VALUES (1 , '11111111' , '18575784345' , '356436' , '广东省' , '茂名市' , '信宜市' , 'v我的v') [ RunTime:0.003232s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:48:41+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/order/addaddress
+[运行时间：0.034052s] [吞吐率：29.37req/s] [内存消耗：406.96kb] [文件加载：49]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'addaddress',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '194',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://localhost',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost/shop/public/index.php/index/order/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'consigneeName' => '11111111',
+  'mobilePhone' => '18575784345',
+  'telephone' => '356436',
+  'province' => '广东省',
+  'city' => '茂名市',
+  'area' => '信宜市',
+  'detail' => 'v我的v',
+)
+[ info ] [ RUN ] app\index\controller\Order->addAddress[ D:\Wamp\www\shop\application\index\controller\Order.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011441s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `address` [ RunTime:0.002093s ]
+[ sql ] [ SQL ] INSERT INTO `address` (`memberId` , `consigneeName` , `mobilePhone` , `telephone` , `province` , `city` , `area` , `detail`) VALUES (1 , '11111111' , '18575784345' , '356436' , '广东省' , '茂名市' , '信宜市' , 'v我的v') [ RunTime:0.003076s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:48:41+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/order/addaddress
+[运行时间：0.041044s] [吞吐率：24.36req/s] [内存消耗：406.96kb] [文件加载：49]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'addaddress',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '194',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://localhost',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost/shop/public/index.php/index/order/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'consigneeName' => '11111111',
+  'mobilePhone' => '18575784345',
+  'telephone' => '356436',
+  'province' => '广东省',
+  'city' => '茂名市',
+  'area' => '信宜市',
+  'detail' => 'v我的v',
+)
+[ info ] [ RUN ] app\index\controller\Order->addAddress[ D:\Wamp\www\shop\application\index\controller\Order.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001564s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `address` [ RunTime:0.001088s ]
+[ sql ] [ SQL ] INSERT INTO `address` (`memberId` , `consigneeName` , `mobilePhone` , `telephone` , `province` , `city` , `area` , `detail`) VALUES (1 , '11111111' , '18575784345' , '356436' , '广东省' , '茂名市' , '信宜市' , 'v我的v') [ RunTime:0.003173s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:48:41+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/order/addaddress
+[运行时间：0.053562s] [吞吐率：18.67req/s] [内存消耗：406.96kb] [文件加载：49]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'addaddress',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '194',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://localhost',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost/shop/public/index.php/index/order/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'consigneeName' => '11111111',
+  'mobilePhone' => '18575784345',
+  'telephone' => '356436',
+  'province' => '广东省',
+  'city' => '茂名市',
+  'area' => '信宜市',
+  'detail' => 'v我的v',
+)
+[ info ] [ RUN ] app\index\controller\Order->addAddress[ D:\Wamp\www\shop\application\index\controller\Order.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001238s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `address` [ RunTime:0.005049s ]
+[ sql ] [ SQL ] INSERT INTO `address` (`memberId` , `consigneeName` , `mobilePhone` , `telephone` , `province` , `city` , `area` , `detail`) VALUES (1 , '11111111' , '18575784345' , '356436' , '广东省' , '茂名市' , '信宜市' , 'v我的v') [ RunTime:0.004403s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:48:41+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/order/addaddress
+[运行时间：0.036162s] [吞吐率：27.65req/s] [内存消耗：406.96kb] [文件加载：49]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'addaddress',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '194',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://localhost',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost/shop/public/index.php/index/order/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'consigneeName' => '11111111',
+  'mobilePhone' => '18575784345',
+  'telephone' => '356436',
+  'province' => '广东省',
+  'city' => '茂名市',
+  'area' => '信宜市',
+  'detail' => 'v我的v',
+)
+[ info ] [ RUN ] app\index\controller\Order->addAddress[ D:\Wamp\www\shop\application\index\controller\Order.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001214s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `address` [ RunTime:0.001210s ]
+[ sql ] [ SQL ] INSERT INTO `address` (`memberId` , `consigneeName` , `mobilePhone` , `telephone` , `province` , `city` , `area` , `detail`) VALUES (1 , '11111111' , '18575784345' , '356436' , '广东省' , '茂名市' , '信宜市' , 'v我的v') [ RunTime:0.003421s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:48:41+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/order/addaddress
+[运行时间：0.045804s] [吞吐率：21.83req/s] [内存消耗：406.96kb] [文件加载：49]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'addaddress',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '194',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://localhost',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost/shop/public/index.php/index/order/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'consigneeName' => '11111111',
+  'mobilePhone' => '18575784345',
+  'telephone' => '356436',
+  'province' => '广东省',
+  'city' => '茂名市',
+  'area' => '信宜市',
+  'detail' => 'v我的v',
+)
+[ info ] [ RUN ] app\index\controller\Order->addAddress[ D:\Wamp\www\shop\application\index\controller\Order.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001199s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `address` [ RunTime:0.000868s ]
+[ sql ] [ SQL ] INSERT INTO `address` (`memberId` , `consigneeName` , `mobilePhone` , `telephone` , `province` , `city` , `area` , `detail`) VALUES (1 , '11111111' , '18575784345' , '356436' , '广东省' , '茂名市' , '信宜市' , 'v我的v') [ RunTime:0.004049s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:48:41+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/order/addaddress
+[运行时间：0.071057s] [吞吐率：14.07req/s] [内存消耗：406.96kb] [文件加载：49]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'addaddress',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '194',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://localhost',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost/shop/public/index.php/index/order/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'consigneeName' => '11111111',
+  'mobilePhone' => '18575784345',
+  'telephone' => '356436',
+  'province' => '广东省',
+  'city' => '茂名市',
+  'area' => '信宜市',
+  'detail' => 'v我的v',
+)
+[ info ] [ RUN ] app\index\controller\Order->addAddress[ D:\Wamp\www\shop\application\index\controller\Order.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011557s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `address` [ RunTime:0.001318s ]
+[ sql ] [ SQL ] INSERT INTO `address` (`memberId` , `consigneeName` , `mobilePhone` , `telephone` , `province` , `city` , `area` , `detail`) VALUES (1 , '11111111' , '18575784345' , '356436' , '广东省' , '茂名市' , '信宜市' , 'v我的v') [ RunTime:0.003272s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:48:56+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/order/index
+[运行时间：0.047654s] [吞吐率：20.98req/s] [内存消耗：501.93kb] [文件加载：51]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '117',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'origin' => 'http://localhost',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-dest' => 'document',
+  'referer' => 'http://localhost/shop/public/index.php/index/cart/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'checkItem' => 
+  array (
+    0 => '7',
+    1 => '8',
+    2 => '9',
+    3 => '10',
+  ),
+  'goodsNum' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Order->index[ D:\Wamp\www\shop\application\index\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\Wamp\www\shop\public/../application/index\view\order\order.html [ array (
+  0 => 'allAddress',
+  1 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011793s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cart` [ RunTime:0.010505s ]
+[ sql ] [ SQL ] SELECT c.id as cartId,`c`.`count`,g.id as goodsId,`goodsName`,`mainPic`,`salePrice`,g.count as last FROM `cart` `c` INNER JOIN `goods` `g` ON `c`.`goodsId`=`g`.`id` WHERE  `c`.`id` IN ('7','8','9','10') [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `address` [ RunTime:0.000841s ]
+[ sql ] [ SQL ] SELECT * FROM `address` WHERE  `memberId` = 1 ORDER BY `id` DESC [ RunTime:0.000528s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:49:01+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/order/index
+[运行时间：0.040058s] [吞吐率：24.96req/s] [内存消耗：500.84kb] [文件加载：51]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '117',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'origin' => 'http://localhost',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-dest' => 'document',
+  'referer' => 'http://localhost/shop/public/index.php/index/cart/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'checkItem' => 
+  array (
+    0 => '7',
+    1 => '8',
+    2 => '9',
+    3 => '10',
+  ),
+  'goodsNum' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Order->index[ D:\Wamp\www\shop\application\index\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\Wamp\www\shop\public/../application/index\view\order\order.html [ array (
+  0 => 'allAddress',
+  1 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010657s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cart` [ RunTime:0.003038s ]
+[ sql ] [ SQL ] SELECT c.id as cartId,`c`.`count`,g.id as goodsId,`goodsName`,`mainPic`,`salePrice`,g.count as last FROM `cart` `c` INNER JOIN `goods` `g` ON `c`.`goodsId`=`g`.`id` WHERE  `c`.`id` IN ('7','8','9','10') [ RunTime:0.011182s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `address` [ RunTime:0.000821s ]
+[ sql ] [ SQL ] SELECT * FROM `address` WHERE  `memberId` = 1 ORDER BY `id` DESC [ RunTime:0.000563s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:49:02+08:00 ] 0.0.0.0 GET localhost/shop/public/index.php/index/order/index
+[运行时间：0.043730s] [吞吐率：22.87req/s] [内存消耗：492.82kb] [文件加载：51]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'none',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-dest' => 'document',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Order->index[ D:\Wamp\www\shop\application\index\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\Wamp\www\shop\public/../application/index\view\order\order.html [ array (
+  0 => 'allAddress',
+  1 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011078s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cart` [ RunTime:0.016796s ]
+[ sql ] [ SQL ] SELECT c.id as cartId,`c`.`count`,g.id as goodsId,`goodsName`,`mainPic`,`salePrice`,g.count as last FROM `cart` `c` INNER JOIN `goods` `g` ON `c`.`goodsId`=`g`.`id` WHERE  `c`.`id` = 'in' [ RunTime:0.001724s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `address` [ RunTime:0.000726s ]
+[ sql ] [ SQL ] SELECT * FROM `address` WHERE  `memberId` = 1 ORDER BY `id` DESC [ RunTime:0.000611s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:49:06+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/order/deleteaddress
+[运行时间：0.048820s] [吞吐率：20.48req/s] [内存消耗：472.08kb] [文件加载：52]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'deleteaddress',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '12',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://localhost',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost/shop/public/index.php/index/order/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'addressId' => '27',
+)
+[ info ] [ RUN ] app\index\controller\Order->deleteAddress[ D:\Wamp\www\shop\application\index\controller\Order.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010482s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `address` [ RunTime:0.013085s ]
+[ sql ] [ SQL ] SELECT * FROM `address` WHERE  `id` = 27 LIMIT 1 [ RunTime:0.000655s ]
+[ sql ] [ SQL ] DELETE FROM `address`    WHERE  `id` = 27 [ RunTime:0.012011s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:49:08+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/order/deleteaddress
+[运行时间：0.046200s] [吞吐率：21.65req/s] [内存消耗：472.08kb] [文件加载：52]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'deleteaddress',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '12',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://localhost',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost/shop/public/index.php/index/order/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'addressId' => '30',
+)
+[ info ] [ RUN ] app\index\controller\Order->deleteAddress[ D:\Wamp\www\shop\application\index\controller\Order.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012249s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `address` [ RunTime:0.001055s ]
+[ sql ] [ SQL ] SELECT * FROM `address` WHERE  `id` = 30 LIMIT 1 [ RunTime:0.000678s ]
+[ sql ] [ SQL ] DELETE FROM `address`    WHERE  `id` = 30 [ RunTime:0.015656s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:49:10+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/order/deleteaddress
+[运行时间：0.016420s] [吞吐率：60.90req/s] [内存消耗：472.08kb] [文件加载：52]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'deleteaddress',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '12',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://localhost',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost/shop/public/index.php/index/order/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'addressId' => '33',
+)
+[ info ] [ RUN ] app\index\controller\Order->deleteAddress[ D:\Wamp\www\shop\application\index\controller\Order.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001036s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `address` [ RunTime:0.000814s ]
+[ sql ] [ SQL ] SELECT * FROM `address` WHERE  `id` = 33 LIMIT 1 [ RunTime:0.000504s ]
+[ sql ] [ SQL ] DELETE FROM `address`    WHERE  `id` = 33 [ RunTime:0.002917s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:49:13+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/order/deleteaddress
+[运行时间：0.048546s] [吞吐率：20.60req/s] [内存消耗：472.08kb] [文件加载：52]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'deleteaddress',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '12',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://localhost',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost/shop/public/index.php/index/order/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'addressId' => '32',
+)
+[ info ] [ RUN ] app\index\controller\Order->deleteAddress[ D:\Wamp\www\shop\application\index\controller\Order.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012300s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `address` [ RunTime:0.001222s ]
+[ sql ] [ SQL ] SELECT * FROM `address` WHERE  `id` = 32 LIMIT 1 [ RunTime:0.018801s ]
+[ sql ] [ SQL ] DELETE FROM `address`    WHERE  `id` = 32 [ RunTime:0.003018s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:49:15+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/order/deleteaddress
+[运行时间：0.030719s] [吞吐率：32.55req/s] [内存消耗：472.08kb] [文件加载：52]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'deleteaddress',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '12',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://localhost',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost/shop/public/index.php/index/order/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'addressId' => '31',
+)
+[ info ] [ RUN ] app\index\controller\Order->deleteAddress[ D:\Wamp\www\shop\application\index\controller\Order.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010110s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `address` [ RunTime:0.000904s ]
+[ sql ] [ SQL ] SELECT * FROM `address` WHERE  `id` = 31 LIMIT 1 [ RunTime:0.000481s ]
+[ sql ] [ SQL ] DELETE FROM `address`    WHERE  `id` = 31 [ RunTime:0.010110s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:49:17+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/order/deleteaddress
+[运行时间：0.040723s] [吞吐率：24.56req/s] [内存消耗：472.08kb] [文件加载：52]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'deleteaddress',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '12',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://localhost',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost/shop/public/index.php/index/order/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'addressId' => '29',
+)
+[ info ] [ RUN ] app\index\controller\Order->deleteAddress[ D:\Wamp\www\shop\application\index\controller\Order.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012154s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `address` [ RunTime:0.002222s ]
+[ sql ] [ SQL ] SELECT * FROM `address` WHERE  `id` = 29 LIMIT 1 [ RunTime:0.000764s ]
+[ sql ] [ SQL ] DELETE FROM `address`    WHERE  `id` = 29 [ RunTime:0.009567s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:49:18+08:00 ] 0.0.0.0 GET localhost/shop/public/index.php/index/order/index
+[运行时间：0.032100s] [吞吐率：31.15req/s] [内存消耗：490.32kb] [文件加载：51]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'none',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-dest' => 'document',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Order->index[ D:\Wamp\www\shop\application\index\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\Wamp\www\shop\public/../application/index\view\order\order.html [ array (
+  0 => 'allAddress',
+  1 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011155s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cart` [ RunTime:0.001852s ]
+[ sql ] [ SQL ] SELECT c.id as cartId,`c`.`count`,g.id as goodsId,`goodsName`,`mainPic`,`salePrice`,g.count as last FROM `cart` `c` INNER JOIN `goods` `g` ON `c`.`goodsId`=`g`.`id` WHERE  `c`.`id` = 'in' [ RunTime:0.000945s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `address` [ RunTime:0.000829s ]
+[ sql ] [ SQL ] SELECT * FROM `address` WHERE  `memberId` = 1 ORDER BY `id` DESC [ RunTime:0.000532s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:51:48+08:00 ] 0.0.0.0 GET localhost/shop/public/index.php/index/order/index
+[运行时间：0.040876s] [吞吐率：24.46req/s] [内存消耗：614.21kb] [文件加载：53]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'none',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-dest' => 'document',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Order->index[ D:\Wamp\www\shop\application\index\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\Wamp\www\shop\public/../application/index\view\order\order.html [ array (
+  0 => 'allAddress',
+  1 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010750s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cart` [ RunTime:0.000852s ]
+[ sql ] [ SQL ] SELECT c.id as cartId,`c`.`count`,g.id as goodsId,`goodsName`,`mainPic`,`salePrice`,g.count as last FROM `cart` `c` INNER JOIN `goods` `g` ON `c`.`goodsId`=`g`.`id` WHERE  `c`.`id` = 'in' [ RunTime:0.000942s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `address` [ RunTime:0.000832s ]
+[ sql ] [ SQL ] SELECT * FROM `address` WHERE  `memberId` = 1 ORDER BY `id` DESC [ RunTime:0.000687s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:53:38+08:00 ] 0.0.0.0 GET localhost/shop/public/index.php/index/order/index
+[运行时间：0.032493s] [吞吐率：30.78req/s] [内存消耗：618.21kb] [文件加载：53]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'none',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-dest' => 'document',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Order->index[ D:\Wamp\www\shop\application\index\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\Wamp\www\shop\public/../application/index\view\order\order.html [ array (
+  0 => 'allAddress',
+  1 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010818s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cart` [ RunTime:0.000938s ]
+[ sql ] [ SQL ] SELECT c.id as cartId,`c`.`count`,g.id as goodsId,`goodsName`,`mainPic`,`salePrice`,g.count as last FROM `cart` `c` INNER JOIN `goods` `g` ON `c`.`goodsId`=`g`.`id` WHERE  `c`.`id` = 'in' [ RunTime:0.000492s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `address` [ RunTime:0.000776s ]
+[ sql ] [ SQL ] SELECT * FROM `address` WHERE  `memberId` = 1 ORDER BY `id` DESC [ RunTime:0.000540s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:53:59+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/order/addaddress
+[运行时间：0.040718s] [吞吐率：24.56req/s] [内存消耗：407.05kb] [文件加载：49]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'addaddress',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '221',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'origin' => 'http://localhost',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost/shop/public/index.php/index/order/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'consigneeName' => '222222',
+  'mobilePhone' => '18575784345',
+  'telephone' => '34643',
+  'province' => '广东省',
+  'city' => '广州市',
+  'area' => '越秀区',
+  'detail' => 'v二Bern被他人你',
+)
+[ info ] [ RUN ] app\index\controller\Order->addAddress[ D:\Wamp\www\shop\application\index\controller\Order.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011396s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `address` [ RunTime:0.000837s ]
+[ sql ] [ SQL ] INSERT INTO `address` (`memberId` , `consigneeName` , `mobilePhone` , `telephone` , `province` , `city` , `area` , `detail`) VALUES (1 , '222222' , '18575784345' , '34643' , '广东省' , '广州市' , '越秀区' , 'v二Bern被他人你') [ RunTime:0.015759s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:54:06+08:00 ] 0.0.0.0 GET localhost/shop/public/index.php/index/order/index
+[运行时间：0.026087s] [吞吐率：38.33req/s] [内存消耗：491.96kb] [文件加载：51]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'none',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-dest' => 'document',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Order->index[ D:\Wamp\www\shop\application\index\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\Wamp\www\shop\public/../application/index\view\order\order.html [ array (
+  0 => 'allAddress',
+  1 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001871s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cart` [ RunTime:0.000815s ]
+[ sql ] [ SQL ] SELECT c.id as cartId,`c`.`count`,g.id as goodsId,`goodsName`,`mainPic`,`salePrice`,g.count as last FROM `cart` `c` INNER JOIN `goods` `g` ON `c`.`goodsId`=`g`.`id` WHERE  `c`.`id` = 'in' [ RunTime:0.000498s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `address` [ RunTime:0.005572s ]
+[ sql ] [ SQL ] SELECT * FROM `address` WHERE  `memberId` = 1 ORDER BY `id` DESC [ RunTime:0.000733s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:54:32+08:00 ] 0.0.0.0 GET localhost/shop/public/index.php/index/cart
+[运行时间：0.035501s] [吞吐率：28.17req/s] [内存消耗：460.80kb] [文件加载：50]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'cart',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'none',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-dest' => 'document',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Cart->index[ D:\Wamp\www\shop\application\index\controller\Cart.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\Wamp\www\shop\public/../application/index\view\cart\cart_list.html [ array (
+  0 => 'itemList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011834s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cart` [ RunTime:0.000795s ]
+[ sql ] [ SQL ] SELECT c.id as cartId,`c`.`count`,g.id as goodsId,`goodsName`,`mainPic`,`salePrice`,g.count as last FROM `cart` `c` INNER JOIN `goods` `g` ON `c`.`goodsId`=`g`.`id` WHERE  `memberId` = 1 [ RunTime:0.002278s ]
+---------------------------------------------------------------
+[ 2020-06-30T23:54:32+08:00 ] 0.0.0.0 GET localhost/shop/public/index.php/index/favicon.ico
+[运行时间：0.013088s] [吞吐率：76.41req/s] [内存消耗：217.33kb] [文件加载：36]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'favicon',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'no-cors',
+  'sec-fetch-dest' => 'empty',
+  'referer' => 'http://localhost/shop/public/index.php/index/cart',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2020-06-30T23:54:34+08:00 ] 0.0.0.0 POST localhost/shop/public/index.php/index/order/index
+[运行时间：0.017801s] [吞吐率：56.18req/s] [内存消耗：498.80kb] [文件加载：51]
+[ info ] [ LANG ] D:\Wamp\www\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'order',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '117',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'origin' => 'http://localhost',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'sec-fetch-site' => 'same-origin',
+  'sec-fetch-mode' => 'navigate',
+  'sec-fetch-user' => '?1',
+  'sec-fetch-dest' => 'document',
+  'referer' => 'http://localhost/shop/public/index.php/index/cart',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'PHPSESSID=qs63jh0s9t40smbv1nkg3vd03h',
+)
+[ info ] [ PARAM ] array (
+  'checkItem' => 
+  array (
+    0 => '7',
+    1 => '8',
+    2 => '9',
+    3 => '10',
+  ),
+  'goodsNum' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Order->index[ D:\Wamp\www\shop\application\index\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\Wamp\www\shop\public/../application/index\view\order\order.html [ array (
+  0 => 'allAddress',
+  1 => 'items',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002063s ] mysql:host=127.0.0.1;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cart` [ RunTime:0.001540s ]
+[ sql ] [ SQL ] SELECT c.id as cartId,`c`.`count`,g.id as goodsId,`goodsName`,`mainPic`,`salePrice`,g.count as last FROM `cart` `c` INNER JOIN `goods` `g` ON `c`.`goodsId`=`g`.`id` WHERE  `c`.`id` IN ('7','8','9','10') [ RunTime:0.001280s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `address` [ RunTime:0.000756s ]
+[ sql ] [ SQL ] SELECT * FROM `address` WHERE  `memberId` = 1 ORDER BY `id` DESC [ RunTime:0.000527s ]

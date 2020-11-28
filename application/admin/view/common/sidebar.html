@@ -1,0 +1,82 @@
+<!-- Page Sidebar -->
+<div class="page-sidebar" id="sidebar">
+    <!-- Sidebar Menu -->
+    <ul class="nav sidebar-menu">
+        
+        <!--UI Elements-->
+        <li {eq name="menu" value="index"}class="open"{/eq}>
+            <a href="#" class="menu-dropdown">
+                <i class="menu-icon fa fa-desktop"></i>
+                <span class="menu-text"> 首页 </span>
+                <i class="menu-expand"></i>
+            </a>
+
+            <ul class="submenu">
+                <li {eq name="submenu" value="welcome"}class="active"{/eq}>
+                    <a href="{:url('index/index')}">
+                        <span class="menu-text">欢迎</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        
+        <li {eq name="menu" value="category"}class="open"{/eq}>
+            <a href="#" class="menu-dropdown">
+                <i class="menu-icon fa fa-desktop"></i>
+                <span class="menu-text"> 分类管理 </span>
+                <i class="menu-expand"></i>
+            </a>
+
+            <ul class="submenu">
+                <li {eq name="submenu" value="add"}class="active"{/eq}>
+                    <a href="{:url('category/add')}">
+                        <span class="menu-text">添加</span>
+                    </a>
+                </li>
+                <li {eq name="submenu" value="list"}class="active"{/eq}>
+                    <a href="{:url('category/list')}" class="menu-dropdown">
+                        <span class="menu-text">列表</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        
+        <li {eq name="menu" value="goods"}class="open"{/eq}>
+            <a href="#" class="menu-dropdown">
+                <i class="menu-icon fa fa-desktop"></i>
+                <span class="menu-text"> 商品管理 </span>
+                <i class="menu-expand"></i>
+            </a>
+            <ul class="submenu">
+                <li {eq name="submenu" value="add"}class="active"{/eq}>
+                    <a href="{:url('goods/add')}">
+                        <span class="menu-text">添加</span>
+                    </a>
+                </li>
+                <li {eq name="submenu" value="list"}class="active"{/eq}>
+                    <a href="{:url('goods/list')}" class="menu-dropdown">
+                        <span class="menu-text">列表</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        
+        <li {eq name="menu" value="order"}class="open"{/eq}>
+            <a href="#" class="menu-dropdown">
+                <i class="menu-icon fa fa-desktop"></i>
+                <span class="menu-text"> 订单管理 </span>
+                <i class="menu-expand"></i>
+            </a>
+            <ul class="submenu">
+                <li {eq name="submenu" value="list"}class="active"{/eq}>
+                    <a href="{:url('order/list')}" class="menu-dropdown">
+                        <span class="menu-text">发货</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        
+    </ul>
+    <!-- /Sidebar Menu -->
+</div>
+<!-- /Page Sidebar -->
