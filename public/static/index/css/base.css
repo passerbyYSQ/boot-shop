@@ -11,6 +11,9 @@ ul > li {
     padding: 0 12px;
     float: left;
 }
+ul.pagination > li {
+	padding: 0;
+}
 a {
     color: #8c8c8c;
     text-decoration: none !important;
@@ -20,4 +23,13 @@ a:hover {
 }
 .form-group label {
     font-weight: 700;
+}
+
+/* 重写分页按钮的样式 */
+.page-item.active .page-link {
+	background-color: #f42424;
+	border-color: #f42424;
+}
+.page-link {
+	color: #8c8c8c;
 }

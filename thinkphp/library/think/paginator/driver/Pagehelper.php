@@ -21,12 +21,12 @@ class Pagehelper extends Paginator {
         if ($this->hasPages()) {
             if ($this->simple) {
                 return sprintf(
-                    '<div class="pages pages_warp" style="margin-top:8px;margin-bottom:16px;">%s %s %s</div>',
+                    "<nav class='py-3'><ul class='pagination'>%s %s %s</ul></nav>",
                     $this->getPreviousButton(),
                     $this->getNextButton());
             } else {
                 return sprintf(
-                    '<div class="pages pages_warp" style="margin-top:8px;margin-bottom:16px;">%s</div>',
+                    "<nav class='m-auto py-3'><ul class='pagination'>%s</ul></nav>",
                     $this->getLinks()
                     );
             }
@@ -131,7 +131,7 @@ class Pagehelper extends Paginator {
      * @param string $text
      * @return string
      */
-    protected function getPreviousButton($text = "<i class='iconfont icon-left'></i>")
+    protected function getPreviousButton($text = "上一页")
     {
         
         if ($this->currentPage() <= 1) {
@@ -153,7 +153,7 @@ class Pagehelper extends Paginator {
      * @param string $text
      * @return string
      */
-    protected function getNextButton($text = "<i class='iconfont icon-right'></i>")
+    protected function getNextButton($text = "下一页")
     {
         if (!$this->hasMore) {
             //return $this->getDisabledTextWrapper($text);
@@ -174,7 +174,7 @@ class Pagehelper extends Paginator {
      */
     protected function getAvailablePageWrapper($url, $page)
     {
-        return '<div class=item><a href="' . htmlentities($url) . '" rel="external nofollow">' . $page . '</a></div>';
+        return "<li class='page-item'><a class='page-link' href='" . htmlentities($url) . "'>" . $page . '</a></li>';
     }
     
     /**
@@ -185,8 +185,7 @@ class Pagehelper extends Paginator {
      */
     protected function getCurrentPageWrapper()
     {
-        //return '<span>' . $this->currentPage . '</span>';
-        return "<div class='item cur'><a>" . $this->currentPage . '</a></div>';
+        return "<li class='page-item active'><span class='page-link'>" . $this->currentPage . '</span></li>';
     }
 
 }

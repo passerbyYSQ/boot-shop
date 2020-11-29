@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e885863-4c7e-4320-8775-1b2a9fd89905" name="Default Changelist" comment="" />
+    <list default="true" id="2e885863-4c7e-4320-8775-1b2a9fd89905" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../application/index/view/goods/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../application/index/view/goods/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../application/index/view/member/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/../application/index/view/member/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/log/202011/28.log" beforeDir="false" afterPath="$PROJECT_DIR$/../runtime/log/202011/28.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/f00bb8bcc843a0b6144d3fc81c93ca7c.php" beforeDir="false" afterPath="$PROJECT_DIR$/../runtime/temp/f00bb8bcc843a0b6144d3fc81c93ca7c.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shop-webstorm.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +41,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1klDx62piAm7C3y1e6ZsjTvG7Pu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -65,11 +95,26 @@
       <workItem from="1606493507790" duration="168000" />
       <workItem from="1606532926322" duration="6574000" />
       <workItem from="1606567177390" duration="1287000" />
+      <workItem from="1606578894699" duration="269000" />
+      <workItem from="1606579231223" duration="129000" />
+      <workItem from="1606651268272" duration="2981000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="498" y="212" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606488530893">

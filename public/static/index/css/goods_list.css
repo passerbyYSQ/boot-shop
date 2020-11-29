@@ -39,12 +39,10 @@
 }
 
 /* 导航栏 */
-nav {
-    border-bottom: 2px solid #f42424;
-}
 .navbar {
     padding-top: 0;
     padding-bottom: 0;
+	border-bottom: 2px solid #f42424;
 }
 .navbar-brand {
     /*height: 100%;*/
@@ -113,7 +111,6 @@ h6.card-title {
 /* 商品列表 */
 .goods-list .card:hover {
     box-shadow: 0 0 10px #ddd;
-    cursor: pointer;
 }
 .goods-list .card {
     overflow: hidden;

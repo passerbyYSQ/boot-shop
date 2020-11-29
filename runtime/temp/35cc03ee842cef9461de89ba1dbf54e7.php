@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:75:"D:\Wamp\www\boot-shop\public/../application/index\view\member\register.html";i:1606575460;s:63:"D:\Wamp\www\boot-shop\application\index\view\common\footer.html";i:1606568028;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:75:"D:\Wamp\www\boot-shop\public/../application/index\view\member\register.html";i:1606652142;s:63:"D:\Wamp\www\boot-shop\application\index\view\common\footer.html";i:1606568028;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +18,6 @@
 </head>
 <body>
     <div class="container">
-        <!--  logo + 搜索框      -->
         <!--  logo + 搜索框      -->
         <div class="row mt-2">
             <div class="col-lg-4 col-sm-12 col-12">
@@ -46,7 +45,7 @@
                 </div>
             </div>
         </div>
-
+		
         <!--   导航栏     -->
         <nav class="navbar navbar-expand-sm navbar-light mt-2 mb-4">
             <a class="navbar-brand" href="#">全部商品分类</a>
