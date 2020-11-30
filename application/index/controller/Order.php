@@ -249,10 +249,10 @@ class Order extends Controller {
     public function index() {
         
         //var_dump(input('post.'));exit();
-        $cartIds = input('post.checkItem/a');
-        if (empty($cartIds)) {
-            $this->error('请选择购物车中的商品');
-        }
+         $cartIds = input('post.checkItem/a');
+//         if (empty($cartIds)) {
+//             $this->error('请选择购物车中的商品');
+//         }
         //var_dump($cartIds);exit();
         
         $cartModel = new CartModel();
@@ -296,13 +296,13 @@ class Order extends Controller {
         $addrs = AddressModel::where('memberId', session('member.id'))
         ->order('id', 'desc')->select();
         
-        $html = '';
+         $html = '';
         foreach ($addrs as $addr) {
             $html .= $this->addressHtml($addr->consigneeName, $addr->mobilePhone, $addr->telephone,
                 $addr->province, $addr->city, $addr->area, $addr->detail, $addr->id);
         }
         
-        return $html;
+        return  $html;
     }
     
     // 添加收获地址
@@ -338,17 +338,23 @@ class Order extends Controller {
     
     function addressHtml($consigneeName, $mobilePhone, $telephone, 
         $province, $city, $area, $detail, $addressId) {
-        $html = "
-<div class=cs-w-item onClick='selectAddress(this, {$addressId})'>
-   <div class=item-tit><h3 class=username>{$consigneeName}</h3></div>
-   <div class=item-tel>
-      <span class=contact>{$mobilePhone}</span>
-      <span class=contact>{$telephone}</span>
-   </div>
-   <div class=item-address>{$province}  {$city} {$area} &nbsp;&nbsp;&nbsp; {$detail}</div>
-   <i class=icon></i> <a href=javascript:void(0); class=edit onClick='showAddressDialog(false)'>修改</a>
-   <a href=javascript:void(0) class=delete onClick='deleteAddress({$addressId}, this)'>删除</a>
-</div>";
+//        $html = "
+// <div class=cs-w-item onClick='selectAddress(this, {$addressId})'>
+//    <div class=item-tit><h3 class=username>{$consigneeName}</h3></div>
+//    <div class=item-tel>
+//       <span class=contact>{$mobilePhone}</span>
+//       <span class=contact>{$telephone}</span>
+//    </div>
+//    <div class=item-address>{$province}  {$city} {$area} &nbsp;&nbsp;&nbsp; {$detail}</div>
+//    <i class=icon></i> <a href=javascript:void(0); class=edit onClick='showAddressDialog(false)'>修改</a>
+//    <a href=javascript:void(0) class=delete onClick='deleteAddress({$addressId}, this)'>删除</a>
+// </div>";
+            $html = "  <li class='list-group-item list-group-item-action'>{$consigneeName}&nbsp;
+            {$province}&nbsp;
+            {$city}&nbsp;
+            {$area} &nbsp;
+            {$detail}&nbsp;
+            {$mobilePhone}</li>";
         return $html;
     }
     

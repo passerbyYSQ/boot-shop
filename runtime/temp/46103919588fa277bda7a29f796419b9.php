@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:78:"D:\777\AppServ\www\boot-shop\public/../application/index\view\order\order.html";i:1606666675;s:70:"D:\777\AppServ\www\boot-shop\application\index\view\common\footer.html";i:1606641685;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,16 +9,16 @@
     <title>订单界面页</title>
 
     <!-- 引入图标样式 -->
-    <link rel="stylesheet" href="__lib__/iconfont/css/iconfont.css">
+    <link rel="stylesheet" href="/boot-shop/public/static/lib/iconfont/css/iconfont.css">
 
     <!-- 引入Bootstrap核心样式文件 -->
-    <link rel="stylesheet" href="__lib__/bootstrap4/css/bootstrap.css">
+    <link rel="stylesheet" href="/boot-shop/public/static/lib/bootstrap4/css/bootstrap.css">
 
 
      <!-- 引入自己写的样式 -->
    
-    <link rel="stylesheet" href="__index__/css/footer.css">
-    <link rel="stylesheet" href="__index__/css/order.css">
+    <link rel="stylesheet" href="/boot-shop/public/static/index/css/footer.css">
+    <link rel="stylesheet" href="/boot-shop/public/static/index/css/order.css">
     
 
     <!--站点图标-->
@@ -25,7 +26,7 @@
 
     <style type="text/css">
         /*选中收货人或支付方式改变样式*/
-        .selected{font-weight:bold; background:url('__index__/img/checked.png') no-repeat; background-position: right  bottom}
+        .selected{font-weight:bold; background:url('/boot-shop/public/static/index/img/checked.png') no-repeat; background-position: right  bottom}
 
     </style>
 
@@ -58,19 +59,19 @@
         <div class="row">
             <div class="col-md-5 col-12">
                 <a href="https://blog.csdn.net/qq_43290318">
-                    <img src="__index__/img/logo.png" style="max-height: 92px;">
+                    <img src="/boot-shop/public/static/index/img/logo.png" style="max-height: 92px;">
                 </a>
                 <a href="https://blog.csdn.net/qq_43290318">
-                    <img src="__index__/img/ecsc-join.gif" style="max-height: 92px;">
+                    <img src="/boot-shop/public/static/index/img/ecsc-join.gif" style="max-height: 92px;">
                 </a>
             </div>
 
             <div class="col-md-7 col-12 ml-auto mb-2">
-                <img src="__index__/img/order_head.png" class="img-fluid" alt="">
+                <img src="/boot-shop/public/static/index/img/order_head.png" class="img-fluid" alt="">
             </div>
         </div>
         <!--        主体-->
-        <form action="{:url('order/submit')}" method="post" name="doneTheForm" class="validator" id="theForm">
+        <form action="<?php echo url('order/submit'); ?>" method="post" name="doneTheForm" class="validator" id="theForm">
         <p class=" my_p mt-2 mb-2  ">填写并核对订单信息</p>
         <div class="link-top"></div>
         <div class="row mb-3 mt-5">
@@ -86,7 +87,7 @@
         </div>
         <div class="link-body "></div>
         <ul class="list-group list-group-flush " id="Receiver">
-        	{$allAddress}
+        	<?php echo $allAddress; ?>
          
             <li class="list-group-item list-group-item-action">赖旋 广东 佛山市 南海区 狮山镇 南海软件科技园信息大道华南师范大学 183****6947</li>
             <li class="list-group-item list-group-item-action">赖旋 广东 佛山市 南海区 狮山镇 南海软件科技园信息大道华南师范大学 183****6947</li>
@@ -125,7 +126,7 @@
 			<div class="row mb-3 mt-5">
             <div class="col-4 font-weight-bold">确认订单信息</div>
             <div class="col-4 ml-auto clearfix " >
-                <div class="float-right  return_cart"> <a href="{:url('cart/index')}" class="extra-r">返回购物车</a></span>
+                <div class="float-right  return_cart"> <a href="<?php echo url('cart/index'); ?>" class="extra-r">返回购物车</a></span>
                 </div>
             </div>
         </div>
@@ -138,34 +139,32 @@
 				value="0" autocomplete="off" />
 			<div class="link-body"></div>
         <ul class="list-group">
-        {assign name="sum" value="0" /}
-     	{foreach $items as $item}
-		{assign name="sum" value="$sum + $item.salePrice * $item.count" /}
+        <?php $sum = '0'; foreach($items as $item): $sum = $sum + $item['salePrice'] * $item['count']; ?>
             <li class="list-group-item ">
                 <div class="row">
                     <div class="col-md-2 col-2">
-                    <input name="cartIds[]" type="hidden" value="{$item.cartId}">
-                    <a href="{:url('goods/index')}?id={$item.goodsId}" target="_blank">
-                    <img src="__public__/{$item.mainPic}"  style="width: 50px;height: 50px" alt="">
+                    <input name="cartIds[]" type="hidden" value="<?php echo $item['cartId']; ?>">
+                    <a href="<?php echo url('goods/index'); ?>?id=<?php echo $item['goodsId']; ?>" target="_blank">
+                    <img src="/boot-shop/public/<?php echo $item['mainPic']; ?>"  style="width: 50px;height: 50px" alt="">
                     </a>
                     </div>
                     <div class="col-md-6 col-6 text-center">
-                        <div> {$item.goodsName}</div>
+                        <div> <?php echo $item['goodsName']; ?></div>
                     </div>
                     <div class="col-md-1  col-2 text-center">
-                        <span>¥{$item.salePrice}</span></div>
-                    <div class="col-md-1 col-2 text-center " >x{$item.count}</div>
+                        <span>¥<?php echo $item['salePrice']; ?></span></div>
+                    <div class="col-md-1 col-2 text-center " >x<?php echo $item['count']; ?></div>
                     <div class="col-md-1 col-12 text-center ">
-                        <span class="p-price">¥{$item.salePrice * $item.count}</span></div>
-                        <input type="hidden"value="{$item.last}" />
+                        <span class="p-price">¥<?php echo $item['salePrice'] * $item['count']; ?></span></div>
+                        <input type="hidden"value="<?php echo $item['last']; ?>" />
 
                 </div>
             </li>
-   		{/foreach}
+   		<?php endforeach; ?>
 
 				<li class="list-group-item ">
                 <div class="row">
-                    <div class="col-md-2 col-2"><img src="__index__/img/girl.jpg"  style="width: 50px;height: 50px" alt=""></div>
+                    <div class="col-md-2 col-2"><img src="/boot-shop/public/static/index/img/girl.jpg"  style="width: 50px;height: 50px" alt=""></div>
                     <div class="col-md-6 col-6 text-center">
                         <div> 夏季短袖卫衣t恤男套装运动休闲韩版潮流男装一套搭配帅气两件套</div>
                     </div>
@@ -194,7 +193,7 @@
 
 
         <div class="clearfix " style="background-color: #F2f2f2">
-            <div class="float-right m-2">{$itemCount}件商品  应付金额： <span class="p-price">¥{$sum}</span>
+            <div class="float-right m-2"><?php echo $itemCount; ?>件商品  应付金额： <span class="p-price">¥<?php echo $sum; ?></span>
             </div>
             </div>
         <div class="clearfix" style="background-color: #F2f2f2">
@@ -211,7 +210,113 @@
     </div>
 
 	<!-- 引入公共的footer部分 -->
-    {include file="common/footer" /}
+    	<!-- footer部分 -->
+    <!-- 灰色横条 -->
+    <div class="bg-grey">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-4 col-6 ">
+                    <div class="service-item d-flex justify-content-center">
+                        <i class="f-icon f-icon-qi"></i>
+                        <span>七天包退</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 ">
+                    <div class="service-item d-flex justify-content-center">
+                        <i class="f-icon f-icon-zheng"></i>
+                        <span>正品保障</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 ">
+                    <div class="service-item d-flex justify-content-center">
+                        <i class="f-icon f-icon-hao"></i>
+                        <span>好评如潮</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 ">
+                    <div class="service-item d-flex justify-content-center">
+                        <i class="f-icon f-icon-shan"></i>
+                        <span>闪电发货</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 ">
+                    <div class="service-item d-flex justify-content-center">
+                        <i class="f-icon f-icon-quan"></i>
+                        <span>权威荣誉</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 ">
+                    <div class="service-item d-flex justify-content-center">
+                        <i class="f-icon f-icon-kefu"></i>
+                        <span>咨询客服</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- dark部分 -->
+    <div class="footer-body">
+        <div class="container">
+            <div class="row vertical-list">
+                <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                    <h5>新手上路</h5>
+                    <ul>
+                        <li><a href="">售后流程</a></li>
+                        <li><a href="">购物流程</a></li>
+                        <li><a href="">订购方式</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                    <h5>配送与支付</h5>
+                    <ul>
+                        <li><a href="">货到付款区域</a></li>
+                        <li><a href="">配送支付智能查询</a></li>
+                        <li><a href="">支付方式说明</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                    <h5>服务保证</h5>
+                    <ul>
+                        <li><a href="">退换货原则</a></li>
+                        <li><a href="">售后服务保证</a></li>
+                        <li><a href="">产品质量保证</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                    <h5>联系我们</h5>
+                    <ul>
+                        <li><a href="">网站故障报告</a></li>
+                        <li><a href="">选机咨询</a></li>
+                        <li><a href="">投诉与建议</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 mb-2">
+                    <div class="qrcode-box">
+                        <img src="/boot-shop/public/static/index/img/passerby.jpg" alt="">
+                        <div class="qrcode-title">联系我</div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 mb-2">
+                    <div class="qrcode-box">
+                        <img src="/boot-shop/public/static/index/img/scnu_logo.jpg" alt="">
+                        <div class="qrcode-title">Logo</div>
+                    </div>
+                </div>
+            </div>
+            <!--  分隔线  -->
+            <div class="apart-line"></div>
+            <ul class="clearfix text-center horizontal-list d-flex justify-content-center">
+                <li><a href="#">客户服务</a></li>
+                <li><a href="#">我的收藏</a></li>
+                <li><a href="#">我的浏览</a></li>
+                <li><a href="#">我的订单</a></li>
+            </ul>
+            <p class="copyright">
+                Copyright © 2020 <a href="">passerbyYSQ</a>. All Rights Reserved | <a href=""> 粤ICP备20036780号</a><br>
+                Powered by <a href="">passerbyYSQ</a> 1127664027@qq.com
+            </p>
+        </div>
+    </div>
 <!--    弹框-->
     <!-- 模态框（Modal） -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -267,11 +372,11 @@
 
 
     <!-- js的顺序不能乱 -->
-    <script src="__lib__/jquery/jquery.min.js"></script>
+    <script src="/boot-shop/public/static/lib/jquery/jquery.min.js"></script>
     <!-- popper.min.js依赖jquery -->
-    <script src="__lib__/popper/popper.min.js"></script>
+    <script src="/boot-shop/public/static/lib/popper/popper.min.js"></script>
     <!-- bootstrap.min.js依赖jquery -->
-    <script src="__lib__/bootstrap4/js/bootstrap.min.js"></script>
+    <script src="/boot-shop/public/static/lib/bootstrap4/js/bootstrap.min.js"></script>
 
     <script type="text/javascript">
         $(function(){
@@ -318,7 +423,7 @@
 		
 		// 初始化 省、市、区的选择框
 		function initCxSelect() {
-			$.cxSelect.defaults.url = '__index__/json/cityData.min.json';
+			$.cxSelect.defaults.url = '/boot-shop/public/static/index/json/cityData.min.json';
 			//console.log($('#regionSelect'));
 			$('#regionSelect').cxSelect({
 				selects: ['province', 'city', 'area']
@@ -329,7 +434,7 @@
 		function deleteAddress(addressId, obj) { 
 			if (confirm('是否确认删除？')) {
 				$.ajax({
-					url: "{:url('order/deleteAddress')}",
+					url: "<?php echo url('order/deleteAddress'); ?>",
 					type: "post",
 					data: {
 						addressId: addressId
@@ -357,7 +462,7 @@
 			
 			//if (isOk1 && isOk2) {
 				$.ajax({
-					url: "{:url('order/addAddress')}",
+					url: "<?php echo url('order/addAddress'); ?>",
 					type: "post",
 					data: {
 						consigneeName: $("#consigneeName").val(),
