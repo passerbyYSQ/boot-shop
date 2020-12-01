@@ -5,6 +5,11 @@
 .top-bar ul li {
     margin: 8px 0;
 }
+/* 搜索框 */
+.search {
+    border-color: #007bff;
+    border-width: 2px;
+}
 /*右上角的列表*/
 .bd-list > li {
     border-right: 1px solid #dcdcdc;
@@ -43,7 +48,7 @@
 .myiconfont{
     color: #ff8f23;
     width: 13px;
-    display: inline-block;
+    /*display: inline-block;*/
     vertical-align: center;
     font-size: 16px;
     font-style: normal;
@@ -53,7 +58,7 @@
 .myiconfont2{
     color: #8c8c8c;
     width: 13px;
-    display: inline-block;
+    /*display: inline-block;*/
     vertical-align: center;
     font-size: 16px;
     font-style: normal;
