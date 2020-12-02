@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- 不设置的话，手机端不会进行响应式布局 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>商品详情 - 夏季短袖卫衣t恤男套装运动休闲韩版潮流男装一套搭配帅气两件套</title>
+
+    <!-- 引入图标样式 -->
+    <link rel="stylesheet" href="lib/iconfont/css/iconfont.css">
+
+    <!-- 引入Bootstrap核心样式文件 -->
+    <link rel="stylesheet" href="lib/bootstrap4/css/bootstrap.css">
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/popper/popper.min.js"></script>
+    <script src="lib/bootstrap4/js/bootstrap.js"></script>
+
+    <!-- 引入自己写的样式 -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/goods_list.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/demo.css">
+    <!--放大镜插件-->
+    <script type="text/javascript" src="js/magiczoomplus.js"></script>
+
+    <!--站点图标-->
+    <!-- ... -->
+
+    <style type="text/css">
+    </style>
+
+</head>
+<body>
+<div class="container">
+    <div class="top-bar">
+        <!-- top-bar 最顶部那一行 -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-12">
+                    <ul class="clearfix">
+                        <li><a href="#">请先登录</a></li>
+                        <li><a href="#">免费注册</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-8 col-12">
+                    <ul class="bd-list clearfix">
+                        <li><a href="#">客户服务</a></li>
+                        <li><a href="#">我的收藏</a></li>
+                        <li><a href="#">我的浏览</a></li>
+                        <li><a href="#">我的订单</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container p-2">
+        <!--  logo + 搜索框      -->
+        <div class="row">
+            <div class="col-lg-4 col-sm-12 col-12">
+                <a href="https://blog.csdn.net/qq_43290318">
+                    <img src="img/logo.png" style="max-height: 92px;">
+                </a>
+                <a href="https://blog.csdn.net/qq_43290318">
+                    <img src="img/ecsc-join.gif" style="max-height: 92px;">
+                </a>
+            </div>
+            <div class="col-lg-5 col-sm-8 col-12">
+                <div class="input-group mt-4">
+                    <input type="text" class="form-control search" placeholder="请输入商品名称关键词">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" id="button-addon2">搜索</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-4 col-12">
+                <div class="shop-cart mt-4 float-right">
+                    <a href="#">
+                        <i class="iconfont icon-carts"></i><span>我的购物车</span>
+                        <em class=""><b>3</b></em>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--   导航栏     -->
+        <nav class="navbar navbar-expand-sm navbar-light mt-2">
+            <a class="navbar-brand" href="#">全部商品分类</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#">女人街</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">品牌专区</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">聚划算</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!--商品价格详情-->
+    <div class="row no-gutters">
+        <!--图片-->
+        <div class="col-lg-4 col-md-10 offset-md-1 col-sm-10 offset-sm-1 imgGlass">
+            <div class="preview" if="preview">
+                <div class="gallery_wrap">
+                    <a href="img/yifu1.jpg"
+                       class="MagicZoomPlus" id="Zoomer"
+                       rel="hint-text: ; selectors-effect: false; selectors-class: img-hover; selectors-change: mouseover; zoom-distance: 10;zoom-width: 100%; zoom-height: 100%;">
+                        <img src="img/yifu1.jpg" id="J_prodImg" alt="夏季短袖卫衣t恤男套装运动休闲韩版潮流男装一套搭配帅气两件套">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--详情-->
+        <div class="col-lg-6 col-md-10 col-sm-10 p-0 ml-5">
+            <div class="detail mr-lg-1 mb-1">
+                <div class="row product-wrap">
+                    <div class="col-lg-12 name">
+                        夏季短袖卫衣t恤男套装运动休闲韩版潮流男装一套搭配帅气两件套
+                    </div>
+                    <!--灰色部分-->
+                    <div class="price-box col-12 row ml-sm-1">
+                        <div class="col-12">
+                            <!--灰色第一行部分-->
+                            <div class="row">
+                                <div class="col-sm-8 col-12 d-flex justify-content-start">
+                                    <div class="wordsmall1 mt-2">商 城 价</div>
+                                    <div>
+                                        <strong class="shop-price text-danger" id="ECS_SHOPPRICE" ectype="SHOP_PRICE">
+                                            <em>¥</em>
+                                            <!--价格，后面更改-->
+                                            398.00
+                                        </strong>
+                                    </div>
+                                    <div class="price-notify price-reduction-notice">降价通知</div>
+                                </div>
+                                <div class="col-sm-4 col-12 ">
+                                    <div class="d-flex justify-content-sm-end justify-content-start ml-sm-0 ml-3 my-3">
+                                        <div class="si-cumulative">
+                                            累计评价<em>0</em>
+                                        </div>
+                                        <div class="si-cumulative">
+                                            <!--累计销量，后面更改-->
+                                            累计销量<em>2</em>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <!--灰色第二行部分-->
+                        <div class="col-12">
+                            <div class="wordsmall2 mr-0">市 场 价</div>
+                            <div class="si-warp">
+                                <div class="m-price ml-0" id="ECS_MARKETPRICE">
+                                    <!--后面添加数据库修改-->
+                                    <em class="wordsmall2">¥</em>578.00
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12"></div>
+                    </div>
+                    <div class="col-12 row">
+                        <div class="wordsmall1 col-2 mt-3">服务</div>
+                        <div class="service-item-1 col-8">
+                            <div class="fl">
+                                由
+                                <a href="#" class="link-red">passerByYSQ</a>
+                                提供售后服务
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 row">
+                        <div class="wordsmall1 col-2 mt-3">数量</div>
+                        <div class="col-8">
+                            <div class="amount-warp">
+                                <input class="text buy-num" ectype="quantity" value="1"
+                                       onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onafterpaste="this.value=this.value.replace(/[^\d]/g,'')"
+                                       name="number" defaultnumber="1">
+                                <div class="a-btn">
+                                    <a href="javascript:addCount(1);" class="btn-add" ectype="btnAdd">
+                                        <i class="iconfont icon-up"></i></a>
+                                    <a href="javascript:addCount(-1);" class="btn-reduce"
+                                       ectype="btnReduce"><i class="iconfont icon-down"></i></a>
+                                    <input type="hidden" name="perNumber" id="perNumber" ectype="perNumber" value="0">
+                                    <input type="hidden" name="perMinNumber" id="perMinNumber" ectype="perMinNumber" value="1">
+                                </div>
+                                <input name="confirm_type" id="confirm_type" type="hidden"
+                                       value="3" />
+                            </div>
+                            <div class="mt-3 wordsmall1">
+                                库存
+                                <em id="goods_attr_num" ectype="goods_attr_num">
+<!--                                    后面修改-->
+                                456
+                            </em>&nbsp;
+                                个
+                            </div>
+                        </div>
+                    </div>
+<!--                    两个按钮-->
+                    <div class="col-12 row">
+                        <div class="col-md-4 col-12">
+                            <button class="btn btn-warning btn-size">立即购买</button>
+                        </div>
+                        <div class="col-md-7 col-12">
+                            <button class="btn btn-danger btn-size2">
+                                <i class="iconfont icon-carts"></i>
+                                加入购物车
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="row mt-4 ">
+                            <div class="wordsmall1 col-2">温馨提示</div>
+                            <div class="wordsmall1 col-8 ">不支持退换货服务</div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <ul class="bd-list clearfix">
+                            <li class="mylabel collection-img">
+                                <i class="iconfont icon-collection"></i>
+                                <label>收藏(0)</label>
+                            </li>
+                            <li class="mylabel">
+                                <input type="checkbox" id="799" class="mylabel"/>
+                                <label for="799">对比</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--选项卡-->
+    <div class="mt-3">
+        <nav class="navbar navbar-expand-sm navbar-light mt-2">
+            <ul class="nav nav-tabs" >
+                <li class="nav-item">
+                    <a href="#tab1" class="nav-link" data-toggle="tab">商品信息</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#tab2" class="nav-link" data-toggle="tab">用户评论(0)</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#tab3" class="nav-link" data-toggle="tab">网友讨论圈</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="tab-content">
+            <!--商品信息-->
+            <div id="tab1" class="tab-pane active">
+                <div class="title mt-4">基本信息</div>
+                <hr/>
+                <div class="row">
+                    <div class="col-lg-4 col-12">
+                        <div class="row">
+                            <div class="small-title col-3">商品名:</div>
+                            <div class="small-information col-9">夏季短袖卫衣t恤男套装运动休闲韩版潮流男装一套搭配帅气两件套</div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-4 col-6">
+                        <div class="row">
+                            <div class="small-title col-md-3 offset-lg-2 col-6">所属分类:</div>
+                            <div class="small-information col-md-7 col-6">卫衣</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-6 clearfix">
+                        <div class="row">
+                            <div class="small-title col-md-3 offset-lg-2 col-5">上架时间:</div>
+                            <div class="small-information col-md-7 col-7">2020-07-08 23:54:54</div>
+                        </div>
+                    </div>
+                </div>
+                <hr/>
+                <!-- 商品详情 -->
+                <div class="title mt-4">商品详情</div>
+                <hr/>
+                <div class="row mb-4">
+                    <div class="col-4">
+                        <div class="small-information mt-2">品牌: A.D Hepburn</div>
+                    </div>
+                    <div class="col-4">
+                        <div class="small-information mt-2">尺码: 【收藏加购先发货】 M L XL 2XL 3XL</div>
+                    </div>
+                    <div class="col-4">
+                        <div class="small-information mt-2">花型图案: 字母数字</div>
+                    </div>
+                    <div class="col-4">
+                        <div class="small-information mt-2">领型: 连帽</div>
+                    </div>
+                    <div class="col-4">
+                        <div class="small-information mt-2">颜色: 白色 黑色</div>
+                    </div>
+                    <div class="col-4">
+                        <div class="small-information mt-2">袖型: 常规</div>
+                    </div>
+                    <div class="col-4">
+                        <div class="small-information mt-2">上市时间: 2020年</div>
+                    </div>
+                    <div class="col-4">
+                        <div class="small-information mt-2">货号: A.D3283</div>
+                    </div>
+                    <div class="col-4">
+                        <div class="small-information mt-2">细分风格: 潮</div>
+                    </div>
+                    <div class="col-4">
+                        <div class="small-information mt-2">基础风格: 青春流行</div>
+                    </div>
+                    <div class="col-4">
+                        <div class="small-information mt-2">适用季节: 夏季</div>
+                    </div>
+                    <div class="col-4">
+                        <div class="small-information mt-2">袖长: 短袖</div>
+                    </div>
+                    <div class="col-4">
+                        <div class="small-information mt-2">厚薄: 常规</div>
+                    </div>
+                    <div class="col-4">
+                        <div class="small-information mt-2">适用场景: 日常</div>
+                    </div>
+                    <div class="col-4">
+                        <div class="small-information mt-2">版型: 修身</div>
+                    </div>
+                    <div class="col-4">
+                        <div class="small-information mt-2">款式细节: 拉链装饰</div>
+                    </div>
+                    <div class="col-4">
+                        <div class="small-information mt-2">服饰工艺: 免烫处理</div>
+                    </div>
+                    <div class="col-4">
+                        <div class="small-information mt-2">适用对象: 青年</div>
+                    </div>
+                    <div class="col-4">
+                        <div class="small-information mt-2">印花主题: 几何图案</div>
+                    </div>
+                </div>
+                <!--图片-->
+                <div class="row mb-5">
+                    <div class="col-7 mt-2">
+                        <img src="img/yifu1.jpg" alt class="img-fluid"/>
+                    </div>
+                    <div class="col-7 mt-2">
+                        <img src="img/yifu1.jpg" alt class="img-fluid"/>
+                    </div>
+                    <div class="col-7 mt-2">
+                        <img src="img/yifu1.jpg" alt class="img-fluid"/>
+                    </div>
+                    <div class="col-7 mt-2">
+                        <img src="img/yifu1.jpg" alt class="img-fluid"/>
+                    </div>
+                    <div class="col-7 mt-2">
+                        <img src="img/yifu1.jpg" alt class="img-fluid"/>
+                    </div>
+                </div>
+            </div>
+            <div id="tab2" class="tab-pane">2</div>
+            <div id="tab3" class="tab-pane">3</div>
+        </div>
+    </div>
+
+</div>
+<!-- footer部分 -->
+<!-- 灰色横条 -->
+<div class="bg-grey">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2 col-md-4 col-6 ">
+                <div class="service-item d-flex justify-content-center">
+                    <i class="f-icon f-icon-qi"></i>
+                    <span>七天包退</span>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 ">
+                <div class="service-item d-flex justify-content-center">
+                    <i class="f-icon f-icon-zheng"></i>
+                    <span>正品保障</span>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 ">
+                <div class="service-item d-flex justify-content-center">
+                    <i class="f-icon f-icon-hao"></i>
+                    <span>好评如潮</span>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 ">
+                <div class="service-item d-flex justify-content-center">
+                    <i class="f-icon f-icon-shan"></i>
+                    <span>闪电发货</span>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 ">
+                <div class="service-item d-flex justify-content-center">
+                    <i class="f-icon f-icon-quan"></i>
+                    <span>权威荣誉</span>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 ">
+                <div class="service-item d-flex justify-content-center">
+                    <i class="f-icon f-icon-kefu"></i>
+                    <span>咨询客服</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- dark部分 -->
+<div class="footer-body">
+    <div class="container">
+        <div class="row vertical-list">
+            <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                <h5>新手上路</h5>
+                <ul>
+                    <li><a href="">售后流程</a></li>
+                    <li><a href="">购物流程</a></li>
+                    <li><a href="">订购方式</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                <h5>配送与支付</h5>
+                <ul>
+                    <li><a href="">货到付款区域</a></li>
+                    <li><a href="">配送支付智能查询</a></li>
+                    <li><a href="">支付方式说明</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                <h5>服务保证</h5>
+                <ul>
+                    <li><a href="">退换货原则</a></li>
+                    <li><a href="">售后服务保证</a></li>
+                    <li><a href="">产品质量保证</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                <h5>联系我们</h5>
+                <ul>
+                    <li><a href="">网站故障报告</a></li>
+                    <li><a href="">选机咨询</a></li>
+                    <li><a href="">投诉与建议</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 mb-2">
+                <div class="qrcode-box">
+                    <img src="img/passerby.jpg" alt="">
+                    <div class="qrcode-title">联系我</div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 mb-2">
+                <div class="qrcode-box">
+                    <img src="img/scnu_logo.jpg" alt="">
+                    <div class="qrcode-title">Logo</div>
+                </div>
+            </div>
+        </div>
+        <!--  分隔线  -->
+        <div class="apart-line"></div>
+        <ul class="clearfix text-center horizontal-list d-flex justify-content-center">
+            <li><a href="#">客户服务</a></li>
+            <li><a href="#">我的收藏</a></li>
+            <li><a href="#">我的浏览</a></li>
+            <li><a href="#">我的订单</a></li>
+        </ul>
+        <p class="copyright">
+            Copyright © 2020 <a href="">passerbyYSQ</a>. All Rights Reserved | <a href=""> 粤ICP备20036780号</a><br>
+            Powered by <a href="">passerbyYSQ</a> 1127664027@qq.com
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
