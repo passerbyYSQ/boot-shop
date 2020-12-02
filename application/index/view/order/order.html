@@ -26,7 +26,7 @@
     <style type="text/css">
         /*选中收货人或支付方式改变样式*/
         .selected{font-weight:bold; background:url('__index__/img/checked.png') no-repeat; background-position: right  bottom}
-
+		
     </style>
 
 </head>
@@ -37,16 +37,23 @@
             <div class="row">
                 <div class="col-md-4 col-12">
                     <ul class="clearfix">
-                        <li><a href="#">请先登录</a></li>
-                        <li><a href="#">免费注册</a></li>
+                    	{empty name="$Think.session.member"}
+                    		<!-- 未登录 -->
+	                        <li><a href="{:url('member/login')}">请先登录</a></li>
+	                        <li><a href="{:url('member/register')}">免费注册</a></li>
+	                    {else/}
+	                    	<!-- 已登录 -->
+	                    	<li><a href="#">{$Think.session.member.phone} | {$Think.session.member.memberName}</a></li>
+	                        <li><a href="{:url('member/logout')}" onClick="return confirm('是否确认退出当前账号？');">退出</a></li>
+	                    {/empty}
                     </ul>
                 </div>
                 <div class="col-md-8 col-12">
                     <ul class="bd-list clearfix">
-                        <li><a href="#">客户服务</a></li>
+                        <li><a href="https://blog.csdn.net/qq_43290318">客户服务</a></li>
                         <li><a href="#">我的收藏</a></li>
                         <li><a href="#">我的浏览</a></li>
-                        <li><a href="#">我的订单</a></li>
+                        <li><a href="{:url('order/myorder')}">我的订单</a></li>
                     </ul>
                 </div>
             </div>
@@ -85,28 +92,26 @@
             </div>
         </div>
         <div class="link-body "></div>
+        	<input type="hidden" name="addressId" />
         <ul class="list-group list-group-flush " id="Receiver">
         	{$allAddress}
          
-            <li class="list-group-item list-group-item-action">赖旋 广东 佛山市 南海区 狮山镇 南海软件科技园信息大道华南师范大学 183****6947</li>
-            <li class="list-group-item list-group-item-action">赖旋 广东 佛山市 南海区 狮山镇 南海软件科技园信息大道华南师范大学 183****6947</li>
-            <li class="list-group-item list-group-item-action">赖旋 广东 佛山市 南海区 狮山镇 南海软件科技园信息大道华南师范大学 183****6947</li>
-            <li class="list-group-item list-group-item-action">赖旋 广东 佛山市 南海区 狮山镇 南海软件科技园信息大道华南师范大学 183****6947</li>
+
         </ul>
         <div class="mb-3 mt-5 font-weight-bold">支付方式</div>
         <div class="link-body"></div>
 			<ul class="list-group list-group-horizontal-lg" id="Payment">
-
-				<li class="list-group-item">
+			<input type="hidden" isCod="0" name="payment" 	 />
+				<li class="list-group-item" id="firstpay" selected>
 					<div data-value='{"type":"cod","payid":"16","allow":""}'>
-						<span> <input type="hidden" isCod="1" name="payment"
+						<span > <input type="hidden" isCod="1" name="payment1"
 							value="0" /> 支付宝支付
 						</span> <b></b>
 					</div>
 				</li>
 				<li class="list-group-item">
 					<div data-value='{"type":"onlinepay","payid":"15","allow":""}'>
-						<span> <input type="hidden" isCod="0" name="payment"
+						<span> <input type="hidden" isCod="0" name="payment1"
 							value="1" /> 微信支付
 						</span> <b></b>
 					</div>
@@ -115,7 +120,7 @@
 
 				<li class="list-group-item">
 					<div data-value='{"type":"balance","payid":"11","allow":""}'>
-						<span> <input type="hidden" isCod="0" name="payment"
+						<span> <input type="hidden" isCod="0" name="payment1"
 							value="2" /> 网上银行
 						</span> <b></b>
 					</div>
@@ -144,7 +149,7 @@
             <li class="list-group-item ">
                 <div class="row">
                     <div class="col-md-2 col-2">
-                    <input name="cartIds[]" type="hidden" value="{$item.cartId}">
+                    <input name="cartIds[]" type="hidden" value="{$item.cartId}"> 
                     <a href="{:url('goods/index')}?id={$item.goodsId}" target="_blank">
                     <img src="__public__/{$item.mainPic}"  style="width: 50px;height: 50px" alt="">
                     </a>
@@ -157,12 +162,13 @@
                     <div class="col-md-1 col-2 text-center " >x{$item.count}</div>
                     <div class="col-md-1 col-12 text-center ">
                         <span class="p-price">¥{$item.salePrice * $item.count}</span></div>
-                        <input type="hidden"value="{$item.last}" />
-
+                      
+	  
                 </div>
             </li>
    		{/foreach}
-
+   		
+   <!-- 
 				<li class="list-group-item ">
                 <div class="row">
                     <div class="col-md-2 col-2"><img src="__index__/img/girl.jpg"  style="width: 50px;height: 50px" alt=""></div>
@@ -176,7 +182,7 @@
                         <span class="p-price">¥398.00</span></div>
 
                 </div>
-            </li>
+            </li> -->
         </ul>
 
         <div class="row   mt-5 mb-2 mr-2" >
@@ -198,7 +204,9 @@
             </div>
             </div>
         <div class="clearfix" style="background-color: #F2f2f2">
-            <div class="float-right m-2">寄送至：广东 佛山市 南海区 狮山镇 南海软件科技园信息大道华南师范大学收货人：赖旋 183****6947
+            <div class="float-right m-2">
+            	<span id="sendAddr">寄送至：广东佛山高明区华南师范大学南海校区</span> <span
+									id="sendMobile">收货人：小明&nbsp;&nbsp;18575784345</span>
             </div>
         </div>
         <div class="ml-auto clearfix">
@@ -256,7 +264,7 @@
                     </form>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                    <button type="button" class="btn btn-danger" href="javascript:void(0)" onClick="saveAddress()">保存收货人信息</button>
+                    <button type="button" class="btn btn-danger" href="javascript:void(0)" onClick="saveAddress()"   data-dismiss="modal">保存收货人信息</button>
                 </div>
             </div><!-- /.modal-content -->
         </div><!-- /.modal -->
@@ -274,45 +282,61 @@
     <script src="__lib__/bootstrap4/js/bootstrap.min.js"></script>
 
     <script type="text/javascript">
+    window.onload=function(){
+    	  $("#Receiver li:first").click();
+    }
         $(function(){
             $("#Receiver li").click(function() {
                 $(this).siblings('li').removeClass('selected');  		// 删除其他兄弟元素的样式
-                $(this).addClass('selected');                            // 添加当前元素的样式
+                $(this).addClass('selected');     // 添加当前元素的样式
+               
             });
             $("#Payment li").click(function() {
                 $(this).siblings('li').removeClass('selected');  		// 删除其他兄弟元素的样式
-                $(this).addClass('selected');                            // 添加当前元素的样式
-            });
-        });
+                $(this).addClass('selected');  // 添加当前元素的样式
 
+                $("input[name='payment']").val($(this).find("input[type=hidden]").val());
+            
+               // var v=$(this).find("input[type=hidden]").val(); //获取值  
+             //  alert(v) ;
+            
+            });
+            $("#firstpay").attr("class","selected list-group-item");
+         //   $("#Receiver li:first").attr("class","selected list-group-item");
+        });
+/* 
     	$(function() {
 			initCxSelect();
 			validateAddressForm();
 			changePayWay();
 			// 模拟点击，选中第一个地址
 			$("#consignee-addr div.cs-w-item:first").click();
-		});
+		}); */
 		
 		// 切换付款方式
-		function changePayWay() {
+/* 		function changePayWay() {
 			$(".payment-list>.p-radio-item").on('click', function() {
 				$(this).addClass("item-selected");
 				$(this).siblings(".item-selected").removeClass("item-selected");
 				$(this).find("input[name='payment']").prop("checked", true);
 			});
-		}
+		} */
 		
 		// 切换选中的地址
 		function selectAddress(obj, addressId) {
-			$(obj).addClass("cs-selected");
-			$(obj).siblings(".cs-w-item").removeClass("cs-selected");
+			   $(obj).siblings('li').removeClass('selected');  		// 删除其他兄弟元素的样式
+               $(obj).addClass('selected');     // 添加当前元素的样式
+			/* $(obj).addClass("cs-selected");
+			$(obj).siblings(".cs-w-item").removeClass("cs-selected"); */
 			$("input[name='addressId']").val(addressId);
-			
+			//var v=addressId; //获取值  
+			// alert(v) ;
 			var sendAddr = "寄送至：" + $(obj).find(".item-address").text().replace(/\s+/g, "");
 			$("#sendAddr").html(sendAddr);
-			
+			//alert(sendAddr) ;
 			var sendMobile = "收货人：" + $(obj).find(".username").text() + " " +
 						$(obj).find(".contact").eq(0).text();
+			//alert(sendMobile) ;
 			$("#sendMobile").html(sendMobile);
 		}
 		
@@ -371,7 +395,7 @@
 					success: function(res) {
 						if (res.status) {
 						//	closeAddressDialog();
-							$("#consignee-addr .consignee-warp").prepend(res.data);
+							$("#Receiver").prepend(res.data);
 						} else {
 							alert(res.msg);
 							console. log(res);

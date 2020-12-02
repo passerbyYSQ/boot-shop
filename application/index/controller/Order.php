@@ -158,7 +158,7 @@ class Order extends Controller {
     
     // 提交订单
     public function submit() {
-        //var_dump(input('post.'));
+      //  var_dump(input('post.'));
         
         if (empty(session('member'))) {
             $this->error('请先登录');
@@ -168,11 +168,13 @@ class Order extends Controller {
         $payMethod = input('post.payment');
         $cartIds = input('post.cartIds/a');
         
+       
+        
         $address = AddressModel::get(
             ['id'=>$addressId, 'memberId'=>session('member.id')]);
-        if (empty($address)) {
+         if (empty($address)) {
             $this->error('收货地址不存在', 'cart/index');
-        }
+        } 
         
         if ($payMethod != 0 || $payMethod != 1 || $payMethod != 2) {
             $payMethod = 0;
@@ -235,6 +237,7 @@ class Order extends Controller {
         } catch (Exception $e) {
             // 回滚事务
             Db::rollback();
+            
             $this->error('提交订单失败');
         }
         
@@ -250,9 +253,9 @@ class Order extends Controller {
         
         //var_dump(input('post.'));exit();
          $cartIds = input('post.checkItem/a');
-//         if (empty($cartIds)) {
-//             $this->error('请选择购物车中的商品');
-//         }
+        if (empty($cartIds)) {
+            $this->error('请选择购物车中的商品');
+                }   
         //var_dump($cartIds);exit();
         
         $cartModel = new CartModel();
@@ -349,12 +352,16 @@ class Order extends Controller {
 //    <i class=icon></i> <a href=javascript:void(0); class=edit onClick='showAddressDialog(false)'>修改</a>
 //    <a href=javascript:void(0) class=delete onClick='deleteAddress({$addressId}, this)'>删除</a>
 // </div>";
-            $html = "  <li class='list-group-item list-group-item-action'>{$consigneeName}&nbsp;
-            {$province}&nbsp;
+            $html = "  <li  onClick='selectAddress(this, {$addressId})' class='list-group-item list-group-item-action'>
+            
+               <span class=username>{$consigneeName}&nbsp;</span>
+            
+                <span class=item-address> {$province}&nbsp;
             {$city}&nbsp;
             {$area} &nbsp;
-            {$detail}&nbsp;
-            {$mobilePhone}</li>";
+            {$detail}&nbsp;</span>  
+             <span class=contact>{$mobilePhone}</span>
+            </li>";
         return $html;
     }
     
