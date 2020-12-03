@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- 不设置的话，手机端不会进行响应式布局 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>跳转中...</title>
+
+    <!-- 引入Bootstrap核心样式文件 -->
+    <link rel="stylesheet" href="lib/bootstrap4/css/bootstrap.css">
+    <style type="text/css">
+
+        .box {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            margin-top: 100px;
+            box-shadow: 0 0 10px #ddd;
+        }
+
+        .msg {
+            line-height: 48px;
+            margin-left: 12px;
+        }
+
+        .run {
+            width: 70%;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 col-12 text-center box">
+                <div class="d-flex justify-content-center px-5 mt-4 mb-2">
+                    <img src="img/error.svg" width="48" alt="">
+                    <h4 class="msg">登录成功收到v白色的接口VS的</h4>
+                </div>
+                <h5 class="text-muted">
+                    <b id="wait">10</b> s 后页面自动
+                    <a id="href" href="#" class="text-decoration-none">跳转</a>
+                </h5>
+                <img src="img/run.gif" alt="" class="run my-3">
+            </div>
+        </div>
+    </div>
+
+    <!-- js的顺序不能乱 -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <!-- bootstrap.min.js依赖jquery -->
+    <script src="lib/bootstrap4/js/bootstrap.min.js"></script>
+</body>
+</html>
