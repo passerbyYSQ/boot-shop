@@ -20,15 +20,80 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e885863-4c7e-4320-8775-1b2a9fd89905" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/img/error.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/run.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/success.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skip.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../application/index/controller/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/../application/index/controller/Order.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../application/index/view/order/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/../application/index/view/order/order.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../application/index/view/goods/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../application/index/view/goods/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/log/202005/25.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/log/202005/26.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/log/202005/27.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/log/202005/28.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/log/202005/29.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/log/202005/30.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/log/202005/31.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/log/202006/01.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/log/202006/02.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/log/202006/05.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/log/202006/11.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/log/202006/12.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/log/202006/18.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/log/202006/19.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/log/202006/20.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/log/202006/21.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/log/202006/22.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/log/202006/23.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/log/202006/30.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/log/202007/01.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/log/202007/02.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/log/202007/03.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/log/202007/04.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/log/202007/05.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/log/202007/06.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/log/202007/08.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/log/202008/20.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/log/202011/28.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/log/202011/29.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/log/202011/30.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/0501f123a75ee710590114e51e66b65a.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/08953f37e1b16eaa56dce6024f99c3f1.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/0ba2a1761b5304bac97731f3d62bc900.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/1f9aafa9c3c74af1e002ba20f497580a.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/29fde60a37eb10b681f4e9ca58ea67b2.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/2ad7061287d53db7e87f5c88fb013891.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/30989225889393f493a96ff478a56174.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/333900f4ad04b3f9a52828beca188eb2.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/33bcd138b3e08906656c6bfa0af50530.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/35cc03ee842cef9461de89ba1dbf54e7.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/3c4a5fbb5a64ea04762a1d5d20ad7fff.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/402f2094e1c590aeba951fca8b9c06b3.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/41b7472f532b6e867d9b39894952f539.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/46103919588fa277bda7a29f796419b9.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/4d6785dc6187808b4ee466123bcebc75.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/66e97b648e966e1921ca3e38c8e89b3a.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/687a6c52ee40f342e86aee5002e47e08.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/6fd18593f0a6f655337cb5eae44eff72.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/708de277a6d339d510ef49505669a8cb.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/7963350cd5104763c014080d54b0ccfb.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/844de94040325d127e23fa9230861829.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/857dd9b1d3e94e915e46354b8937b56c.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/858ffcdce93afbd74eedb858be467bd9.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/9035479283182c32d0d8e214498ad4c4.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/9810ab29d64c08f28d0ea80aa41ed65c.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/9e21cb317031be7a44a60d1ae7f0a306.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/9efba7e155901cc59278ba9e9020bc02.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/a912e3355405041e77c9f43416ed81c4.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/c1e2461fb5221189f9f306efd1586133.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/d07fefd009555574dd0052ba92c76262.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/d18c26f717cfb14673be1d3a5a61540a.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/d538544e9055a3e29b70e23ab29599b3.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/dba3059b21b383292ba45066fd83bb7f.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/dbf4e9d8eeab1319e623cf6f80ae950d.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/df8f033f44c064147061709b3b50a778.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/f00bb8bcc843a0b6144d3fc81c93ca7c.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/f8fa6995522e0e3164783d3b5409e130.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/fe29771a48fd03769fcd03cede8a941d.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../runtime/temp/ff9c622e93febd47191b67f377e0636d.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/goods.html" beforeDir="false" afterPath="$PROJECT_DIR$/goods.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/shopcart.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/shopcart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopcart.html" beforeDir="false" afterPath="$PROJECT_DIR$/shopcart.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,8 +103,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="bootstrap" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -47,9 +112,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1klDx62piAm7C3y1e6ZsjTvG7Pu" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -57,7 +120,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -69,16 +132,16 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\WebstormProjects\shop\lib\iconfont\css" />
-      <recent name="E:\WebstormProjects\shop\lib\iconfont" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Wamp\www\boot-shop\shop-webstorm\img" />
       <recent name="E:\WebstormProjects\shop" />
       <recent name="E:\WebstormProjects\shop\img" />
       <recent name="E:\WebstormProjects\shop\lib\iconfont" />
       <recent name="E:\WebstormProjects\shop\lib\bootstrap\js" />
+      <recent name="E:\WebstormProjects\shop\lib\bootstrap\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\WebstormProjects\shop\lib\iconfont\css" />
+      <recent name="E:\WebstormProjects\shop\lib\iconfont" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -104,11 +167,6 @@
       <workItem from="1606651268272" duration="2981000" />
       <workItem from="1606663194214" duration="178000" />
       <workItem from="1606784900409" duration="2926000" />
-      <workItem from="1606810495928" duration="1662000" />
-      <workItem from="1606915422950" duration="1278000" />
-      <workItem from="1606917649214" duration="939000" />
-      <workItem from="1606924286384" duration="600000" />
-      <workItem from="1606997366413" duration="4868000" />
     </task>
     <servers />
   </component>

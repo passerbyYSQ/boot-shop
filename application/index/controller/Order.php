@@ -252,10 +252,10 @@ class Order extends Controller {
     public function index() {
         
         //var_dump(input('post.'));exit();
-        $cartIds = input('post.checkItem/a');
+         $cartIds = input('post.checkItem/a');
         if (empty($cartIds)) {
             $this->error('请选择购物车中的商品');
-        }   
+                }   
         //var_dump($cartIds);exit();
         
         $cartModel = new CartModel();
