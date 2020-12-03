@@ -84,7 +84,7 @@
         max-width: 33%;
         width: 100%;
     }
-	.dislist2{
+    .dislist2{
         max-width: 33%;
         width: 100%;
     }
@@ -109,7 +109,7 @@
         max-width: 33%;
         width: 100%;
     }
-	.dislist2{
+    .dislist2{
         max-width: 33%;
         width: 100%;
     }
@@ -136,7 +136,7 @@
         max-width: 10%;
         width: 100%;
     }
-	.dislist2{
+    .dislist2{
         max-width: 17.5%;
         width: 100%;
     }
@@ -163,7 +163,7 @@
         max-width: 12.5%;
         width: 100%;
     }
-	.dislist2{
+    .dislist2{
         max-width: 12.5%;
         width: 100%;
     }
@@ -190,46 +190,52 @@
 }
 /*商品数量条样式*/
 .buy-num{
-	float: left;
     width: 24px;
     padding: 0 2px;
     border: 1px solid #d2d2d2;
     height: 28px;
     outline: 0;
     text-align: center;
+    border-radius: 4px;
 }
 /*商品数量调整按钮*/
 .btn-add{
-	float: left;
     width: 22px;
     height: 28px;
     line-height: 28px;
     text-align: center;
-	border: 1px solid #d2d2d2;
-    border-left: 0;
+    border: 1px solid #d2d2d2;
+    border-radius: 4px;
 }
 .btn-reduce{
-	float: left;
     width: 22px;
     height: 28px;
     line-height: 28px;
     text-align: center;
-	border: 1px solid #d2d2d2;
-    border-left: 0;
+    border: 1px solid #d2d2d2;
+    border-radius: 4px;
+}
+.btn-add strong{
+    position: relative;
+    top: -10%;
+}
+.btn-reduce strong{
+    position: relative;
+    top: -10%;
 }
 .dislist a{
-	float: left;
+    floayt: center;
     margin-top: 0;
     display: block;
     font-size: 12px;
     color: #438cde;
 }
 /*显示隐形*/
-.hide{ 
-	display: none;
+.hide{
+    display: none;
 }
-.show{ 
-	display: block;
+.show{
+    display: block;
 }
 /*删除收货人信息*/
 .tip-box{ width: 300px;*width: 330px;margin: 0 auto;overflow:hidden;}

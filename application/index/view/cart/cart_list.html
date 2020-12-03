@@ -101,9 +101,9 @@
 					<div class="dislist" style="color: #8c8c8c">操作</div>
 				</div>
 				<!--商品-->
-				<div class="text-center mt-3 mb-3 pb-4" style="background-color: #fff">
-					{foreach $itemList as $item}
-					<form id="cartForm" method="post" action="{:url('order/index')}">
+				<form id="cartForm" method="post" action="{:url('order/index')}">
+					<div class="text-center mt-3 mb-3 pb-4" style="background-color: #fff">
+						{foreach $itemList as $item}
 						<div class="row item-single">
 							<div class="mt-4 otherlist">
 								<input type="checkbox" value="{$item.cartId}"
@@ -116,7 +116,7 @@
 								</div>
 							</div>
 							<div class="mt-4 dislist1" id="goods_price_8"><em>¥</em><span name="price">{$item.salePrice}</span></div>
-							<div class="mt-4 dislist2 pl-4">
+							<div class="mt-4 dislist2 d-flex justify-content-center">
 								<a class="btn-reduce" href="javascript:void(0)" onclick="addNum(this, -1, {$item.last});
                                 		requestUpdateCount({$item.cartId}, $(this).siblings('input[name=goodsNum]').val(), this)">
 									<strong>-</strong>
@@ -130,17 +130,16 @@
 							</div>
 							<div class="mt-4 dislist1" id="goods_subtotal_8"><em>¥</em><span
 									name="subtotal">{$item.count * $item.salePrice}</span></div>
-							<div class="mt-4 dislist pl-5">
+							<div class="mt-4 dislist">
 								<a class="cart-remove" href="javascript:void(0)"
 								   onClick="requestDeleteOne({$item.cartId}, this)"
 								   ectype="cartOperation">删除</a>
-								   <br/>
 								<a class="cart-store" href="javascript:void(0)" ectype="cartOperation">收藏</a>
 							</div>
 						</div>
-					</form>
-					{/foreach}
-				</div>
+						{/foreach}
+					</div>
+				</form>
 				<!--商品底部-->
 				<div class="row text-center mb-5 pb-2" style="background-color: #fff">
 					<div class="my-col mt-4">
