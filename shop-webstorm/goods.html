@@ -5,7 +5,7 @@
     <!-- 不设置的话，手机端不会进行响应式布局 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>商品详情 - 夏季短袖卫衣t恤男套装运动休闲韩版潮流男装一套搭配帅气两件套</title>
+    <title>商品详情 - {$goods.goodsName}</title>
 
     <!-- 引入图标样式 -->
     <link rel="stylesheet" href="lib/iconfont/css/iconfont.css">
@@ -112,10 +112,10 @@
         <div class="col-lg-4 col-md-10 offset-md-1 col-sm-10 offset-sm-1 imgGlass">
             <div class="preview" if="preview">
                 <div class="gallery_wrap">
-                    <a href="img/yifu1.jpg"
+                    <a href="__public__/{$goods.mainPic}"
                        class="MagicZoomPlus" id="Zoomer"
                        rel="hint-text: ; selectors-effect: false; selectors-class: img-hover; selectors-change: mouseover; zoom-distance: 10;zoom-width: 100%; zoom-height: 100%;">
-                        <img src="img/yifu1.jpg" id="J_prodImg" alt="夏季短袖卫衣t恤男套装运动休闲韩版潮流男装一套搭配帅气两件套">
+                        <img src="img/yifu1.jpg" id="J_prodImg" alt="{$goods.goodsName}">
                     </a>
                 </div>
             </div>
@@ -125,7 +125,7 @@
             <div class="detail mr-lg-1 mb-1">
                 <div class="row product-wrap">
                     <div class="col-lg-12 name">
-                        夏季短袖卫衣t恤男套装运动休闲韩版潮流男装一套搭配帅气两件套
+                        {$goods.goodsName}
                     </div>
                     <!--灰色部分-->
                     <div class="price-box col-12 row ml-sm-1">
@@ -138,7 +138,7 @@
                                         <strong class="shop-price text-danger" id="ECS_SHOPPRICE" ectype="SHOP_PRICE">
                                             <em>¥</em>
                                             <!--价格，后面更改-->
-                                            398.00
+                                            {$goods.marketPrice}
                                         </strong>
                                     </div>
                                     <div class="price-notify price-reduction-notice">降价通知</div>
@@ -150,7 +150,7 @@
                                         </div>
                                         <div class="si-cumulative">
                                             <!--累计销量，后面更改-->
-                                            累计销量<em>2</em>
+                                            累计销量<em>{$goods.saleCount}</em>
                                         </div>
                                     </div>
                                 </div>
@@ -164,15 +164,15 @@
                             <div class="si-warp">
                                 <div class="m-price ml-0" id="ECS_MARKETPRICE">
                                     <!--后面添加数据库修改-->
-                                    <em class="wordsmall2">¥</em>578.00
+                                    <em class="wordsmall2">¥</em>{$goods.salePrice}
                                 </div>
                             </div>
                         </div>
                         <div class="col-12"></div>
                     </div>
                     <div class="col-12 row">
-                        <div class="wordsmall1 col-2 mt-3">服务</div>
-                        <div class="service-item-1 col-8">
+                        <div class="wordsmall1 col-4 col-sm-2 mt-3">服务</div>
+                        <div class="service-item-1 col-6 col-sm-8">
                             <div class="fl">
                                 由
                                 <a href="#" class="link-red">passerByYSQ</a>
@@ -181,13 +181,13 @@
                         </div>
                     </div>
                     <div class="col-12 row">
-                        <div class="wordsmall1 col-2 mt-3">数量</div>
-                        <div class="col-8">
+                        <div class="wordsmall1 col-4 col-sm-2 mt-3">数量</div>
+                        <div class="col-6 col-sm-9 row">
                             <div class="amount-warp">
                                 <input class="text buy-num" ectype="quantity" value="1"
                                        onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onafterpaste="this.value=this.value.replace(/[^\d]/g,'')"
                                        name="number" defaultnumber="1">
-                                <div class="a-btn">
+                                <div class="a-btn mr-3">
                                     <a href="javascript:addCount(1);" class="btn-add" ectype="btnAdd">
                                         <i class="iconfont icon-up"></i></a>
                                     <a href="javascript:addCount(-1);" class="btn-reduce"
@@ -202,8 +202,8 @@
                                 库存
                                 <em id="goods_attr_num" ectype="goods_attr_num">
 <!--                                    后面修改-->
-                                456
-                            </em>&nbsp;
+                                    {$goods.count}
+                                </em>&nbsp;
                                 个
                             </div>
                         </div>
@@ -266,20 +266,20 @@
                     <div class="col-lg-4 col-12">
                         <div class="row">
                             <div class="small-title col-3">商品名:</div>
-                            <div class="small-information col-9">夏季短袖卫衣t恤男套装运动休闲韩版潮流男装一套搭配帅气两件套</div>
+                            <div class="small-information col-9">{$goods.goodsName}</div>
                         </div>
 
                     </div>
                     <div class="col-lg-4 col-6">
                         <div class="row">
                             <div class="small-title col-md-3 offset-lg-2 col-6">所属分类:</div>
-                            <div class="small-information col-md-7 col-6">卫衣</div>
+                            <div class="small-information col-md-7 col-6">{$goods.cateName}</div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-6 clearfix">
                         <div class="row">
                             <div class="small-title col-md-3 offset-lg-2 col-5">上架时间:</div>
-                            <div class="small-information col-md-7 col-7">2020-07-08 23:54:54</div>
+                            <div class="small-information col-md-7 col-7">{$goods.onSaleTime}</div>
                         </div>
                     </div>
                 </div>
@@ -287,83 +287,9 @@
                 <!-- 商品详情 -->
                 <div class="title mt-4">商品详情</div>
                 <hr/>
-                <div class="row mb-4">
-                    <div class="col-4">
-                        <div class="small-information mt-2">品牌: A.D Hepburn</div>
-                    </div>
-                    <div class="col-4">
-                        <div class="small-information mt-2">尺码: 【收藏加购先发货】 M L XL 2XL 3XL</div>
-                    </div>
-                    <div class="col-4">
-                        <div class="small-information mt-2">花型图案: 字母数字</div>
-                    </div>
-                    <div class="col-4">
-                        <div class="small-information mt-2">领型: 连帽</div>
-                    </div>
-                    <div class="col-4">
-                        <div class="small-information mt-2">颜色: 白色 黑色</div>
-                    </div>
-                    <div class="col-4">
-                        <div class="small-information mt-2">袖型: 常规</div>
-                    </div>
-                    <div class="col-4">
-                        <div class="small-information mt-2">上市时间: 2020年</div>
-                    </div>
-                    <div class="col-4">
-                        <div class="small-information mt-2">货号: A.D3283</div>
-                    </div>
-                    <div class="col-4">
-                        <div class="small-information mt-2">细分风格: 潮</div>
-                    </div>
-                    <div class="col-4">
-                        <div class="small-information mt-2">基础风格: 青春流行</div>
-                    </div>
-                    <div class="col-4">
-                        <div class="small-information mt-2">适用季节: 夏季</div>
-                    </div>
-                    <div class="col-4">
-                        <div class="small-information mt-2">袖长: 短袖</div>
-                    </div>
-                    <div class="col-4">
-                        <div class="small-information mt-2">厚薄: 常规</div>
-                    </div>
-                    <div class="col-4">
-                        <div class="small-information mt-2">适用场景: 日常</div>
-                    </div>
-                    <div class="col-4">
-                        <div class="small-information mt-2">版型: 修身</div>
-                    </div>
-                    <div class="col-4">
-                        <div class="small-information mt-2">款式细节: 拉链装饰</div>
-                    </div>
-                    <div class="col-4">
-                        <div class="small-information mt-2">服饰工艺: 免烫处理</div>
-                    </div>
-                    <div class="col-4">
-                        <div class="small-information mt-2">适用对象: 青年</div>
-                    </div>
-                    <div class="col-4">
-                        <div class="small-information mt-2">印花主题: 几何图案</div>
-                    </div>
-                </div>
-                <!--图片-->
-                <div class="row mb-5">
-                    <div class="col-7 mt-2">
-                        <img src="img/yifu1.jpg" alt class="img-fluid"/>
-                    </div>
-                    <div class="col-7 mt-2">
-                        <img src="img/yifu1.jpg" alt class="img-fluid"/>
-                    </div>
-                    <div class="col-7 mt-2">
-                        <img src="img/yifu1.jpg" alt class="img-fluid"/>
-                    </div>
-                    <div class="col-7 mt-2">
-                        <img src="img/yifu1.jpg" alt class="img-fluid"/>
-                    </div>
-                    <div class="col-7 mt-2">
-                        <img src="img/yifu1.jpg" alt class="img-fluid"/>
-                    </div>
-                </div>
+                <div>
+                    ${goods.details}
+                </div>>
             </div>
             <div id="tab2" class="tab-pane">2</div>
             <div id="tab3" class="tab-pane">3</div>

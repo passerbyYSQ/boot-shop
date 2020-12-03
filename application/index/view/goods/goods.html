@@ -1,715 +1,411 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>商品详情 - {$goods.goodsName}</title>
-<link rel="shortcut icon" href="favicon.ico" />
+    <meta charset="utf-8">
+    <!-- 不设置的话，手机端不会进行响应式布局 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>商品详情 - {$goods.goodsName}</title>
 
-<link rel="stylesheet" type="text/css" href="__index__/css/base.css" />
-<link rel="stylesheet" type="text/css" href="__index__/css/style.css" />
-<link rel="stylesheet" type="text/css" href="__index__/css/iconfont.css" />
-<link rel="stylesheet" type="text/css" href="__index__/css/purebox.css" />
-<link rel="stylesheet" type="text/css" href="__index__/css/quickLinks.css" />
+    <!-- 引入图标样式 -->
+    <link rel="stylesheet" href="__lib__/iconfont/css/iconfont.css">
 
+    <!-- 引入Bootstrap核心样式文件 -->
+    <link rel="stylesheet" href="__lib__/bootstrap4/css/bootstrap.css">
+    <script src="__lib__/jquery/jquery.min.js"></script>
+    <script src="__lib__/popper/popper.min.js"></script>
+    <script src="__lib__/bootstrap4/js/bootstrap.js"></script>
 
-<script type="text/javascript" src="__index__/js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="__index__/js/jquery.json.js"></script>
-<script type="text/javascript" src="__index__/js/transport_jquery.js"></script>
+    <!-- 引入自己写的样式 -->
+    <link rel="stylesheet" href="__index__/css/base.css">
+    <link rel="stylesheet" href="__index__/css/goods_list.css">
+    <link rel="stylesheet" href="__index__/css/footer.css">
+    <link rel="stylesheet" href="__index__/css/demo.css">
+    <!--放大镜插件-->
+    <script type="text/javascript" src="__lib__/magiczoomplus.js"></script>
 
-<script type="text/javascript">
-	//加载效果
-	var load_cart_info = '<img src="__index__/img/loadGoods.gif" height="108" class="ml100">';
-	var load_icon = '<img src="__index__/img/load.gif" width="200" height="200">';
-</script>
-<link rel="stylesheet" type="text/css" href="__index__/css/goods_fitting.css" />
-<link rel="stylesheet" type="text/css" href="__index__/css/suggest.css" />
+    <!--站点图标-->
+    <!-- ... -->
+
+    <style type="text/css">
+    </style>
 
 </head>
 <body>
-	{include file="common/top" /}
-
-	<div class="container">
-		<div class="w w1200">
-			<div class="product-info">
-
-				<div class="preview" if="preview">
-					<div class="gallery_wrap">
-						<a href="__public__/{$goods.mainPic}"
-							class="MagicZoomPlus" id="Zoomer"
-							rel="hint-text: ; selectors-effect: false; selectors-class: img-hover; selectors-change: mouseover; zoom-distance: 10;zoom-width: 400; zoom-height: 474;">
-							<img src="__public__/{$goods.mainPic}" id="J_prodImg" alt="{$goods.goodsName}">
-						</a>
-					</div>
-				</div>
-				<div class="product-wrap">
-					<form action="javascript:addToCart(799)" method="post"
-						name="ECS_FORMBUY" id="ECS_FORMBUY">
-						<div class="name">{$goods.goodsName}</div>
-						<div class="summary">
-							<div class="summary-price-wrap">
-								<div class="s-p-w-wrap">
-									<div class="summary-item si-shop-price">
-										<div class="si-tit">商 城 价</div>
-										<div class="si-warp">
-											<strong class="shop-price" id="ECS_SHOPPRICE"
-												ectype="SHOP_PRICE"><em>¥</em>{$goods.salePrice}</strong> <span
-												class="price-notify" data-userid="62" data-goodsid="799"
-												ectype="priceNotify">降价通知</span>
-										</div>
-									</div>
-									<div class="summary-item si-market-price">
-										<div class="si-tit">市 场 价</div>
-										<div class="si-warp">
-											<div class="m-price" id="ECS_MARKETPRICE">
-												<em>¥</em>{$goods.marketPrice}
-											</div>
-										</div>
-									</div>
-									<div class="si-info">
-										<div class="si-cumulative">
-											累计评价<em>0</em>
-										</div>
-										<div class="si-cumulative">
-											累计销量<em>{$goods.saleCount}</em>
-										</div>
-									</div>
-									<div class="si-phone-code">
-										<div class="qrcode-wrap">
-											<div class="qrcode_tit">
-												手机购买<i class="iconfont icon-qr-code"></i>
-											</div>
-											<div class="qrcode_pop">
-												<div class="mobile-qrcode">
-													<img src="__root__/passerby.jpg" alt="商品二维码"
-														title="" width="175">
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<div class="clear"></div>
-								</div>
-							</div>
-							<div class="summary-basic-info">
-
-								<div class="summary-item is-service">
-									<div class="si-tit">服务</div>
-									<div class="si-warp">
-										<div class="fl">
-											由 <a href="javascript:void(0)" class="link-red">passerbyYSQ</a>
-											发货并提供售后服务
-										</div>
-										<div class="fl pl10" id="user_area_shipping"></div>
-									</div>
-								</div>
-
-								<div class="summary-item is-number">
-									<div class="si-tit">数量</div>
-									<div class="si-warp">
-										<div class="amount-warp">
-											<input class="text buy-num" ectype="quantity" value="1"
-											onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onafterpaste="this.value=this.value.replace(/[^\d]/g,'')"
-												name="number" defaultnumber="1">
-											<div class="a-btn">
-												<a href="javascript:addCount(1);" class="btn-add" ectype="btnAdd">
-													<i class="iconfont icon-up"></i></a> 
-												<a href="javascript:addCount(-1);" class="btn-reduce"
-													ectype="btnReduce"><i class="iconfont icon-down"></i></a> 
-												<input
-													type="hidden" name="perNumber" id="perNumber"
-													ectype="perNumber" value="0"> <input type="hidden"
-													name="perMinNumber" id="perMinNumber" ectype="perMinNumber"
-													value="1">
-											</div>
-											<input name="confirm_type" id="confirm_type" type="hidden"
-												value="3" />
-										</div>
-										<span>库存&nbsp;<em id="goods_attr_num"
-											ectype="goods_attr_num">{$goods.count}</em>&nbsp;个
-										</span>
-									</div>
-								</div>
-								<div class="clear"></div>
-							</div>
-							<div class="choose-btns ml60 clearfix">
-								<a href="#" data-type="0"
-									class="btn-buynow" ectype="btn-buynow">立即购买</a> 
-								<a href="javascript:addToCart({$Think.get.id});"
-									class="btn-append" ectype="btn-append"><i
-									class="iconfont icon-carts"></i>加入购物车</a>
-
-
-							</div>
-							<div class="summary-basic-info">
-								<div class="summary-item is-service">
-									<div class="si-tit">温馨提示</div>
-									<div class="si-warp gray">·不支持退换货服务</div>
-								</div>
-							</div>
-							<div class="short-share">
-								<div class="short-share-r bar_code hide">
-									条形条码：<em id="bar_code"></em>
-								</div>
-								<div class="left-btn">
-									<div class="duibi">
-										<a href="javascript:void(0);" id="compareLink"> <input
-											type="checkbox" name="" class="ui-checkbox" id="799"
-											onClick="Compare.add(this, 799,'韩美格2017春秋新款修身大码蕾丝网纱打底衫女长袖薄款圆领女T恤 全店商品 二件减5元 三件减10','0', '__index__/img/0_thumb_G_1490174858999.jpg', '68', '<em>¥</em>81.60')">
-											<label for="799" class="ui-label">对比</label>
-										</a>
-									</div>
-									<a href="javascript:void(0);"
-										class="collection choose-btn-coll"
-										data-dialog="goods_collect_dialog" data-divid="goods_collect"
-										data-url="user.php?act=collect" data-goodsid="799"><i
-										class="iconfont choose-btn-icon icon-collection"
-										id="collection_iconfont"></i><em>收藏 (<span
-											id="collect_count">0</span>)
-									</em></a>
-									<div class="bdsharebuttonbox"
-										style="width: 50px; height: 25px; float: left;">
-										<a href="javascript:void(0);" data-cmd="more"
-											class="share bds_more"
-											style="width: 50px; height: 25px; background: none; margin: 0px 0px 0px 15px; padding: 0px;"><i
-											class="iconfont icon-share"></i><em>分享</em></a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<input type="hidden" value="62" id="user_id" name="user_id" /> <input
-							type="hidden" value="799" id="good_id" name="good_id" /> <input
-							type="hidden" value="2" id="region_id" name="region_id" /> <input
-							type="hidden" value="16" id="area_id" name="area_id" /> <input
-							type="hidden" value="0" name="street_list" /> <input
-							type="hidden" value="0" name="restrictShop" ectype="restrictShop" />
-						<input type="hidden" value="1" name="add_shop_price"
-							ectype="add_shop_price" />
-					</form>
-				</div>
-
-				<div class="clear"></div>
-			</div>
+<div class="container">
+    <div class="top-bar">
+        <!-- top-bar 最顶部那一行 -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-12">
+                    <ul class="clearfix">
+                        <li><a href="#">请先登录</a></li>
+                        <li><a href="#">免费注册</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-8 col-12">
+                    <ul class="bd-list clearfix">
+                        <li><a href="#">客户服务</a></li>
+                        <li><a href="#">我的收藏</a></li>
+                        <li><a href="#">我的浏览</a></li>
+                        <li><a href="#">我的订单</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container p-2">
+        <!--  logo + 搜索框      -->
+        <div class="row">
+            <div class="col-lg-4 col-sm-12 col-12">
+                <a href="https://blog.csdn.net/qq_43290318">
+                    <img src="__index__/img/logo.png" style="max-height: 92px;">
+                </a>
+                <a href="https://blog.csdn.net/qq_43290318">
+                    <img src="__index__/img/ecsc-join.gif" style="max-height: 92px;">
+                </a>
+            </div>
+            <div class="col-lg-5 col-sm-8 col-12">
+                <div class="input-group mt-4">
+                    <input type="text" id="keyword" class="form-control search" placeholder="请输入商品名称关键词"
+                           {notempty name="$conds.goodsName" placeholder="搜索商品名"}value="{$conds.goodsName}" {/notempty}>
+                    <div class="input-group-append">
+                        <button onClick="searchByGoodsName($('#keyword').val())"
+                                class="btn btn-primary" type="button" id="button-addon2">搜索</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-4 col-12">
+                <div class="shop-cart mt-4 float-right">
+                    <a href="{:url('cart/index')}">
+                        <i class="iconfont icon-carts"></i><span>我的购物车</span>
+                        <em class=""><b>3</b></em>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--   导航栏     -->
+        <nav class="navbar navbar-expand-sm navbar-light mt-2">
+            <a class="navbar-brand" href="#">全部商品分类</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#">女人街</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">品牌专区</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">聚划算</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!--商品价格详情-->
+    <div class="row no-gutters">
+        <!--图片-->
+        <div class="col-lg-4 col-md-10 offset-md-1 col-sm-10 offset-sm-1 imgGlass">
+            <div class="preview" if="preview">
+                <div class="gallery_wrap">
+                    <a href="__public__/{$goods.mainPic}"
+                       class="MagicZoomPlus" id="Zoomer"
+                       rel="hint-text: ; selectors-effect: false; selectors-class: img-hover; selectors-change: mouseover; zoom-distance: 10;zoom-width: 100%; zoom-height: 100%;">
+                        <img src="__public__/{$goods.mainPic}" id="J_prodImg" alt="{$goods.goodsName}">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--详情-->
+        <div class="col-lg-6 col-md-10 col-sm-10 p-0 ml-5">
+            <div class="detail mr-lg-1 mb-1">
+                <div class="row product-wrap">
+                    <div class="col-lg-12 name">
+                        {$goods.goodsName}
+                    </div>
+                    <!--灰色部分-->
+                    <div class="price-box col-12 row ml-sm-1">
+                        <div class="col-12">
+                            <!--灰色第一行部分-->
+                            <div class="row">
+                                <div class="col-sm-8 col-12 d-flex justify-content-start">
+                                    <div class="wordsmall1 mt-2">商 城 价</div>
+                                    <div>
+                                        <strong class="shop-price text-danger" id="ECS_SHOPPRICE" ectype="SHOP_PRICE">
+                                            <em>¥</em>
+                                            <!--价格，后面更改-->
+                                            {$goods.marketPrice}
+                                        </strong>
+                                    </div>
+                                    <div class="price-notify price-reduction-notice">降价通知</div>
+                                </div>
+                                <div class="col-sm-4 col-12 ">
+                                    <div class="d-flex justify-content-sm-end justify-content-start ml-sm-0 ml-3 my-3">
+                                        <div class="si-cumulative">
+                                            累计评价<em>0</em>
+                                        </div>
+                                        <div class="si-cumulative">
+                                            <!--累计销量，后面更改-->
+                                            累计销量<em>{$goods.saleCount}</em>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
 
-			<div class="goods-main-layout">
+                        </div>
+                        <!--灰色第二行部分-->
+                        <div class="col-12">
+                            <div class="wordsmall2 mr-0">市 场 价</div>
+                            <div class="si-warp">
+                                <div class="m-price ml-0" id="ECS_MARKETPRICE">
+                                    <!--后面添加数据库修改-->
+                                    <em class="wordsmall2">¥</em>{$goods.salePrice}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12"></div>
+                    </div>
+                    <div class="col-12 row">
+                        <div class="wordsmall1 col-4 col-sm-2 mt-3">服务</div>
+                        <div class="service-item-1 col-6 col-sm-8">
+                            <div class="fl">
+                                由
+                                <a href="#" class="link-red">passerByYSQ</a>
+                                提供售后服务
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 row">
+                        <div class="wordsmall1 col-4 col-sm-2 mt-3">数量</div>
+                        <div class="col-6 col-sm-9 row">
+                            <div class="amount-warp">
+                                <input class="text buy-num" ectype="quantity" value="1"
+                                       onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onafterpaste="this.value=this.value.replace(/[^\d]/g,'')"
+                                       name="number" defaultnumber="1">
+                                <div class="a-btn mr-3">
+                                    <a href="javascript:addCount(1);" class="btn-add" ectype="btnAdd">
+                                        <i class="iconfont icon-up"></i></a>
+                                    <a href="javascript:addCount(-1);" class="btn-reduce"
+                                       ectype="btnReduce"><i class="iconfont icon-down"></i></a>
+                                    <input type="hidden" name="perNumber" id="perNumber" ectype="perNumber" value="0">
+                                    <input type="hidden" name="perMinNumber" id="perMinNumber" ectype="perMinNumber" value="1">
+                                </div>
+                                <input name="confirm_type" id="confirm_type" type="hidden"
+                                       value="3" />
+                            </div>
+                            <div class="mt-3 wordsmall1">
+                                库存
+                                <em id="goods_attr_num" ectype="goods_attr_num">
+<!--                                    后面修改-->
+                                    {$goods.count}
+                                </em>&nbsp;
+                                个
+                            </div>
+                        </div>
+                    </div>
+<!--                    两个按钮-->
+                    <div class="col-12 row">
+                        <div class="col-md-4 col-12">
+                            <button class="btn btn-warning btn-size">立即购买</button>
+                        </div>
+                        <div class="col-md-7 col-12">
+                            <button class="btn btn-danger btn-size2">
+                                <i class="iconfont icon-carts"></i>
+                                加入购物车
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="row mt-4 ">
+                            <div class="wordsmall1 col-2">温馨提示</div>
+                            <div class="wordsmall1 col-8 ">不支持退换货服务</div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <ul class="bd-list clearfix">
+                            <li class="mylabel collection-img">
+                                <i class="iconfont icon-collection"></i>
+                                <label>收藏(0)</label>
+                            </li>
+                            <li class="mylabel">
+                                <input type="checkbox" id="799" class="mylabel"/>
+                                <label for="799">对比</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--选项卡-->
+    <div class="mt-3">
+        <nav class="navbar navbar-expand-sm navbar-light mt-2">
+            <ul class="nav nav-tabs" >
+                <li class="nav-item">
+                    <a href="#tab1" class="nav-link" data-toggle="tab">商品信息</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#tab2" class="nav-link" data-toggle="tab">用户评论(0)</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#tab3" class="nav-link" data-toggle="tab">网友讨论圈</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="tab-content">
+            <!--商品信息-->
+            <div id="tab1" class="tab-pane active">
+                <div class="title mt-4">基本信息</div>
+                <hr/>
+                <div class="row">
+                    <div class="col-lg-4 col-12">
+                        <div class="row">
+                            <div class="small-title col-3">商品名:</div>
+                            <div class="small-information col-9">{$goods.goodsName}</div>
+                        </div>
 
-				<div class="g-m-detail" style="margin-left: 0px;">
-					<div class="gm-tabbox" ectype="gm-tabs">
-						<ul class="gm-tab">
-							<li class="curr" ectype="gm-tab-item">商品信息</li>
-							<li ectype="gm-tab-item">用户评论（<em class="ReviewsCount">0</em>）
-							</li>
-							<li ectype="gm-tab-item">网友讨论圈</li>
-						</ul>
-						<div class="gm-tab-qp-bort" ectype="qp-bort"></div>
-					</div>
-					<div class="gm-floors" ectype="gm-floors">
-						<div class="gm-f-item gm-f-details" ectype="gm-item">
-							<div class="gm-title">
-								<h3>基本信息</h3>
-							</div>
-							<div class="goods-para-list">
-								<dl class="goods-para">
-									<dd class="column">
-										<span><b>商品名</b>：{$goods.goodsName}</span>
-									</dd>
-									<dd class="column">
-										<span><b>所属分类</b>：{$goods.cateName}</span>
-									</dd>
-									<dd class="column">
-										<span><b>上架时间</b>：{$goods.onSaleTime}</span>
-									</dd>
-								</dl>
+                    </div>
+                    <div class="col-lg-4 col-6">
+                        <div class="row">
+                            <div class="small-title col-md-3 offset-lg-2 col-6">所属分类:</div>
+                            <div class="small-information col-md-7 col-6">{$goods.cateName}</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-6 clearfix">
+                        <div class="row">
+                            <div class="small-title col-md-3 offset-lg-2 col-5">上架时间:</div>
+                            <div class="small-information col-md-7 col-7">{$goods.onSaleTime}</div>
+                        </div>
+                    </div>
+                </div>
+                <hr/>
+                <!-- 商品详情 -->
+                <div class="title mt-4">商品详情</div>
+                <hr/>
+                <div>
+                    {$goods.details}
+                </div>
+            </div>
+            <div id="tab2" class="tab-pane">2</div>
+            <div id="tab3" class="tab-pane">3</div>
+        </div>
+    </div>
 
-							</div>
-							
-							<div class="gm-title">
-								<h3>商品详情</h3>
-							</div>
-							<div class="goods-para-list">
-								{$goods.details}
+</div>
+<!-- footer部分 -->
+<!-- 灰色横条 -->
+<div class="bg-grey">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2 col-md-4 col-6 ">
+                <div class="service-item d-flex justify-content-center">
+                    <i class="f-icon f-icon-qi"></i>
+                    <span>七天包退</span>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 ">
+                <div class="service-item d-flex justify-content-center">
+                    <i class="f-icon f-icon-zheng"></i>
+                    <span>正品保障</span>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 ">
+                <div class="service-item d-flex justify-content-center">
+                    <i class="f-icon f-icon-hao"></i>
+                    <span>好评如潮</span>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 ">
+                <div class="service-item d-flex justify-content-center">
+                    <i class="f-icon f-icon-shan"></i>
+                    <span>闪电发货</span>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 ">
+                <div class="service-item d-flex justify-content-center">
+                    <i class="f-icon f-icon-quan"></i>
+                    <span>权威荣誉</span>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 ">
+                <div class="service-item d-flex justify-content-center">
+                    <i class="f-icon f-icon-kefu"></i>
+                    <span>咨询客服</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- dark部分 -->
+<div class="footer-body">
+    <div class="container">
+        <div class="row vertical-list">
+            <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                <h5>新手上路</h5>
+                <ul>
+                    <li><a href="">售后流程</a></li>
+                    <li><a href="">购物流程</a></li>
+                    <li><a href="">订购方式</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                <h5>配送与支付</h5>
+                <ul>
+                    <li><a href="">货到付款区域</a></li>
+                    <li><a href="">配送支付智能查询</a></li>
+                    <li><a href="">支付方式说明</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                <h5>服务保证</h5>
+                <ul>
+                    <li><a href="">退换货原则</a></li>
+                    <li><a href="">售后服务保证</a></li>
+                    <li><a href="">产品质量保证</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                <h5>联系我们</h5>
+                <ul>
+                    <li><a href="">网站故障报告</a></li>
+                    <li><a href="">选机咨询</a></li>
+                    <li><a href="">投诉与建议</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 mb-2">
+                <div class="qrcode-box">
+                    <img src="__index__/img/passerby.jpg" alt="">
+                    <div class="qrcode-title">联系我</div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 mb-2">
+                <div class="qrcode-box">
+                    <img src="__index__/img/scnu_logo.jpg" alt="">
+                    <div class="qrcode-title">Logo</div>
+                </div>
+            </div>
+        </div>
+        <!--  分隔线  -->
+        <div class="apart-line"></div>
+        <ul class="clearfix text-center horizontal-list d-flex justify-content-center">
+            <li><a href="#">客户服务</a></li>
+            <li><a href="#">我的收藏</a></li>
+            <li><a href="#">我的浏览</a></li>
+            <li><a href="#">我的订单</a></li>
+        </ul>
+        <p class="copyright">
+            Copyright © 2020 <a href="">passerbyYSQ</a>. All Rights Reserved | <a href=""> 粤ICP备20036780号</a><br>
+            Powered by <a href="">passerbyYSQ</a> 1127664027@qq.com
+        </p>
+    </div>
+</div>
 
-							</div>
-
-						</div>
-						<div class="gm-f-item gm-f-comment" ectype="gm-item">
-							<div class="gm-title">
-								<h3>评论晒单</h3>
-								<ul class="gm-f-tab" ectype="gmf-tab">
-									<li class="curr" rev="0"><a href="javascript:;">全部<em>(0)</em></a></li>
-									<li rev="1"><a href="javascript:;">好评<em>(0)</em></a></li>
-									<li rev="2"><a href="javascript:;">中评<em>(0)</em></a></li>
-									<li rev="3" class="last"><a href="javascript:;">差评<em>(0)</em></a></li>
-								</ul>
-							</div>
-							<div class="gm-warp">
-								<div class="praise-rate-warp">
-									<div class="rate">
-										<strong>100</strong> <span class="rate-span"> <span
-											class="tit">好评率</span> <span class="bf">%</span>
-										</span>
-									</div>
-									<div class="actor-new">
-										<div class="not_impression">此商品还没有设置买家印象，陪我一起等下嘛~</div>
-									</div>
-								</div>
-								<div class="com-list-main">
-
-									<div id="ECS_COMMENT">
-										<div class="no_records no_comments_qt">
-											<i class="no_icon no_icon_three"></i> <span class="block">暂无评价</span>
-										</div>
-
-									</div>
-								</div>
-							</div>
-						</div>
-
-					</div>
-				</div>
-				<div class="clear"></div>
-
-			</div>
-
-			<div class="hidden">
-
-				<div id="notify_box" class="hide">
-					<div class="sale-notice">
-						<div class="prompt">一旦商品在30日内降价，您将收到邮件、短信和手机推送消息！通过手机客户端消息提醒，购买更便捷~</div>
-						<div class="user-form foreg-form">
-							<div class="form-row">
-								<div class="form-label">
-									<em class="red">*</em>价格低于：
-								</div>
-								<div class="form-value">
-									<input type="text" id="price-notice" name="price-notice"
-										class="form-input w120 fl">
-									<div class="notic">时，通知我</div>
-									<div class="error"></div>
-								</div>
-							</div>
-							<div class="form-row">
-								<div class="form-label">
-									<em class="red">*</em>手机号码：
-								</div>
-								<div class="form-value">
-									<input type="text" class="form-input" id="cellphone"
-										name="cellphone">
-									<div class="error"></div>
-								</div>
-							</div>
-							<div class="form-row">
-								<div class="form-label">
-									<em class="red">*</em>邮箱地址：
-								</div>
-								<div class="form-value">
-									<input type="text" class="form-input" id="user_email_notice"
-										name="email">
-									<div class="error"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-
-				<div class="ecsc-cart-popup" id="addtocartdialog">
-					<div class="loading-mask"></div>
-					<div class="loading">
-						<div class="center_pop_txt">
-							<div class="title">
-								<h3>提示</h3>
-								<a href="javascript:loadingClose();" title="关闭"
-									class="loading-x">X</a>
-							</div>
-						</div>
-						<div class="btns">
-							<a href="flow.php" class="ecsc-btn-mini ecsc-btn-orange">去付款</a>
-							<a href="javascript:loadingClose();" class="ecsc-btn-mini">继续购物</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-
-
-			<div class="duibi_box" id="slideTxtBox">
-				<div class="parWarp">
-					<div class="parTit">对比栏</div>
-					<div class="parBd">
-						<div class="slideBox5" id="duibilan">
-							<div id="diff-items" class="diff-items clearfix">
-								<dl class="hasItem" id="compare_goods1">
-									<dt>
-										<h1>1</h1>
-									</dt>
-									<dd>
-										<span class="ts">您还可以继续添加</span>
-									</dd>
-								</dl>
-								<dl class="hasItem" id="compare_goods2">
-									<dt>
-										<h1>2</h1>
-									</dt>
-									<dd>
-										<span class="ts">您还可以继续添加</span>
-									</dd>
-								</dl>
-								<dl class="hasItem" id="compare_goods3">
-									<dt>
-										<h1>3</h1>
-									</dt>
-									<dd>
-										<span class="ts">您还可以继续添加</span>
-									</dd>
-								</dl>
-								<dl class="hasItem" id="compare_goods4">
-									<dt>
-										<h1>4</h1>
-									</dt>
-									<dd>
-										<span class="ts">您还可以继续添加</span>
-									</dd>
-								</dl>
-							</div>
-							<div class="diff-operate">
-								<a id="compare_button" class="compare-active"></a> <a
-									id="qingkong" class="del-items">清空对比栏</a> <a
-									href="javascript:;" class="hide-me" ectype="db_hide">隐藏</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-
-
-
-			<div class="tm-dl-overlay tm-dl-overlay-hidden">
-				<a href="javascript:void('close')" class="tm-dl-overlay-close"><b></b><i></i></a>
-				<div class="tm-dl-overlay-content"></div>
-			</div>
-			<div class="tm-dl-overlay-mask"></div>
-		</div>
-		<div class="mui-mbar-tabs">
-			<div class="quick_link_mian" data-userid="62">
-				<div class="quick_links_panel">
-					<div id="quick_links" class="quick_links">
-						<ul>
-							<li><a href="user.php"><i class="setting"></i></a>
-								<div class="ibar_login_box status_login">
-									<div class="avatar_box">
-										<p class="avatar_imgbox">
-											<img src="__index__/img/touxiang.jpg" width="100"
-												height="100" />
-										</p>
-										<ul class="user_info">
-											<li>用户名：86913361-232247</li>
-											<li>级&nbsp;别：铜牌</li>
-										</ul>
-									</div>
-									<div class="login_btnbox">
-										<a href="user.php?act=order_list" class="login_order">我的订单</a>
-										<a href="user.php?act=collection_list" class="login_favorite">我的收藏</a>
-									</div>
-									<i class="icon_arrow_white"></i>
-								</div></li>
-
-							<li id="shopCart"><a href="javascript:void(0);"
-								class="cart_list"> <i class="message"></i>
-									<div class="span">购物车</div> <span class="cart_num">1</span>
-							</a></li>
-							<li><a href="javascript:void(0);" class="mpbtn_order"><i
-									class="chongzhi"></i></a>
-								<div class="mp_tooltip">
-									<font id="mpbtn_money"
-										style="font-size: 12px; cursor: pointer;">我的订单</font> <i
-										class="icon_arrow_right_black"></i>
-								</div></li>
-							<li><a href="javascript:void(0);" class="mpbtn_yhq"><i
-									class="yhq"></i></a>
-								<div class="mp_tooltip">
-									<font id="mpbtn_money"
-										style="font-size: 12px; cursor: pointer;">优惠券</font> <i
-										class="icon_arrow_right_black"></i>
-								</div></li>
-							<li><a href="javascript:void(0);" class="mpbtn_total"><i
-									class="view"></i></a>
-								<div class="mp_tooltip" style="visibility: hidden;">
-									<font id="mpbtn_myMoney"
-										style="font-size: 12px; cursor: pointer;">我的资产</font> <i
-										class="icon_arrow_right_black"></i>
-								</div></li>
-							<li><a href="javascript:void(0);" class="mpbtn_history"><i
-									class="zuji"></i></a>
-								<div class="mp_tooltip">
-									<font id="mpbtn_histroy"
-										style="font-size: 12px; cursor: pointer;">我的足迹</font> <i
-										class="icon_arrow_right_black"></i>
-								</div></li>
-							<li><a href="javascript:void(0);" class="mpbtn_collection"><i
-									class="wdsc"></i></a>
-								<div class="mp_tooltip">
-									<font id="mpbtn_wdsc" style="font-size: 12px; cursor: pointer;">我的收藏</font>
-									<i class="icon_arrow_right_black"></i>
-								</div></li>
-							<li><a href="javascript:void(0);" class="mpbtn_email"><i
-									class="email"></i></a>
-								<div class="mp_tooltip">
-									<font id="mpbtn_email"
-										style="font-size: 12px; cursor: pointer;">邮箱订阅</font> <i
-										class="icon_arrow_right_black"></i>
-								</div></li>
-						</ul>
-					</div>
-					<div class="quick_toggle">
-						<ul>
-							<li><a id="IM" IM_type="dsc" onclick="openWin(this)"
-								href="javascript:;"><i class="kfzx"></i></a>
-								<div class="mp_tooltip">
-									客服中心<i class="icon_arrow_right_black"></i>
-								</div></li>
-							<li class="returnTop"><a href="javascript:void(0);"
-								class="return_top"><i class="top"></i></a></li>
-						</ul>
-
-					</div>
-				</div>
-				<div id="quick_links_pop" class="quick_links_pop"></div>
-			</div>
-		</div>
-		<div class="email_sub">
-			<div class="attached_bg"></div>
-			<div class="w1200">
-				<div class="email_sub_btn">
-					<input type="input" id="user_email" name="user_email"
-						autocomplete="off" placeholder="请输入您的邮箱帐号"> <a
-						href="javascript:void(0);" onClick="add_email_list();"
-						class="emp_btn">订阅</a>
-				</div>
-			</div>
-		</div>
-		<div class="footer-new">
-			<div class="footer-new-top">
-				<div class="w w1200">
-					<div class="service-list">
-						<div class="service-item">
-							<i class="f-icon f-icon-qi"></i> <span>七天包退</span>
-						</div>
-						<div class="service-item">
-							<i class="f-icon f-icon-zheng"></i> <span>正品保障</span>
-						</div>
-						<div class="service-item">
-							<i class="f-icon f-icon-hao"></i> <span>好评如潮</span>
-						</div>
-						<div class="service-item">
-							<i class="f-icon f-icon-shan"></i> <span>闪电发货</span>
-						</div>
-						<div class="service-item">
-							<i class="f-icon f-icon-quan"></i> <span>权威荣誉</span>
-						</div>
-					</div>
-					<div class="contact">
-						<div class="contact-item contact-item-first">
-							<i class="f-icon f-icon-tel"></i><span>4000-000-000</span>
-						</div>
-						<div class="contact-item">
-							<a id="IM" IM_type="dsc" onclick="openWin(this)"
-								href="javascript:;" class="btn-ctn"><i
-								class="f-icon f-icon-kefu"></i><span>咨询客服</span></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="footer-new-con">
-				<div class="fnc-warp">
-					<div class="help-list">
-						<div class="help-item">
-							<h3>新手上路</h3>
-							<ul>
-								<li><a href="article.php?id=9" title="售后流程" target="_blank"
-									rel="nofollow">售后流程</a></li>
-								<li><a href="article.php?id=10" title="购物流程"
-									target="_blank" rel="nofollow">购物流程</a></li>
-								<li><a href="article.php?id=11" title="订购方式"
-									target="_blank" rel="nofollow">订购方式</a></li>
-							</ul>
-							</dl>
-						</div>
-						<div class="help-item">
-							<h3>配送与支付</h3>
-							<ul>
-								<li><a href="article.php?id=15" title="货到付款区域"
-									target="_blank" rel="nofollow">货到付款区域</a></li>
-								<li><a href="article.php?id=16" title="配送支付智能查询 "
-									target="_blank" rel="nofollow">配送支付智能查询</a></li>
-								<li><a href="article.php?id=17" title="支付方式说明"
-									target="_blank" rel="nofollow">支付方式说明</a></li>
-							</ul>
-							</dl>
-						</div>
-						<div class="help-item">
-							<h3>会员中心</h3>
-							<ul>
-								<li><a href="article.php?id=18" title="资金管理"
-									target="_blank" rel="nofollow">资金管理</a></li>
-								<li><a href="article.php?id=19" title="我的收藏"
-									target="_blank" rel="nofollow">我的收藏</a></li>
-								<li><a href="article.php?id=20" title="我的订单"
-									target="_blank" rel="nofollow">我的订单</a></li>
-							</ul>
-							</dl>
-						</div>
-						<div class="help-item">
-							<h3>服务保证</h3>
-							<ul>
-								<li><a href="article.php?id=21" title="退换货原则"
-									target="_blank" rel="nofollow">退换货原则</a></li>
-								<li><a href="article.php?id=22" title="售后服务保证"
-									target="_blank" rel="nofollow">售后服务保证</a></li>
-								<li><a href="article.php?id=23" title="产品质量保证 "
-									target="_blank" rel="nofollow">产品质量保证</a></li>
-							</ul>
-							</dl>
-						</div>
-						<div class="help-item">
-							<h3>联系我们</h3>
-							<ul>
-								<li><a href="article.php?id=24" title="网站故障报告"
-									target="_blank" rel="nofollow">网站故障报告</a></li>
-								<li><a href="article.php?id=25" title="选机咨询 "
-									target="_blank" rel="nofollow">选机咨询</a></li>
-								<li><a href="article.php?id=26" title="投诉与建议 "
-									target="_blank" rel="nofollow">投诉与建议</a></li>
-							</ul>
-							</dl>
-						</div>
-
-					</div>
-					<div class="qr-code">
-						<div class="qr-item qr-item-first">
-							<div class="code_img">
-								<img src="__index__/img/ecjia_qrcode.png">
-							</div>
-							<div class="code_txt">官方网址</div>
-						</div>
-						<div class="qr-item">
-							<div class="code_img">
-								<img src="__index__/img/ectouch_qrcode.png">
-							</div>
-							<div class="code_txt">在线课程</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="footer-new-bot">
-				<div class="w w1200">
-
-					<p class="copyright_links">
-						<a href="index.php" rel="nofollow">首页</a> <span class="spacer"></span>
-
-						<a href="article.php?id=2" rel="nofollow">隐私保护</a> <span
-							class="spacer"></span> <a href="article.php?id=4" rel="nofollow">联系我们</a>
-
-						<span class="spacer"></span> <a href="article.php?id=1"
-							rel="nofollow">免责条款</a> <span class="spacer"></span> <a
-							href="article.php?id=5" rel="nofollow">公司简介</a> <span
-							class="spacer"></span> <a href="message.php" rel="nofollow">意见反馈</a>
-
-					</p>
-
-					<p>
-						<span>©&nbsp;2015-2017&nbsp;tongpankt.com&nbsp;版权所有&nbsp;&nbsp;</span><span>ICP备案证书号:</span><a
-							href="#">豫ICP备*****号-1</a>&nbsp;<a href="#">POWERED by童攀课堂</a>
-					</p>
-
-					<p class="copyright_auth">&nbsp;</p>
-				</div>
-			</div>
-
-
-			<div class="hide" id="pd_coupons">
-				<span class="success-icon m-icon"></span>
-				<div class="item-fore">
-					<h3>领取成功！感谢您的参与，祝您购物愉快~</h3>
-					<div class="txt ftx-03">本活动为概率性事件，不能保证所有客户成功领取优惠券</div>
-				</div>
-			</div>
-
-
-			<div class="hidden">
-				<input type="hidden" name="seller_kf_IM" value="" rev="" ru_id="" />
-				<input type="hidden" name="seller_kf_qq" value="349488953" /> <input
-					type="hidden" name="seller_kf_tel" value="4000-000-000" /> <input
-					type="hidden" name="user_id" value="62" />
-			</div>
-		</div>
-
-		
-		<script type="text/javascript" src="__index__/js/utils.js"></script>
-		 
-		<script type="text/javascript" src="__index__/js/jquery.SuperSlide.2.1.1.js"></script>
-		<script type="text/javascript" src="__index__/js/jquery.yomi.js"></script>
-		
-		<script type="text/javascript" src="__index__/js/cart_common.js"></script>
-		<script type="text/javascript" src="__index__/js/magiczoomplus.js"></script>
-		<!--
-		<script type="text/javascript" src="__index__/js/cart_quick_links.js"></script>
-		<script type="text/javascript" src="__index__/js/perfect-scrollbar.min.js"></script>
-				
-		<script type="text/javascript" src="__index__/js/jquery.purebox.js"></script>
-		<script type="text/javascript" src="__index__/js/goodsFittings.js"></script>
-		 -->
-		<script type="text/javascript">
-		
-			function addToCart(goodsId) {
-				// 将商品添加到购物车
-				//console.log("debug");
-				// 做一个判断
-				var count = $(".buy-num").val()
-				var max = {$goods.count};
-				
-				console.log(count);
-				if (parseInt(count) > max) {
-					$(".buy-num").val(max)
-					//console.log(1);
-				} else if (count == 0) {
-					$(".buy-num").val(1);
-					//console.log(2);
-				} else {
-					//console.log(3);
-					$.ajax({
-						type: "post",
-						url: "{:url('cart/add')}",
-						data: {
-							goodsId: goodsId,
-							count : count
-						},
-						success: function(res) {
-							//console.log(res);
-							if (res.status) {
-								alert('加入购物车成功');
-							} else {
-								alert('加入购物车失败：' + res.msg);
-							}
-							
-						}
-					});
-				}
-			}
-			
-			function addCount(num) {
-				//console.log(num);
-				var max = {$goods.count}; // 库存
-				var cur = parseInt($(".buy-num").val());
-				if (num > 0) {
-					$(".buy-num").val(cur+num > max ? max : (cur+num));
-				} else {
-					$(".buy-num").val(cur+num < 1 ? 1 : (cur+num));
-				}
-			}
-			
-		</script>
 </body>
 </html>
