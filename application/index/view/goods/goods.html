@@ -39,16 +39,23 @@
             <div class="row">
                 <div class="col-md-4 col-12">
                     <ul class="clearfix">
-                        <li><a href="#">请先登录</a></li>
-                        <li><a href="#">免费注册</a></li>
+                        {empty name="$Think.session.member"}
+                        <!-- 未登录 -->
+                        <li><a href="{:url('member/login')}">请先登录</a></li>
+                        <li><a href="{:url('member/register')}">免费注册</a></li>
+                        {else/}
+                        <!-- 已登录 -->
+                        <li><a href="#">{$Think.session.member.phone} | {$Think.session.member.memberName}</a></li>
+                        <li><a href="{:url('member/logout')}" onClick="return confirm('是否确认退出当前账号？');">退出</a></li>
+                        {/empty}
                     </ul>
                 </div>
                 <div class="col-md-8 col-12">
                     <ul class="bd-list clearfix">
-                        <li><a href="#">客户服务</a></li>
+                        <li><a href="https://blog.csdn.net/qq_43290318">客户服务</a></li>
                         <li><a href="#">我的收藏</a></li>
                         <li><a href="#">我的浏览</a></li>
-                        <li><a href="#">我的订单</a></li>
+                        <li><a href="{:url('order/myorder')}">我的订单</a></li>
                     </ul>
                 </div>
             </div>
