@@ -12,6 +12,13 @@ class Cart extends Model {
         return '模型关联';
     }
     
+    // 某个用户的购物车中的商品种数
+    public function goodsItemCount($memberId) {
+        return Cart::where([
+            'memberId' => $memberId
+        ])->count();
+    }
+    
     // 需要计算费用小计
     public function findOneNeedPrice($cartId, $memberId) {
         return db('cart')
@@ -44,7 +51,7 @@ class Cart extends Model {
         ->select();
     }
     
-    // 返回一个Model对象
+    // 返回一个Model对象，而不是数组
     public function findOne($memberId, $goodsId) {
         return Cart::where([
             'memberId' => $memberId,

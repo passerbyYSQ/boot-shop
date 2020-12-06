@@ -26,8 +26,14 @@ class Goods extends Controller
             $this->error('商品不存在');
         } 
         
-        $this->assign('goods', $goods);
+        $cartItemCount = 0;
+        if (session('member')) {
+            $cartModel = new Cart();
+            $cartItemCount = $cartModel->goodsItemCount(session('member.id'));
+        }
         
+        $this->assign('goods', $goods);
+        $this->assign('cartItemCount', $cartItemCount);
         return $this->fetch('goods');
     }
     
@@ -54,7 +60,7 @@ class Goods extends Controller
         $conds['sort'] = input('sort', 'onSaleTime desc');   // 排序方式
         
         $goodsModel = new GoodsModel();
-        $res = $goodsModel->listPage($conds, 5);
+        $res = $goodsModel->listPage($conds, 4);
         
         $this->assign('cates', $cates);
         $this->assign('goodsList', $res['items']);
@@ -63,10 +69,14 @@ class Goods extends Controller
         $conds['sort'] = explode(' ', $conds['sort']);
         
         //var_dump($conds);exit();
-        $cartItemsCount = Cart::count();
+        $cartItemCount = 0;
+        if (session('member')) {
+            $cartModel = new Cart();
+            $cartItemCount = $cartModel->goodsItemCount(session('member.id'));
+        }
         
         $this->assign('conds', $conds);
-        $this->assign('cartItemsCount', $cartItemsCount);
+        $this->assign('cartItemCount', $cartItemCount);
         return $this->fetch();
     }
 }

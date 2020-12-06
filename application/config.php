@@ -14,8 +14,8 @@ return [
     // | 应用设置
     // +----------------------------------------------------------------------
 
-    // 应用调试模式
-    'app_debug'              => true,
+    // 应用调试模式。开发时设置为true，部署上线后设置为false
+    'app_debug'              => false,
     // 应用Trace
     'app_trace'              => false,
     // 应用模式状态
@@ -141,7 +141,8 @@ return [
         // 标签库标签结束标记
         'taglib_end'   => '}',
         
-        // 【新增】！模板缓存，调试时，设置为false，正式上线设置为true
+        // 【新增】！模板缓存
+        // 开发时设置为false，部署上线后设置为true
         'tpl_cache'    => false
     ],
 
@@ -160,8 +161,8 @@ return [
         '__root__' => '/boot-shop/public/static/style'
     ],
     // 默认跳转页面对应的模板文件
-    'dispatch_success_tmpl'  => THINK_PATH . 'tpl' . DS . 'dispatch_jump.tpl',
-    'dispatch_error_tmpl'    => THINK_PATH . 'tpl' . DS . 'dispatch_jump.tpl',
+    'dispatch_success_tmpl'  => THINK_PATH . 'tpl' . DS . 'dispatch_jump_self.tpl',
+    'dispatch_error_tmpl'    => THINK_PATH . 'tpl' . DS . 'dispatch_jump_self.tpl',
 
     // +----------------------------------------------------------------------
     // | 异常及错误设置
@@ -176,7 +177,7 @@ return [
     'show_error_msg'         => false,
     // 异常处理handle类 留空使用 \think\exception\Handle
     'exception_handle'       => '',
-
+    
     // +----------------------------------------------------------------------
     // | 日志设置
     // +----------------------------------------------------------------------

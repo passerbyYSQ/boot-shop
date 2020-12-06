@@ -19,7 +19,7 @@ class Cart extends Controller {
         $model = new CartModel();
         //var_dump(session('member'));exit();
         $itemList = $model->list(session('member.id'));
-        $itemCount = CartModel::count();
+        $itemCount = $model->goodsItemCount(session('member.id'));
         
         $this->assign('itemList', $itemList);
         $this->assign('itemCount', $itemCount);
@@ -44,6 +44,12 @@ class Cart extends Controller {
             $res['status'] = false;
             $res['msg'] = "删除失败" . $item->getError();
         }
+        
+        // 如果删除成功，将用户购物车中的商品数目返回
+        if ($res['status']) {
+            $model = new CartModel();
+            $res['data'] = $model->goodsItemCount(session('member.id'));
+        }
 
         return json($res);
     }
@@ -63,6 +69,12 @@ class Cart extends Controller {
                 $res['msg'] = '部分删除失败';
                 return json($res);
             }
+        }
+        
+        // 如果删除成功，将用户购物车中的商品数目返回
+        if ($res['status']) {
+            $model = new CartModel();
+            $res['data'] = $model->goodsItemCount(session('member.id'));
         }
         
         return json($res);
@@ -123,8 +135,8 @@ class Cart extends Controller {
         }
         
         $memberId= session('member.id');
-        $goodsId = input('post.goodsId');
-        $count = input('post.count');
+        $goodsId = input('post.goodsId'); // 商品id
+        $count = input('post.count');  // 添加到购物车中的数量
         
         $goods = GoodsModel::get($goodsId);
         if (empty($goods)) {
@@ -162,6 +174,12 @@ class Cart extends Controller {
                 }
             }
         }
+        
+        // 如果添加成功，将用户购物车中的商品数目返回
+        if ($res['status']) {
+            $res['data'] = $model->goodsItemCount($memberId);
+        }
+        
         return json($res);
     }
 }

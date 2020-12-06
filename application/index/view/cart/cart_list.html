@@ -54,7 +54,7 @@
 		<div class="col-lg-3 col-sm-6 col-12">
 			<div class="row ml-1" style="margin-top: 1.8rem">
 				<p style="color: #808080;font-size: 1.1rem">购物车（共有</p>
-				<p style="color: red;font-size: 1.1rem">{$itemCount}</p>
+				&nbsp;<p style="color: red; font-size: 1.1rem" id="cartItemCount">{$itemCount}</p>&nbsp;
 				<p style="color: #808080;font-size: 1.1rem">件商品）</p>
 			</div>
 		</div>
@@ -90,9 +90,10 @@
 			<div class="col-12 pt-2 pb-2">
 				<!--标签-->
 				<div class="row text-center pt-3 pb-3" style="background-color: #fff">
-					<div class="otherlist" style="color: #8c8c8c" ectype="ckList">
-						<input type="checkbox" id="cart-selectall" checked
-							   onChange="checkAll()" ectype="ckAll" /> 全选
+					<div class="custom-control custom-checkbox otherlist" style="color: #8c8c8c" ectype="ckList">
+					  	<input type="checkbox" class="custom-control-input" id="cart-selectall" 
+					  		checked onChange="checkAll()" ectype="ckAll">
+					  	<label class="custom-control-label" for="cart-selectall">全选</label>
 					</div>
 					<div class="shoplist text-left pl-4" style="color: #8c8c8c">商品</div>
 					<div class="dislist" style="color: #8c8c8c">单价（元）</div>
@@ -105,9 +106,10 @@
 					<div class="text-center mt-3 mb-3 pb-4" style="background-color: #fff">
 						{foreach $itemList as $item}
 						<div class="row item-single">
-							<div class="mt-4 otherlist">
-								<input type="checkbox" value="{$item.cartId}"
-									   onChange="checkOne(this)" id="checkItem_{$item.cartId}" name="checkItem[]"/>
+							<div class="custom-control custom-checkbox mt-4 otherlist">
+								  <input type="checkbox" class="custom-control-input" value="{$item.cartId}"
+									   onChange="checkOne(this)" id="checkItem_{$item.cartId}" name="checkItem[]">
+								  <label class="custom-control-label" for="checkItem_{$item.cartId}"></label>
 							</div>
 							<div class="mt-4 shoplist">
 								<div class="media">
@@ -176,95 +178,6 @@
 	</div>
 </div>
 
-<div class="hide">
-
-	<div id="dialog_remove" class="hide">
-		<div class="tip-box icon-box">
-			<span class="warn-icon m-icon"></span>
-			<div class="item-fore">
-				<h3 class="ftx-04">删除商品？</h3>
-				<div class="ftx-03">您可以选择移到收藏，或删除商品。</div>
-			</div>
-		</div>
-	</div>
-
-	<div id="dialog_collect" class="hide">
-		<div class="tip-box icon-box">
-			<span class="warn-icon m-icon"></span>
-			<div class="item-fore">
-				<h3 class="ftx-04">移到收藏</h3>
-				<div class="ftx-03">移动后选中商品将不在购物车中显示。</div>
-			</div>
-		</div>
-	</div>
-
-	<div id="flow_add_cart" class="hide">
-		<div class="tip-box icon-box">
-			<span class="warn-icon m-icon"></span>
-			<div class="item-fore">
-				<h3 class="ftx-04">请至少选中一件商品！</h3>
-			</div>
-		</div>
-	</div>
-
-	<div id="cart_gift_goods" class="hide">
-		<div class="tip-box icon-box">
-			<span class="warn-icon m-icon"></span>
-			<div class="item-fore">
-				<h3 class="ftx-04 rem">
-					最多领取<em ectype="giftNumber"></em>个商品
-				</h3>
-			</div>
-		</div>
-	</div>
-
-	<div id="set_default" class="hide">
-		<div class="tip-box icon-box">
-			<span class="warn-icon m-icon"></span>
-			<div class="item-fore">
-				<h3 class="ftx-04">您确定要设置为默认收货地址吗？</h3>
-			</div>
-		</div>
-	</div>
-
-	<div id="del_address" class="hide">
-		<div class="tip-box icon-box">
-			<span class="warn-icon m-icon"></span>
-			<div class="item-fore">
-				<h3 class="ftx-04">你确认要删除该收货地址吗？</h3>
-			</div>
-		</div>
-	</div>
-
-	<div id="no_address_cart" class="hide">
-		<div class="tip-box icon-box">
-			<span class="warn-icon m-icon"></span>
-			<div class="item-fore">
-				<h3 class="ftx-04">您还没有选择收货地址！</h3>
-			</div>
-		</div>
-	</div>
-
-	<div id="no_goods_cart" class="hide">
-		<div class="tip-box icon-box">
-			<span class="warn-icon m-icon"></span>
-			<div class="item-fore">
-				<h3 class="ftx-04">您的购物车中没有商品！</h3>
-			</div>
-		</div>
-	</div>
-
-	<div id="cart_address_not" class="hide">
-		<div class="tip-box icon-box">
-			<span class="warn-icon m-icon"></span>
-			<div class="item-fore">
-				<h3 class="ftx-04">您还没有选择收货地址！</h3>
-			</div>
-		</div>
-	</div>
-
-
-</div>
 
 <!--foot部分-->
 <div class="footer-body">
@@ -481,13 +394,15 @@
 					cartId: cartId
 				},
 				success: function(res) {
-					//console.log(res);
+					console.log(res);
 					if (res.status) {
 						$(obj).parents(".item-single").remove();
 						// 重新计算总价
 						calTotalCost();
 						// 更改 已勾选复选框的数量
 						$("#selectedCount").html($("input[name='checkItem[]']:checked").length);
+						// 更改购物车中的商品种树
+						$("#cartItemCount").html(res.data);
 					} else {
 						alert(res.msg);
 					}
@@ -517,6 +432,8 @@
 						calTotalCost();
 						// 更改 已勾选复选框的数量
 						$("#selectedCount").html($("input[name='checkItem[]']:checked").length);
+						// 更改购物车中的商品种树
+						$("#cartItemCount").html(res.data);
 					} else {
 						alert(res.msg);
 						window.location.reload();

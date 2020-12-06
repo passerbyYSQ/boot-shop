@@ -50,7 +50,7 @@ class Member extends Controller {
         //var_dump(session('member'));exit();
         
         if (!empty(session('member'))) {
-            $this->error('请勿重复登录');
+            $this->error('请勿重复登录', 'goods/list');
         }
         
         if (request()->isPost()) {

@@ -46,7 +46,7 @@ a:hover {
 /*画一条横线*/
 .link-body {
     border-top: 1px solid  #495057;
-    margin-bottom: 40px;
+    margin-bottom: 24px;
 }
 /*左上字体*/
 .my_p{
@@ -94,5 +94,8 @@ a:hover {
     color: #8c8c8c;
 
 
+}
+ul.list-group > li.list-group-item {
+	cursor: pointer;
 }
 
