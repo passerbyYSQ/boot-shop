@@ -250,10 +250,19 @@
     
     <!-- js的顺序不能乱 -->
     <script src="__lib__/jquery/jquery.min.js"></script>
+    <!-- 引入popper，bootbox.js需要 -->
+    <script src="__lib__/popper/popper.min.js"></script>
     <!-- bootstrap.min.js依赖jquery -->
     <script src="__lib__/bootstrap4/js/bootstrap.min.js"></script>
+    
+    <!-- 引入bootbox，基于bootstrap的模态框封装 -->
+    <script src="__lib__/bootbox/bootbox.min.js"></script>
+    
 	
 	<script type="text/javascript">
+		
+	
+	
 		// 根据商品名称关键词搜索
 		function searchByGoodsName(goodsName) {
 			console.log(goodsName);
@@ -275,11 +284,31 @@
 				success: function(res) {
 					console.log(res);
 					if (res.status) {
-						alert('加入购物车成功');
+						//alert('加入购物车成功');
+						bootbox.alert({
+							title: '提示',
+							message: '加入购物车成功',
+							buttons: {
+							   ok: {
+								   label: '确认',
+								   className: 'btn btn-outline-success'
+							   }
+							}
+						});
 						// 更新右上角“我的购物车”的商品种数
 						$("#cartItemCount").html(res.data);
 					} else {
-						alert('加入购物车失败：' + res.msg);
+						//alert('加入购物车失败：' + res.msg);
+						bootbox.alert({
+							title: '提示',
+							message: '加入购物车失败：' + res.msg,
+							buttons: {
+							   ok: {
+								   label: '确认',
+								   className: 'btn btn-outline-danger'
+							   }
+							}
+						});
 					}
 					
 				}
@@ -310,7 +339,17 @@
 			}  else 
 				*/
 			if (parseInt(min) > parseInt(max)) {
-				alert('最低价格不能高于最高价格');
+				//alert('最低价格不能高于最高价格');
+				bootbox.alert({
+					title: '提示',
+					message: '最低价格不能高于最高价格',
+					buttons: {
+					   ok: {
+						   label: '确认',
+						   className: 'btn btn-outline-danger'
+					   }
+					}
+				});
 				return false;
 			} 
 			return true;

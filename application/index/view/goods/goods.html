@@ -9,20 +9,15 @@
 
     <!-- 引入图标样式 -->
     <link rel="stylesheet" href="__lib__/iconfont/css/iconfont.css">
-
+    
     <!-- 引入Bootstrap核心样式文件 -->
     <link rel="stylesheet" href="__lib__/bootstrap4/css/bootstrap.css">
-    <script src="__lib__/jquery/jquery.min.js"></script>
-    <script src="__lib__/popper/popper.min.js"></script>
-    <script src="__lib__/bootstrap4/js/bootstrap.js"></script>
 
     <!-- 引入自己写的样式 -->
     <link rel="stylesheet" href="__index__/css/base.css">
     <link rel="stylesheet" href="__index__/css/goods_list.css">
     <link rel="stylesheet" href="__index__/css/footer.css">
     <link rel="stylesheet" href="__index__/css/demo.css">
-    <!--放大镜插件-->
-    <script type="text/javascript" src="__lib__/magiczoomplus.js"></script>
 
     <!--站点图标-->
     <!-- ... -->
@@ -421,6 +416,17 @@
         </p>
     </div>
 </div>
+
+<script src="__lib__/jquery/jquery.min.js"></script>
+<script src="__lib__/popper/popper.min.js"></script>
+<script src="__lib__/bootstrap4/js/bootstrap.js"></script>
+
+<!--放大镜插件-->
+<script type="text/javascript" src="__lib__/magiczoomplus.js"></script>
+
+<!-- 引入bootbox，基于bootstrap的模态框封装 -->
+<script src="__lib__/bootbox/bootbox.min.js"></script>
+
 <script type="text/javascript">
 
     function addToCart(goodsId) {
@@ -449,10 +455,30 @@
                 success: function(res) {
                     console.log(res);
                     if (res.status) {
-                        alert('加入购物车成功');
+                        //alert('加入购物车成功');
+                        bootbox.alert({
+							title: '提示',
+							message: '加入购物车成功',
+							buttons: {
+							   ok: {
+								   label: '确认',
+								   className: 'btn btn-outline-success'
+							   }
+							}
+						});
                         $("#cartItemCount").html(res.data);
                     } else {
-                        alert('加入购物车失败：' + res.msg);
+                        //alert('加入购物车失败：' + res.msg);
+                    	bootbox.alert({
+							title: '提示',
+							message: '加入购物车失败：' + res.msg,
+							buttons: {
+							   ok: {
+								   label: '确认',
+								   className: 'btn btn-outline-danger'
+							   }
+							}
+						});
                     }
 
                 }
