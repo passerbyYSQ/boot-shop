@@ -3,6 +3,8 @@
 
 # 效果图
 
+项目演示地址：http://shop.ysqorz.top/
+
 ![1606570564673](README.assets/1606570564673.png)
 
 <img src="README.assets/1606570602053.png" alt="1606570602053" style="zoom:67%;" />
@@ -14,11 +16,7 @@
 ![1606571052711](README.assets/1606571052711.png)
 
 > 1. 克隆项目，把项目放到 www 目录下面
->
-> 2. 导入数据库
->
->         通过 navicat 等可视化界面操作。创建数据库 ```shop```，。 执行项目中的 脚本文件```shop.sql```，将数据导入到新建的数据库。
->
+>2. 导入数据库。通过 navicat 等可视化界面操作。创建数据库 ```shop```。 执行项目中的 脚本文件```shop.sql```，将数据导入到新建的数据库。
 > 3. 由于入口文件在 public 目录下，故访问注册页面的路径为：http://localhost/boot-shop/public/index/member/register
 
 # 开发注意事项（补充中...）
