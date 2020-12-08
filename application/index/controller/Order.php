@@ -143,11 +143,16 @@ class Order extends Controller {
             $res[$id] = array($orderDetail, $itemList);
         }
         
-        
         $this->assign('orderList', $res);
         $this->assign('pageHtml', $pageHtml);
         $this->assign('cond', $cond);
         $this->assign('cartItemsCount', CartModel::count());
+        
+        $model = new CartModel();
+        //var_dump(session('member'));exit();
+        $itemCount = $model->goodsItemCount(session('member.id'));
+        $this->assign('cartItemCount', $itemCount);
+        
         return $this->fetch('my_order');
         
     }
