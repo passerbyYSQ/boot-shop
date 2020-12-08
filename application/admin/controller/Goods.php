@@ -153,7 +153,7 @@ class Goods extends BaseController {
             
             // 移动上传的主图
             $save_path = 'upload/'. date('Y/m/d'); // 当前目录在index.php所在目录下
-            $upload = upload($save_path, '2M', 'mainPic');
+            $upload = upload($save_path, '6M', 'mainPic');
             if (!$upload['result']) {
                 $this->error('商品主图上传失败：' . $upload['error']);
             }

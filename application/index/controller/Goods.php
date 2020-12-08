@@ -20,10 +20,12 @@ class Goods extends Controller
     
     public function index() {
         $goodsId = input('get.id');
+        //var_dump($goodsId);exit();
         $goodsModel = new GoodsModel();
         $goods = $goodsModel->findById($goodsId);
+        
         if (empty($goods)) {
-            $this->error('商品不存在');
+            $this->error('商品不存在', 'list');
         } 
         
         $cartItemCount = 0;

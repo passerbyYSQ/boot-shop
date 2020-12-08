@@ -14,20 +14,28 @@
 <body>
     <!--导航栏部分-->
     <div class="top-bar">
+        <!-- top-bar 最顶部那一行 -->
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-12">
                     <ul class="clearfix">
-                        <li><a href="#">{$Think.session.member.memberName}</a></li>
-                        <li><a href="#">{$Think.session.member.phone}</a></li>
+                    	{empty name="$Think.session.member"}
+                    		<!-- 未登录 -->
+	                        <li><a href="{:url('member/login')}">请先登录</a></li>
+	                        <li><a href="{:url('member/register')}">免费注册</a></li>
+	                    {else/}
+	                    	<!-- 已登录 -->
+	                    	<li><a href="#">{$Think.session.member.phone} | {$Think.session.member.memberName}</a></li>
+	                        <li><a href="{:url('member/logout')}" onClick="return confirm('是否确认退出当前账号？');">退出</a></li>
+	                    {/empty}
                     </ul>
                 </div>
                 <div class="col-md-8 col-12">
                     <ul class="bd-list clearfix">
-                        <li><a href="#">客户服务</a></li>
+                        <li><a href="https://blog.csdn.net/qq_43290318">客户服务</a></li>
                         <li><a href="#">我的收藏</a></li>
                         <li><a href="#">我的浏览</a></li>
-                        <li><a href="#">我的订单</a></li>
+                        <li><a href="{:url('order/myorder')}">我的订单</a></li>
                     </ul>
                 </div>
             </div>
@@ -46,13 +54,15 @@
                 </a>
             </div>
             <div class="col-lg-5 col-sm-8 col-12">
-	            <div class="input-group mt-4">
-	                <input id="keyword"  type="text" class="form-control search"  placeholder="请输入商品名称关键词"
-	                	{notempty name="$conds.goodsName" placeholder="搜索商品名"}value="{$conds.goodsName}" {/notempty}>
-	                <div class="input-group-append">
-	                    <button class="btn btn-primary" type="button" id="button-addon2">搜索</button>
-	                </div>
-	            </div>
+	            <form id="searchForm" method="get" action="{:url('goods/list')}">
+					<div class="input-group mt-4">
+					<input name="goodsName" id="keyword" type="text" class="form-control search" {notempty name="$conds.goodsName" placeholder="搜索商品名"
+						   }value="{$conds.goodsName}" {/notempty}/>
+					<div class="input-group-append">
+						<button class="btn btn-primary" type="submit" id="button-addon2">搜索</button>
+					</div>
+				</div>
+			</form>
             </div>
             <div class="col-lg-3 col-sm-4 col-12">
                 <div class="shop-cart mt-4 float-right">
@@ -94,29 +104,29 @@
     <!--我的订单-->
     <div class="order-body mt-0 mb-0">
         <div class="container pt-4 pb-4">
-            <div class="user-mod" style="min-height: 1075px">
+            <div class="user-mod" style="min-height: 200px">
                 <!--我的订单索引-->
                 <form id="myOrderForm" method="post" action="{:url('order/myorder')}">
                     <div class="user-title">
                         <h2>我的订单</h2>
                         <input name="status" type="hidden" value="{$cond['status']}" />
                         <ul class="tabs">
-                            <li {eq name="$cond['status']" value=""}class="active""{/eq} onclick="changeStatus('')">
+                            <li {eq name="$cond['status']" value=""}class="active"{/eq} onclick="changeStatus('')">
                                 <a href="javascript:void(0);">全部</a>
                             </li>
                             <li {eq name="$cond['status']" value="0"}class="active"{/eq} class="user-count3" onclick="changeStatus('0')">
                                 <a href="javascript:void(0);">未付款</a>
                             </li>
-                            <li {eq name="$cond['status']" value="0"}class="active"{/eq} class="user-count1" onclick="changeStatus('1')">
+                            <li {eq name="$cond['status']" value="1"}class="active"{/eq} class="user-count1" onclick="changeStatus('1')">
                                 <a href="javascript:void(0);">未发货</a>
                             </li>
-                            <li {eq name="$cond['status']" value="0"}class="active"{/eq} class="user-count2" onclick="changeStatus('2')">
+                            <li {eq name="$cond['status']" value="2"}class="active"{/eq} class="user-count2" onclick="changeStatus('2')">
                                 <a href="javascript:void(0);">未收货</a>
                             </li>
-                            <li {eq name="$cond['status']" value="0"}class="active"{/eq} class="user-count4" onclick="changeStatus('3')">
+                            <li {eq name="$cond['status']" value="3"}class="active"{/eq} class="user-count4" onclick="changeStatus('3')">
                                 <a href="javascript:void(0);">未评价</a>
                             </li>
-                            <li {eq name="$cond['status']" value="0"}class="active"{/eq} class="user-count4" onclick="changeStatus('4')">
+                            <li {eq name="$cond['status']" value="4"}class="active"{/eq} class="user-count4" onclick="changeStatus('4')">
                                 <a href="javascript:void(0);">已完成</a>
                             </li>
                         </ul>
@@ -226,69 +236,8 @@
         </div>
     </div>
 
-    <!--foot部分-->
-    <div class="footer-body mt-0">
-        <div class="container">
-            <div class="row vertical-list">
-                <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
-                    <h5>新手上路</h5>
-                    <ul>
-                        <li><a href="">售后流程</a></li>
-                        <li><a href="">购物流程</a></li>
-                        <li><a href="">订购方式</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
-                    <h5>配送与支付</h5>
-                    <ul>
-                        <li><a href="">货到付款区域</a></li>
-                        <li><a href="">配送支付智能查询</a></li>
-                        <li><a href="">支付方式说明</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
-                    <h5>服务保证</h5>
-                    <ul>
-                        <li><a href="">退换货原则</a></li>
-                        <li><a href="">售后服务保证</a></li>
-                        <li><a href="">产品质量保证</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
-                    <h5>联系我们</h5>
-                    <ul>
-                        <li><a href="">网站故障报告</a></li>
-                        <li><a href="">选机咨询</a></li>
-                        <li><a href="">投诉与建议</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 col-md-4 col-6 mb-2">
-                    <div class="qrcode-box">
-                        <img src="img/passerby.jpg" alt="">
-                        <div class="qrcode-title">联系我</div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-4 col-6 mb-2">
-                    <div class="qrcode-box">
-                        <img src="img/scnu_logo.jpg" alt="">
-                        <div class="qrcode-title">Logo</div>
-                    </div>
-                </div>
-            </div>
-            <!--  分隔线  -->
-            <div class="apart-line"></div>
-            <ul class="clearfix text-center horizontal-list d-flex justify-content-center">
-                <li><a href="#">客户服务</a></li>
-                <li><a href="#">我的收藏</a></li>
-                <li><a href="#">我的浏览</a></li>
-                <li><a href="#">我的订单</a></li>
-            </ul>
-            <p class="copyright">
-                Copyright © 2020 <a href="">passerbyYSQ</a>. All Rights Reserved | <a href=""> 粤ICP备20036780号</a><br>
-                Powered by <a href="">passerbyYSQ</a> 1127664027@qq.com
-            </p>
-        </div>
-    </div>
+    <!-- 引入公共的footer部分 -->
+    {include file="common/footer" /}
 
     <!-- js的顺序不能乱 -->
     <!-- bootstrap4.min.js依赖jquery -->

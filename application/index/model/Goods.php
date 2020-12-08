@@ -13,7 +13,8 @@ class Goods extends Model {
     public function findById($id) {
         return db('goods')
                     ->alias('g')
-                    ->join('category c', 'g.cateId=c.id')
+                    // 左拼接，商品可没有分类（所属分类被删除了）
+                    ->join('category c', 'g.cateId=c.id', 'left') 
                     ->field('g.*, c.cateName')
                     ->where('g.id', $id)
                     ->find();

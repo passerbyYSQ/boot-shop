@@ -2,8 +2,8 @@
 .card-body {
     padding: 12px;
 }
-body, button, input, select, textarea {
-    font: 12px/1.5 Microsoft YaHei, tahoma, arial, Hevetica, \\5b8b体, sans-serif;
+.order-body {
+    font: 14px/1.5 Microsoft YaHei, tahoma, arial, Hevetica, \\5b8b体, sans-serif;
     color: #555;
 }
 /* 右上角的列表 */

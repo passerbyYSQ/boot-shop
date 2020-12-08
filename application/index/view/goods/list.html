@@ -20,8 +20,38 @@
 
     <!--站点图标-->
     <!-- ... -->
+    
+    <!-- js的顺序不能乱 -->
+    <script src="__lib__/jquery/jquery.min.js"></script>
+    
+    <!-- 图片加载裁剪插件 -->
+    <script src="__lib__/jquery/jqthumb.min.js"></script>
+    
+   
+    <script type="text/javascript">
+		function DrawImage(hotimg){
+			// 这段代码一定要放在header加载，如果放在后面，可能在渲染图片时该段代码还没渲染
+			$(hotimg).jqthumb({
+				width : '100%',//宽度
+				height : '260px',//高度
+				//position : { y: '50%', x: '50%'},//从图片的中间开始产生缩略图
+				zoom : '1',//缩放比例
+				method : 'auto'//提交方法，用于不同的浏览器环境，默认为‘auto’
+			});
+		}
+    </script>
 
-    <style type="text/css">
+    <style type="text/css">	
+		.title-limit {
+			 height: 48px;
+			  text-overflow: -o-ellipsis-lastline;
+			  overflow: hidden;
+			  text-overflow: ellipsis;
+			  display: -webkit-box;
+			  -webkit-line-clamp: 2;
+			  line-clamp: 2;
+			  -webkit-box-orient: vertical;
+		}
     </style>
 
 </head>
@@ -211,7 +241,7 @@
 	            <div class="col-md-3 col-sm-6 col-12 mb-4">
 	                <div class="card">
 	                	<a href="{:url('goods/index')}?id={$goods.id}" target="_blank">
-	                		<img src="__public__/{$goods.mainPic}"  class="card-img-top" alt="..." />
+	                		<img src="__public__/{$goods.mainPic}" onload="DrawImage(this)" class="card-img-top img-responsive" alt="..." />
 	                	</a>
 	                    <div class="card-body">
 	                        <div class="goods-num clearfix">
@@ -219,7 +249,7 @@
 	                            <span class="sale-count">已售<b>{$goods.saleCount}</b>件</span>
 	                        </div>
 	                        <p class="card-text text-right text-muted">上架：{$goods.onSaleTime}</p>
-	                        <h6 class="card-title">
+	                        <h6 class="card-title title-limit">
 	                            <a href="{:url('goods/index')}?id={$goods.id}" target="_blank">{$goods.goodsName}</a>
 	                        </h6>
 	                        <div class="btn-group btn-group-sm d-flex flex-fill" role="group" >
@@ -248,8 +278,8 @@
 	<!-- 引入公共的footer部分 -->
     {include file="common/footer" /}
     
-    <!-- js的顺序不能乱 -->
-    <script src="__lib__/jquery/jquery.min.js"></script>
+    
+    
     <!-- 引入popper，bootbox.js需要 -->
     <script src="__lib__/popper/popper.min.js"></script>
     <!-- bootstrap.min.js依赖jquery -->
@@ -258,11 +288,10 @@
     <!-- 引入bootbox，基于bootstrap的模态框封装 -->
     <script src="__lib__/bootbox/bootbox.min.js"></script>
     
+    
 	
 	<script type="text/javascript">
 		
-	
-	
 		// 根据商品名称关键词搜索
 		function searchByGoodsName(goodsName) {
 			console.log(goodsName);

@@ -531,8 +531,9 @@ Purchase: http://wrapbootstrap.com
                     success: function (data) {
                     	//console.log(data);
                     	if (data['result'] === true) {
-                    		//console.log(true);
+                    		console.log($editable);
                     		editor.insertImage($editable,  "__public__/" + data['save_path']);
+                    		
                     		//$summernote.summernote('insertImage', data['save_path']);
                     	} else {
                     		alert(data['error']);
