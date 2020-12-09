@@ -78,7 +78,7 @@
     <!--   导航栏     -->
     <div class="container mb-0">
         <nav class="navbar navbar-expand-sm navbar-light mt-2">
-            <a class="navbar-brand" href="#">全部商品分类</a>
+            <a class="navbar-brand" href="{:url('index/index')}">全部商品分类</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -246,23 +246,24 @@
     <script src="__lib__/popper/popper.min.js"></script>
     <!-- 引入所有的Bootstrap的JS插件 -->
     <script src="__lib__/bootstrap4/js/bootstrap.min.js"></script>
+    
     <script type="text/javascript">
-    function changeStatus(newStatus) {
-		$("input[name='status']").val(newStatus);
-		$("#myOrderForm").submit();
-	}
-	
-	function changePeriod(newPeriod) {
-		$("input[name='period']").val(newPeriod);
-		$("#myOrderForm").submit();
-	}
-	
-	$("#dateTime li").each(function() {
-		//console.log($(this).attr('data-period'));
-		if ($(this).attr('data-period') == '{$cond['period']}') {
-			$("#dateTime>div").html($(this).text());
+	    function changeStatus(newStatus) {
+			$("input[name='status']").val(newStatus);
+			$("#myOrderForm").submit();
 		}
-	});
+		
+		function changePeriod(newPeriod) {
+			$("input[name='period']").val(newPeriod);
+			$("#myOrderForm").submit();
+		}
+		
+		$("#dateTime li").each(function() {
+			//console.log($(this).attr('data-period'));
+			if ($(this).attr('data-period') == '{$cond['period']}') {
+				$("#dateTime>div").html($(this).text());
+			}
+		});
     </script>
 </body>
 </html>

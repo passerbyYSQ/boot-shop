@@ -113,8 +113,8 @@
 							</div>
 							<div class="mt-4 shoplist">
 								<div class="media">
-									<a href="#" target="_blank"><img src="__public__/{$item.mainPic}" alt="" style="width: 70px;height: 70px"/></a>
-									<a href="#" class="media-body ml-3 mr-4" target="_blank">{$item.goodsName}</a>
+									<a href="{:url('goods/index')}?id={$item.goodsId}" target="_blank"><img src="__public__/{$item.mainPic}" alt="" style="width: 70px;height: 70px"/></a>
+									<a href="{:url('goods/index')}?id={$item.goodsId}" class="media-body ml-3 mr-4" target="_blank">{$item.goodsName}</a>
 								</div>
 							</div>
 							<div class="mt-4 dislist1" id="goods_price_8"><em>¥</em><span name="price">{$item.salePrice}</span></div>

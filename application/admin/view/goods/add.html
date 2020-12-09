@@ -464,6 +464,11 @@ Purchase: http://wrapbootstrap.com
     <script src="__admin__/js/jquery.min.js"></script>
     <script src="__admin__/js/bootstrap.min.js"></script>
     <script src="__admin__/js/slimscroll/jquery.slimscroll.min.js"></script>
+    
+    <!-- 引入popper，bootbox.js需要 -->
+    <script src="__lib__/popper/popper.min.js"></script>
+    <!-- 引入bootbox，基于bootstrap的模态框封装 -->
+    <script src="__lib__/bootbox/bootbox.min.js"></script>
 
     <!--Beyond Scripts-->
     <script src="__admin__/js/beyond.js"></script>
@@ -471,16 +476,18 @@ Purchase: http://wrapbootstrap.com
     <!--Fuelux Spinbox 加减数字框-->
     <script src="__admin__/js/fuelux/spinbox/fuelux.spinbox.min.js"></script>
     
-    <!--Jquery Select2-->
+    <!--Jquery Select2--> 
     <script src="__admin__/js/select2/select2.js"></script>
     
     <!--Summernote Scripts 编辑框-->
     <script src="__admin__/js/editors/summernote/summernote.js"></script>
     
     <!--Bootstrap  wysiwig Scripts-->
+    <!--  
     <script src="__admin__/js/editors/wysiwyg/jquery.hotkeys.js"></script>
     <script src="__admin__/js/editors/wysiwyg/prettify.js"></script>
     <script src="__admin__/js/editors/wysiwyg/bootstrap-wysiwyg.js"></script>
+    -->
 
     <script>
     
@@ -518,28 +525,99 @@ Purchase: http://wrapbootstrap.com
 
           	//ajax上传图片
             function sendFile(file, editor, $editable) {
+          		if (file == null) {
+          			return;
+          		}
+          		console.log(editor);
+          		console.log($editable);
+          		
+          		var val = 0; // 进度。百分比
+          		var totalBytes = file.size; // 文件的总字节数
+          		console.log(totalBytes);
+          		
                 var formData = new FormData();
                 formData.append("file", file);
-                $.ajax({
+                
+                // 显示进度对话框
+                showProgressDialog();
+                
+                var uploadAjax = $.ajax({
                     url: "{:url('goods/uploadimg')}",//路径是你控制器中上传图片的方法，下面controller里面我会写到
                     type: 'POST',
                     data: formData,
                     cache: false,
                     contentType: false,
                     processData: false,
-                    dataType: 'JSON',
+                    xhr: function() {
+    			        //获取原生的xhr对象
+    			        var xhr = $.ajaxSettings.xhr();
+    			        if (xhr.upload) {
+    			            //添加 progress 事件监听
+    						//console.log(xhr.upload);
+    						xhr.upload.onprogress = function(e) {
+    							// e.loaded 已经加载的字节数
+    							val = e.loaded / totalBytes * 100; 
+    							if (val > 100) {
+    								val = 100;
+    							}
+    							
+    							// 更新进度条的进度
+    							$('#progressBar').css({
+    								width: val.toFixed(2) + '%'
+    							});
+    							$('#progressBar').html(val.toFixed(2) + '%');
+    						};
+    						xhr.upload.onabort = function() {
+    							// 取消上传的回调
+    						};
+    			        }
+    			        return xhr;
+    			    },
                     success: function (data) {
-                    	//console.log(data);
+                    	console.log(data);
+                    	
                     	if (data['result'] === true) {
-                    		console.log($editable);
+                    		//console.log($editable);
                     		editor.insertImage($editable,  "__public__/" + data['save_path']);
                     		
                     		//$summernote.summernote('insertImage', data['save_path']);
                     	} else {
                     		alert(data['error']);
                     	}
+                    	
+                    	// 关闭对话框
+  		                bootbox.hideAll();
                     }
                 });
+                
+                function showProgressDialog() {
+                	var html = 
+	                "<div class='progress'><div id='progressBar' class='progress-bar' role='progressbar' style='min-width: 2em;'>" + (val + '%') + "</div></div>";
+                	
+              		bootbox.dialog({ 
+              		    title: '正在上传...',
+              		    message: html,
+              		    size: 'large',
+              		    onEscape: false,
+              		    backdrop: false,
+
+              		    buttons: {
+              		        cancel: {
+              		            label: '取消',
+              		            className: 'btn btn-outline-danger',
+              		            callback: function(){
+              		                 // 中断ajax请求
+              		                 if (uploadAjax != null) {
+										console.log(uploadAjax);
+										uploadAjax.abort();
+									}
+              		                // 关闭对话框
+              		                bootbox.hideAll();
+              		            }
+              		        }
+              		    }
+              		})
+              	}
             }
      
     	});
