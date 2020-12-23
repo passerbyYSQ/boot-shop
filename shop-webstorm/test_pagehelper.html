@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- 不设置的话，手机端不会进行响应式布局 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>商品列表页</title>
+
+    <!-- 引入Bootstrap核心样式文件 -->
+    <link rel="stylesheet" href="lib/bootstrap4/css/bootstrap.css">
+
+
+    <style>
+        /* 分页按钮样式复写 */
+        /*.page-link {*/
+        /*    color: #8c8c8c;*/
+        /*}*/
+        /*.page-link:hover {*/
+        /*    color: #007bff;*/
+        /*}*/
+    </style>
+
+    <!--站点图标-->
+    <!-- ... -->
+
+</head>
+<body>
+    <div class="page-helper mt-5 d-flex justify-content-center">
+
+    </div>
+
+    <!-- js的顺序不能乱 -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <!-- bootstrap.min.js依赖jquery -->
+    <script src="lib/bootstrap4/js/bootstrap.min.js"></script>
+
+    <script>
+        let API_URL = 'test_pagehelper.html';
+        // 11页
+        $(function () {
+            let curPage = getUrlParam('page');
+            if (curPage === undefined) {
+                curPage = 2;
+            }
+            console.log(curPage);
+            $('div.page-helper').append(pageHelper(parseInt(curPage), 108, 10, 3));
+        });
+
+        /**
+         *
+         * @param curPage       当前页。理应由前端传给后端，但是前端的传参有可能超出实际范围，这就必须交由
+         *                      后端来纠正之后，再查询对应页码的数据。然后后端将纠正后的当前页返回给前端，
+         *                      以便前端来渲染页码按钮组。从1开始编号
+         * @param total         总记录数。实际上，后端可以直接返回总页数就可以了，只不过有一定局限性：假如
+         *                      前端还需要显示总记录数，凭借总页数和每页记录数，是无法计算出总记录数的。而返
+         *                      回总记录数，前端可以自行计算总页数，同时还可以额外显示总记录数
+         * @param count         每页显示的记录数，由前端传给后端
+         * @param sideBtnCount  当前页按钮的左边有多少个按钮，不需要传给后端
+         */
+        function pageHelper(curPage, total, count, sideBtnCount) {
+            // 计算总页数
+            let pageCount = Math.ceil(total / count);
+
+            // 计算按钮组最左端和最右端的页码
+            // 将[1, pageCount]分为3个区间：
+            // [1, sideBtnCount]，[sideBtnCount+1, pageCount-sideBtnCount]，[pageCount-sideBtnCount+1, pageCount]
+            let leftPage, rightPage;
+            if (curPage > sideBtnCount && curPage <= pageCount - sideBtnCount) {
+                // [sideBtnCount+1, pageCount-sideBtnCount]
+                leftPage = curPage - sideBtnCount;
+                rightPage = curPage + sideBtnCount;
+
+            } else if (curPage <= sideBtnCount) {
+                // [1, sideBtnCount]
+                leftPage = 1;
+                rightPage = 2 * sideBtnCount + 1;
+                // 越界时，修正当前页
+                if (curPage < 1) {
+                    curPage = 1;
+                }
+
+            } else if (curPage > pageCount - sideBtnCount) {
+                // [pageCount-sideBtnCount+1, pageCount]
+                leftPage = pageCount - 2 * sideBtnCount;
+                rightPage = pageCount;
+                // 越界时，修正当前页
+                if (curPage > pageCount) {
+                    curPage = pageCount;
+                }
+            }
+
+            return "<nav><ul class='pagination'>" +
+                    firstBtn('First') +
+                    preBtn('Pre') +
+                    numBtn(leftPage, rightPage) +
+                    nextBtn('Next') +
+                    lastBtn('Last') +
+                    "</ul></nav>";
+
+            /**
+             * 返回一个可点击的按钮的html代码
+             * @param contentHtml   按钮中的内容
+             */
+            function clickableBtn(contentHtml, num) {
+                return  `<li class='page-item'><a class='page-link' href='${API_URL}?page=${num}'>${contentHtml}</a></li>`;
+            }
+
+            /**
+             * 返回一个当前页按钮的html代码
+             * @param contentHtml
+             */
+            function currentBtn(contentHtml) {
+                return  `<li class='page-item active'><span class='page-link'>${contentHtml}</span></li>`;
+            }
+
+            /**
+             * 返回上一页按钮的html代码
+             * @param contentHtml
+             */
+            function preBtn(contentHtml) {
+                if (curPage <= 1) {
+                    return ''; // 我这里直接返回空，你也可以根据你的喜好，返回禁用点击的按钮
+                }
+                return clickableBtn(contentHtml, curPage - 1);
+            }
+
+            /**
+             * 返回下一页按钮的html代码
+             * @param contentHtml
+             */
+            function nextBtn(contentHtml) {
+                if (curPage >= pageCount) {
+                    return '';
+                }
+                return clickableBtn(contentHtml, curPage + 1);
+            }
+
+            /**
+             * 返回首页按钮的html代码
+             * @param contentHtml
+             */
+            function firstBtn(contentHtml) {
+                if (leftPage <= 1) {
+                    // 如果首页(1)已经显示在了按钮组(>=leftPage)当中，则不需要首页按钮，这里我直接返回空
+                    return '';
+                }
+                return clickableBtn(contentHtml, 1);
+            }
+
+            /**
+             * 返回末页按钮的html代码
+             * @param contentHtml
+             */
+            function lastBtn(contentHtml) {
+                if (pageCount <= rightPage) {
+                    // 如果末页(pageCount)已经显示在了按钮组(<=rightPage)当中，则不需要首页按钮，这里我直接返回空
+                    return '';
+                }
+                return clickableBtn(contentHtml, pageCount);
+            }
+
+            /**
+             * 生成[left, right]区间的按钮的html代码
+             * @param left
+             * @param right
+             */
+            function numBtn(left, right) {
+                let btnHtml = '';
+                for (let i = left; i <= right; i++) {
+                    if (i === curPage) {  // 当前页
+                        btnHtml += currentBtn(i);
+                    } else {
+                        btnHtml += clickableBtn(i, i);
+                    }
+                }
+                return btnHtml;
+            }
+        }
+
+        // 获取指定的路径参数，获取不到返回空串
+        function getUrlParam(key) {
+            // ? 后面的
+            let searchStr = window.location.search.substring(1);
+            console.log(searchStr);
+
+            let paramMap = new Array();
+
+            let paramEntrys = searchStr.split('&');
+            for(let i=0; i<paramEntrys.length; i++) {
+                let entry = paramEntrys[i].split('=');
+                paramMap[ entry[0] ] = entry[1];
+            }
+
+            console.log(paramMap);
+
+            return paramMap[key];
+        }
+    </script>
+
+</body>
+</html>

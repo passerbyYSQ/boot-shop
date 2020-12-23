@@ -106,7 +106,7 @@
         <div class="container pt-4 pb-4">
             <div class="user-mod" style="min-height: 200px">
                 <!--我的订单索引-->
-                <form id="myOrderForm" method="post" action="{:url('order/myorder')}">
+                <form id="myOrderForm" class="clearfix" method="post" action="{:url('order/myorder')}">
                     <div class="user-title">
                         <h2>我的订单</h2>
                         <input name="status" type="hidden" value="{$cond['status']}" />
@@ -160,6 +160,12 @@
                         </button>
                     </div>
                 </form>
+                
+                <!-- 分页按钮 -->
+				<div class="d-flex justify-content-center pt-3">
+					{$pageHtml}
+				</div>
+                
                 <!--我的订单-->
                 {foreach $orderList as $order}
                 <ul class="list-group w-100 pt-3">
@@ -232,6 +238,11 @@
                     </li>
                 </ul>
                 {/foreach}
+                
+                <!-- 分页按钮 -->
+				<div class="d-flex justify-content-center pt-3">
+					{$pageHtml}
+				</div>
             </div>
         </div>
     </div>

@@ -33,3 +33,21 @@ a:hover {
 .page-link {
 	color: #8c8c8c;
 }
+
+
+/* 导航栏 */
+.navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+	border-bottom: 2px solid #f42424;
+}
+.navbar-brand {
+    /*height: 100%;*/
+    font-size: 22px;
+    text-align: center;
+    color: #f42424 !important;
+    border-radius: 8px 8px 0 0;
+    /*border: 2px solid #f42424;*/
+    border-bottom: none;
+    padding: 14px 32px;
+}

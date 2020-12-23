@@ -21,12 +21,12 @@ class Pagehelper extends Paginator {
         if ($this->hasPages()) {
             if ($this->simple) {
                 return sprintf(
-                    "<nav class='py-3'><ul class='pagination'>%s %s %s</ul></nav>",
+                    "<nav class='m-auto'><ul class='pagination'>%s %s %s</ul></nav>",
                     $this->getPreviousButton(),
                     $this->getNextButton());
             } else {
                 return sprintf(
-                    "<nav class='m-auto py-3'><ul class='pagination'>%s</ul></nav>",
+                    "<nav class='m-auto'><ul class='pagination'>%s</ul></nav>",
                     $this->getLinks()
                     );
             }

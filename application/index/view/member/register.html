@@ -238,6 +238,10 @@
    						},
    						dataFilter: function(jsonStr, type) {
    							// jsonStr是'true'表示验证码正确
+   							if (jsonStr === 'false') {
+   								$('#captchaImg').click(); // 模拟点击，更新验证码图片
+   								$('#captcha').val(''); // 清空验证码输入框
+   							}
    							return jsonStr === 'true'; 
    						}
    					}
@@ -264,7 +268,7 @@
    				},
    				captcha: {
    					required: '验证码不能为空',
-   					remote: '验证码错误'
+   					remote: '验证码错误，已刷新'
    				}
    			},
    			onkeyup: function(element, event) {

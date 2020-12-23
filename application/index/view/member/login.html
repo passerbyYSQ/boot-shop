@@ -111,7 +111,7 @@
                                 <input type="text" maxlength="4" class="form-control" id="captcha" name="captcha"
                                        placeholder="验证码">
                                 <div class="input-group-append">
-                                    <img src="{:captcha_src()}" onClick="this.src='{:captcha_src()}'" class="captcha">
+                                    <img src="{:captcha_src()}" id="captchaImg" onClick="this.src='{:captcha_src()}'" class="captcha">
                                 </div>
                             </div>
                         </div>
@@ -216,6 +216,10 @@
    						},
    						dataFilter: function(jsonStr, type) {
    							// jsonStr是'true'表示验证码正确
+   							if (jsonStr === 'false') {
+   								$('#captchaImg').click(); // 模拟点击，更新验证码图片
+   								$('#captcha').val(''); // 清空验证码输入框
+   							}
    							return jsonStr === 'true'; 
    						}
    					}
@@ -233,7 +237,7 @@
    				},
    				captcha: {
    					required: '验证码不能为空',
-   					remote: '验证码错误'
+   					remote: '验证码错误，已刷新'
    				}
    			},
    			onkeyup: function(element, event) {
